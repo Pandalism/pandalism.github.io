@@ -6,7 +6,7 @@ tags: raspberry-pi remote-desktop headless teamviewer guide
 published: true
 ---
 
-I might be projecting, but I believe a large portion of raspberry pi's out there will be currently sitting in their owner's drawers, not doing much at all since the hype around the device has settled down. I thought it would be a great little thing to use as a server for domotics, local websites and what not, so why not put it in a dark little corner and run it headless? And while we are at it, why not have a remote desktop?
+I might be projecting, but I believe a large portion of Raspberry Pi's out there will be currently sitting in their owner's drawers, not doing much at all since the hype around the device has settled down. I thought it would be a great little thing to use as a server for domotics, local websites and what not, so why not put it in a dark little corner and run it headless? And while we are at it, why not have a remote desktop?
 
 Whilst linux allows us unlimited control using just a simple SSH, its sometimes nice to have a remote desktop just to manage files and directorys, and for the rare occasions we might get lost in the terminal. First thing is first, and after looking at the possible solutions, I chose to go with [TeamViewer](https://www.teamviewer.com/en/) for the remote desktop. Alternatives would have been any of the VNC flavours, which are particularly attactive in the face of the hacking, and subsequent mishandling of the situation, which TeamViewer suffered [last year](INSERTLINK). Nonetheless, Teamviewer's ease of setup for remote access from the internet and my general use with it day to day, makes it win here since i'm not too fussed about security at the moment. I hope they are a little more careful now :no_mouth:!
 . Using VNC is just a little more complicated but you can find out how to set it up [here](insertlink).
@@ -41,9 +41,23 @@ Now just plug in the SD card, power and ethernet cables and watch the lights bli
 ![RPi on fire]({{ "https://thumbs.gfycat.com/BriefAmpleAmericankestrel-size_restricted.gif"  | absolute_url}})
 
 ### Step 4:
-So xxx kitty xxx,
-username: pi
-password: raspberry
+Now that the RPi is connected, we need to connect to it through SSH. To do this first we need to find the IP address, and surprisingly, the easiest way is probably to access your router. In my case the virgin media hub shows you pretty clearly which is your router:
+
+![Finding the RPi IP]({{ "/images/posts/2018-08-27-Headless-RPi/3.png" | absolute_url}})
+
+Knowing that, we open up [PuTTY](https://www.putty.org/) or [KiTTY](http://www.9bis.net/kitty/) and fill in the IP we just found. Leaving the rest of the settings
+
+![KiTTY in action]({{ "/images/posts/2018-08-27-Headless-RPi/4.png" | absolute_url}})
+
+When prompted use the default login details for Raspberry Pi's
+
+`username: pi`
+
+`password: raspberry`
+
+With that you should be in the RPi!
+
+![KiTTY in action]({{ "/images/posts/2018-08-27-Headless-RPi/5.png" | absolute_url}})
 
 
 ### Step 4:
