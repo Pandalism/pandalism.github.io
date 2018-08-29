@@ -3,7 +3,7 @@ layout: post
 title: Setting up a headless Raspberry Pi with Teamviewer.
 category: domotics
 tags: raspberry-pi remote-desktop headless teamviewer guide
-published: false
+published: true
 ---
 
 I might be projecting, but I believe a large portion of raspberry pi's out there will be currently sitting in their owner's drawers, not doing much at all since the hype around the device has settled down. I thought it would be a great little thing to use as a server for domotics, local websites and what not, so why not put it in a dark little corner and run it headless? And while we are at it, why not have a remote desktop?
@@ -27,12 +27,13 @@ Whilst linux allows us unlimited control using just a simple SSH, its sometimes 
 ### Step 1: Create the boot SD card
 Download the latest image from the Raspberry Pi [website](https://www.raspberrypi.org/downloads/raspbian/), making sure to select the 'Rasbian with desktop'. Then use your usual boot drive creator as usual to load the image on to the SD card and make it bootable. I personally love [Rufus](https://rufus.akeo.ie/) due to its simplicity, portability and speed; alternatives can be [UNetbootin](https://unetbootin.github.io/) and [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/).
 
-![Rufus in Action]({{ "/images/posts/2018-08-27-Headless-RPi/1.jpg" | absolute_url }})
+![Rufus in Action]({{ "https://rufus.akeo.ie/pics/rufus_en.png" | absolute_url }})
 
 #### Step 2: Make sure SSH will run on startup
 The main reason to even explain such simple first steps is to not forget this vital part. The RPi by default will not have SSH running, and we require SSH to be able to access the RPi terminal without using a monitor/keyboard/mouse plugged in. To activate SSH, navigate to your freshly made SD card and place an empty file in the root folder (that's D: in my case), named 'ssh'. The easiest way to do this, in windows anyways, is to make a text file and change the name, making sure to delete the '.txt' at the end. If you can't access the file extension, just go to 'view' in the top bar and make sure 'show known extensions' is ticked.
 
-![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/1.jpg" | absolute_url }})
+![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/1.png" | absolute_url}})
+![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/2.png" | absolute_url}})
 
 ### Step 3:
 Now just plug in the SD card, power and ethernet cables and watch the lights blink!
