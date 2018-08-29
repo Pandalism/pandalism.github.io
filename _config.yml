@@ -16,11 +16,11 @@ avatar: /images/Logo-Transparent.png
 #
 default:
  -
- scope:
-  path: ""
-  type: "posts" # so the following defaults only affect posts.
- values:
-  author: "Pandalism"
+   scope:
+      path: ""
+      type: "posts" # so the following defaults only affect posts.
+   values:
+      author: "Pandalism"
 
 
 # Includes an icon in the footer for each username you enter
