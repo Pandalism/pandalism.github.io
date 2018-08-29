@@ -30,13 +30,13 @@ Download the latest image from the Raspberry Pi [website](https://www.raspberryp
 ![Rufus in Action]({{ "https://rufus.akeo.ie/pics/rufus_en.png" | absolute_url }})
 
 #### Step 2: Make sure SSH will run on startup
-The main reason to even explain such simple first steps is to not forget this vital part. The RPi by default will not have SSH running, and we require SSH to be able to access the RPi terminal without using a monitor/keyboard/mouse plugged in. To activate SSH, navigate to your freshly made SD card and place an empty file in the root folder (that's D: in my case), named 'ssh'. The easiest way to do this, in windows anyways, is to make a text file and change the name, making sure to delete the '.txt' at the end. If you can't access the file extension, just go to 'view' in the top bar and make sure 'show known extensions' is ticked.
+The main reason to even explain such simple first steps is to not forget this vital part. The RPi by default will not have SSH running, and we require SSH to be able to access the RPi terminal without using a monitor/keyboard/mouse plugged in. To activate SSH, navigate to your freshly made SD card and place an empty file in the root folder (that's D: in my case), named `ssh`. The easiest way to do this, in windows anyways, is to make a text file and change the name, making sure to delete the `.txt`at the end. If you can't access the file extension, just go to 'view' in the top bar and make sure 'show known extensions' is ticked.
 
 ![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/1.png" | absolute_url}})
 ![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/2.png" | absolute_url}})
 
 ### Step 3:
-Now just plug in the SD card, power and ethernet cables and watch the lights blink!
+Now just plug in the SD card, power and Ethernet cables and watch the lights blink!
 
 ![RPi on fire]({{ "https://thumbs.gfycat.com/BriefAmpleAmericankestrel-size_restricted.gif"  | absolute_url}})
 
@@ -55,57 +55,70 @@ When prompted use the default login details for Raspberry Pi's
 
 `password: raspberry`
 
-With that you should be in the RPi!
+With that you should have access to the RPi! ::
 
-![KiTTY in action]({{ "/images/posts/2018-08-27-Headless-RPi/5.png" | absolute_url}})
+![Congrats!]({{ "/images/posts/2018-08-27-Headless-RPi/5.png" | absolute_url}})
 
 
 ### Step 4:
-Run the RPi's inbuilt configurator with 'sudo raspi-config', then use option 1 to change pi's password. Even if not directly exposed to the outside internet, keeping the default password is a recipe for disaster.
+Run the RPi's inbuilt configurator with `sudo raspi-config`, then use option 1 to change pi's password. Even if not directly exposed to the outside internet, keeping the default password is a recipe for disaster.
+
+![The raspi-config]({{ "/images/posts/2018-08-27-Headless-RPi/6.png" | absolute_url}})
 
 ### Step 5:
-Still in the raspi-config, run '8 Update' the upgrade option to make sure the whole distro is up to date. This is similar to using 'sudo apt-get dist-upgrade' from the comandline
+Still in the raspi-config, run `8 Update` the upgrade option to make sure the whole distro is up to date. This is similar to using `sudo apt-get dist-upgrade` from the command line.
 
 ### Step 6:
-Then under '7 Advanced Options', select 'A1 Expand Filesystem'. This will make sure you use up all the space available in the SD card, and not just the 4gb or so that the original boot image had.
+Then under `7 Advanced Options`, select `A1 Expand Filesystem`. This will make sure you use up all the space available in the SD card, and not just the 4gb or so that the original boot image had.
 
 ### Step 7:
-A kind of mistery step needed here is to set the screen to a large size before going forward. This might have an effect on how it is displayed on physical screens when you have them plugged in so keep it in mind that you might want to revert it in the future. In '7 Advanced Options' again, go to 'A5 Resolution' and select the largest size you'd like to fit in your client's monitors, for me it was 1080p as my screen is larger and i wanted to make the most of the realestate, but the choice is up to you. Then exit the config and let it restart.
+A kind of mystery step needed here is to set the screen to a large size before going forward. This might have an effect on how it is displayed on physical screens when you have them plugged in so keep it in mind that you might want to revert it in the future. In `7 Advanced Options` again, go to `A5 Resolution` and select the largest size you'd like to fit in your client's monitors, for me it was 1080p as my screen is larger and I wanted to make the most of the realestate, but the choice is up to you. Then exit the config and let it restart.
 
 ### Step 8:
-Hopefully your SSH client will resync after the reboot, if not, just open up the SSH channel like before. Now we download the teamviewer package for Arm devices, such as the RPi, for that we use:
+Hopefully your SSH client will resync after the reboot, if not, just open up the SSH channel like before. Now we download the teamviewer package for Arm devices, which the RPi is, using a direct download from the website:
 
-wget -P /home/pi/Downloads https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb
+`wget -P /home/pi/Downloads https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb`
 
-and then use the dpgk to install the package as such:
+and then use the `apt` to install the package as such:
 
-sudo apt install /home/pi/Downloads/teamviewer-host_armhf.deb
+`sudo apt install /home/pi/Downloads/teamviewer-host_armhf.deb`
 
 ### Step 9:
-Whilst teamviewer is installed, it still won't run if you simply type teamviewer, as it will rely on the x server to show a GUI and will fail when it realises theres no graphical display.
+Whilst teamviewer is installed, it still won't run if you simply type `teamviewer`, as it will rely on the x server to show a GUI and will fail when it realises there's no graphical display.
 
+![It don't work]({{ "/images/posts/2018-08-27-Headless-RPi/7.png" | absolute_url}})
 
-Initially one could use 'sudo teamviewer setup', log in with your credentials and it would work, however this seems to be bugged in the recent releases thus you need to add the computer manually with the password workaround.
+Initially one could use `sudo teamviewer setup`, log in with your credentials and it would work, however this seems to be bugged in the recent releases; thus, you need to add the computer manually with the id+password workaround.
 To do this, first find out the teamviewer ID from the installation using:
 
-teamviewer info
+`teamviewer info`
 
 Make a note of it. Then set a desired password with:
 
-sudo teamviewer passwd YOUR_PASSWORD
+`sudo teamviewer passwd YOUR_PASSWORD`
+
+![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/8.png" | absolute_url}})
 
 Now in your desktop/laptop, add a remote computer, and use the 'Add remote computer' and fill in the prior details.
+
+![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/9.png" | absolute_url}})
 
 ### Step 10:
 
 Now if all went well, you can open up the remote desktop from your teamviewer client!
 
+![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/10.png" | absolute_url}})
+
+If you see the screen in an absolutely diminutive size then you messed up in Step 7. Go back and try `raspi-config` again.
+
+![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/11.png" | absolute_url}})
+
 ### Optional Step 11:
 
 Since we used the ID and password method to setup the remote access, some options such as wake-on-lan won't be available to use until you have fully assigned the RPi to your teamviewer account. To do this simply use the remote desktop to open the teamviewer options inside the RPi and add your details under 'Account Assignment' in the General Settings.
 
-### note:
-Setting up the Raspberry Pi to use WiFi off the bat whilst headless is a little more involved, as you need to specifically change the Raspberry Pi's wpa_supplicant.conf before installing the SD card. An example of this is can be found [here](https://styxit.com/2017/03/14/headless-raspberry-setup.html). I didnt need to do this as the device is going to reside next to the router and ethernet was simply easier for me.
+### Note:
+Setting up the Raspberry Pi to use WiFi off the bat, whilst headless, is a little more involved, as you need to specifically change the Raspberry Pi's `wpa_supplicant.conf` before installing the SD card. An example of this is can be found [here](https://styxit.com/2017/03/14/headless-raspberry-setup.html). I didn't need to do this as the device is going to reside next to the router and ethernet was simply easier for me.
 
 
 ## Credits
