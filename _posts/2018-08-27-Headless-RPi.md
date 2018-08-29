@@ -107,15 +107,17 @@ Now in your desktop/laptop, add a remote computer, and use the 'Add remote compu
 
 Now if all went well, you can open up the remote desktop from your teamviewer client!
 
-![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/10.png" | absolute_url}})
+![Et Voila]({{ "/images/posts/2018-08-27-Headless-RPi/10.png" | absolute_url}})
 
 If you see the screen in an absolutely diminutive size then you messed up in Step 7. Go back and try `raspi-config` again.
 
-![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/11.png" | absolute_url}})
+![tiny screen!]({{ "/images/posts/2018-08-27-Headless-RPi/11.png" | absolute_url}})
 
 ### Optional Step 11:
 
 Since we used the ID and password method to setup the remote access, some options such as wake-on-lan won't be available to use until you have fully assigned the RPi to your teamviewer account. To do this simply use the remote desktop to open the teamviewer options inside the RPi and add your details under 'Account Assignment' in the General Settings.
+
+![Get all the features]({{ "/images/posts/2018-08-27-Headless-RPi/12.png" | absolute_url}})
 
 ### Note:
 Setting up the Raspberry Pi to use WiFi off the bat, whilst headless, is a little more involved, as you need to specifically change the Raspberry Pi's `wpa_supplicant.conf` before installing the SD card. An example of this is can be found [here](https://styxit.com/2017/03/14/headless-raspberry-setup.html). I didn't need to do this as the device is going to reside next to the router and ethernet was simply easier for me.
