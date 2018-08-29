@@ -5,13 +5,12 @@ So I decided to try and finally get through to making a website as both a showca
 ## Structure and Features
 I figure it'll be a pretty standard webpage structure:
 
- * Home
  * About
+ * Blog
  * Projects
     * Subproject page 1
     * Subproject page 2
- * Blog
- * Contact/SocialMedia stuff?
+ * Contact/SocialMedia stuff? <- this will go in footer
 
 
 ## Roadmap
@@ -24,6 +23,6 @@ To remind myself what I'd like to achieve here:
 
 
 ## Credits
-I seriously would have gone no where if I had gone back to trying to do everything in just HTML, CSS and JS. I knew I wanted a static site but until I found out about static site generators it looked like a gargantuan effort to make a blog:no_mouth:.
+I seriously would have gone nowhere if I had gone back to trying to do everything in just HTML, CSS and JS. I knew I wanted a static site but until I found out about static site generators it looked like a gargantuan effort to make a blog:no_mouth:.
 - [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creators, contributors and maintainers.
 - [Jekyll Now](https://github.com/barryclark/jekyll-now) - Thanks especially to [Barryclark](https://github.com/barryclark) for his most wonderful and accessible introduction to Jekyll blogging.
