@@ -7,7 +7,7 @@ tags: jekyll github-page
 
 I thought it would be neat to try and finally make a blog which I can use to showcase some of the minor hobby projects I get up to. Mostly because it might just force me to keep going on projects and document what I do with a little more care.
 
-![RPi on fire]({{ "https://thumbs.gfycat.com/NextRepulsiveBighornsheep-size_restricted.gif"  | absolute_url}})
+![hello!]({{ "https://thumbs.gfycat.com/NextRepulsiveBighornsheep-size_restricted.gif"  | absolute_url}})
 
 I thought for simplicity, in both hosting and in content creation, might be best to leverage Jekyll's intimate integration into GitHub: content management and versioning? all in one? accessible from anywhere in the world? Sounds pretty good to me, and probably better than anything else I could churn out for now!
 
