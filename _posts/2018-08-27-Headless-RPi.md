@@ -31,8 +31,8 @@ Download the latest image from the Raspberry Pi [website](https://www.raspberryp
 #### Step 2: Make sure SSH will run on startup
 The main reason to even explain such simple first steps is to not forget this vital part. The RPi by default will not have SSH running, and we require SSH to be able to access the RPi terminal without using a monitor/keyboard/mouse plugged in. To activate SSH, navigate to your freshly made SD card and place an empty file in the root folder (that's D: in my case), named `ssh`. The easiest way to do this, in windows anyways, is to make a text file and change the name, making sure to delete the `.txt`at the end. If you can't access the file extension, just go to 'view' in the top bar and make sure 'show known extensions' is ticked.
 
-![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/1.png" | absolute_url}})
-![Add the 'ssh' file]({{ "/images/posts/2018-08-27-Headless-RPi/2.png" | absolute_url}})
+![Add the 'ssh' file]({{ "/assets/posts/2018-08-27-Headless-RPi/1.png" | absolute_url}})
+![Add the 'ssh' file]({{ "/assets/posts/2018-08-27-Headless-RPi/2.png" | absolute_url}})
 
 ### Step 3:
 Now just plug in the SD card, power and Ethernet cables and watch the lights blink!
@@ -42,11 +42,11 @@ Now just plug in the SD card, power and Ethernet cables and watch the lights bli
 ### Step 4:
 Now that the RPi is connected, we need to connect to it through SSH. To do this first we need to find the IP address, and surprisingly, the easiest way is probably to access your router. In my case the virgin media hub shows you pretty clearly which is your router:
 
-![Finding the RPi IP]({{ "/images/posts/2018-08-27-Headless-RPi/3.png" | absolute_url}})
+![Finding the RPi IP]({{ "/assets/posts/2018-08-27-Headless-RPi/3.png" | absolute_url}})
 
 Knowing that, we open up [PuTTY](https://www.putty.org/) or [KiTTY](http://www.9bis.net/kitty/) and fill in the IP we just found. Leaving the rest of the settings
 
-![KiTTY in action]({{ "/images/posts/2018-08-27-Headless-RPi/4.png" | absolute_url}})
+![KiTTY in action]({{ "/assets/posts/2018-08-27-Headless-RPi/4.png" | absolute_url}})
 
 When prompted use the default login details for Raspberry Pi's
 
@@ -56,13 +56,13 @@ When prompted use the default login details for Raspberry Pi's
 
 With that you should have access to the RPi! ::
 
-![Congrats!]({{ "/images/posts/2018-08-27-Headless-RPi/5.png" | absolute_url}})
+![Congrats!]({{ "/assets/posts/2018-08-27-Headless-RPi/5.png" | absolute_url}})
 
 
 ### Step 4:
 Run the RPi's inbuilt configurator with `sudo raspi-config`, then use option 1 to change pi's password. Even if not directly exposed to the outside internet, keeping the default password is a recipe for disaster.
 
-![The raspi-config]({{ "/images/posts/2018-08-27-Headless-RPi/6.png" | absolute_url}})
+![The raspi-config]({{ "/assets/posts/2018-08-27-Headless-RPi/6.png" | absolute_url}})
 
 ### Step 5:
 Still in the raspi-config, run `8 Update` the upgrade option to make sure the whole distro is up to date. This is similar to using `sudo apt-get dist-upgrade` from the command line.
@@ -85,7 +85,7 @@ and then use the `apt` to install the package as such:
 ### Step 9:
 Whilst teamviewer is installed, it still won't run if you simply type `teamviewer`, as it will rely on the x server to show a GUI and will fail when it realises there's no graphical display.
 
-![It don't work]({{ "/images/posts/2018-08-27-Headless-RPi/7.png" | absolute_url}})
+![It don't work]({{ "/assets/posts/2018-08-27-Headless-RPi/7.png" | absolute_url}})
 
 Initially one could use `sudo teamviewer setup`, log in with your credentials and it would work, however this seems to be bugged in the recent releases; thus, you need to add the computer manually with the id+password workaround.
 To do this, first find out the teamviewer ID from the installation using:
@@ -96,27 +96,27 @@ Make a note of it. Then set a desired password with:
 
 `sudo teamviewer passwd YOUR_PASSWORD`
 
-![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/8.png" | absolute_url}})
+![teamviewer info]({{ "/assets/posts/2018-08-27-Headless-RPi/8.png" | absolute_url}})
 
 Now in your desktop/laptop, add a remote computer, and use the 'Add remote computer' and fill in the prior details.
 
-![teamviewer info]({{ "/images/posts/2018-08-27-Headless-RPi/9.png" | absolute_url}})
+![teamviewer info]({{ "/assets/posts/2018-08-27-Headless-RPi/9.png" | absolute_url}})
 
 ### Step 10:
 
 Now if all went well, you can open up the remote desktop from your teamviewer client!
 
-![Et Voila]({{ "/images/posts/2018-08-27-Headless-RPi/10.png" | absolute_url}})
+![Et Voila]({{ "/assets/posts/2018-08-27-Headless-RPi/10.png" | absolute_url}})
 
 If you see the screen in an absolutely diminutive size then you messed up in Step 7. Go back and try `raspi-config` again.
 
-![tiny screen!]({{ "/images/posts/2018-08-27-Headless-RPi/11.png" | absolute_url}})
+![tiny screen!]({{ "/assets/posts/2018-08-27-Headless-RPi/11.png" | absolute_url}})
 
 ### Optional Step 11:
 
 Since we used the ID and password method to setup the remote access, some options such as wake-on-lan won't be available to use until you have fully assigned the RPi to your teamviewer account. To do this simply use the remote desktop to open the teamviewer options inside the RPi and add your details under 'Account Assignment' in the General Settings.
 
-![Get all the features]({{ "/images/posts/2018-08-27-Headless-RPi/12.png" | absolute_url}})
+![Get all the features]({{ "/assets/posts/2018-08-27-Headless-RPi/12.png" | absolute_url}})
 
 ### Note:
 Setting up the Raspberry Pi to use WiFi off the bat, whilst headless, is a little more involved, as you need to specifically change the Raspberry Pi's `wpa_supplicant.conf` before installing the SD card. An example of this is can be found [here](https://styxit.com/2017/03/14/headless-raspberry-setup.html). I didn't need to do this as the device is going to reside next to the router and ethernet was simply easier for me.
