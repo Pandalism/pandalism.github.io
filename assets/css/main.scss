@@ -1,0 +1,46 @@
+---
+---
+//
+// Variables
+//
+// Colours
+$nav-colour: rgba(100,100,100,1);
+$nav-font-colour: rgba(255,255,255,1);
+$page-colour: rgba(255,255,255,1);
+$page-font-colour: rgba(0,0,0,1);
+
+// Padding-ratios
+
+// media widths
+$tablet-width: 800px;
+$mobile-width: 500px;
+
+//
+// IMPORTS
+//
+
+/* ========================================================================== */
+/*  Reset and normalize css */
+/* ========================================================================== */
+@import "reset";
+// @import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/* ========================================================================== */
+/* ========================================================================== */
+/*  Own CSS code */
+/* ========================================================================== */
+/* ========================================================================== */
+
+//set html font size for all rem sizing:
+html {
+  font-size: 10px;
+}
+
+
+@import "style";
+
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";

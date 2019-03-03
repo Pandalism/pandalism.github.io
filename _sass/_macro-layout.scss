@@ -1,0 +1,54 @@
+/* ========================================================================== */
+/*  Macro layout settings */
+/* ========================================================================== */
+*{
+  /* reset margins and paddings to zero to have full control */
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+  /* make sure div takes full page vertically */
+  height: 100%;
+  border: 1px red;
+}
+
+.body-container{
+  /* set display mode to flexible */
+  display: flex;
+  /* make sure div takes full page vertically */
+  height: 100%;
+}
+
+.nav-container{
+  /* set colour */
+  background-color: $nav-colour;
+  color: $nav-font-colour;
+  /* set physical properties */
+  height: 100%;
+  max-width: 80rem;
+  flex: 3;
+
+
+
+  /* set internal alginments and padding for naviagtion*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+}
+
+.page-container{
+  /* set colour */
+  background-color: $page-colour;
+  /* set physical properties */
+  position: relative;
+  flex: 6;
+  min-height: 100%;
+
+  /*set sctoll behaviour */
+  overflow-y: scroll;
+  overflow-x: auto;
+}

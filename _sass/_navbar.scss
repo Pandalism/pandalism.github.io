@@ -1,0 +1,38 @@
+/* ========================================================================== */
+/*  Navigation side/top bar */
+/* ========================================================================== */
+.navbar{
+  text-align: right;
+}
+
+.nav_icon{
+  display: none;
+}
+
+.site_icon{
+  object-fit: contain;
+  height: 100px;
+}
+
+nav {
+  color: $nav-font-colour;
+
+
+  a {
+    // fonts and size are in _fonts.scss
+
+    // display as block
+    display: block;
+
+
+    // remove bullet points and underline
+    text-decoration: none;
+  }
+
+
+
+  a:hover, a.current{
+    text-decoration: line-through;
+    font-weight: 600;
+  }
+}

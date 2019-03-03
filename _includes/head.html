@@ -1,0 +1,25 @@
+
+<head>
+
+  <!--- Title is site name unless theres a page title too, then it gets added --->
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+  <!--- Include the meta tags including viewport & site description --->
+  {% include meta.html %}
+
+
+  <!--- include the css files  --->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!--- include the javascript files --->
+  <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"> </script>
+  <script type="text/javascript" src="assets/js/main.js"> </script>
+
+  <!--- Include site analytics --->
+  {% include analytics.html %}
+
+  <!-- Include RSS -->
+  <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> -->
+
+
+</head>
