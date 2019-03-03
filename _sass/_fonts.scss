@@ -32,12 +32,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 600;
-  line-height: 3.3rem;
-  color: inherit;
+
 }
 
 h4 {
@@ -67,15 +62,39 @@ p {
   color: inherit;
 }
 
-/* Nav bar fonts and font sizes */
-nav {
 
-  a {
-    font-size: 2.2rem;
+/* Nav bar fonts and font sizes */
+.navbar {
+  h1 {
+
+  }
+  h2 {
+    font-size: 3rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 4rem;
+    color: inherit;
+  }
+
+  h3{
+    font-size: 2rem;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    line-height: 3.5rem;
+    line-height: 2.7rem;
+    color: inherit;
+  }
+}
+
+nav {
+
+  a {
+    font-size: 2rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 3rem;
     color: $nav-link-colour;
   }
 

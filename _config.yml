@@ -8,10 +8,18 @@
 
 name: Pandalism
 tagline: AKA Felix DMR
-description: Programming, Electronics, Autonomous Vehicles and other assorted interests!
+description: Programming, Electronics, Autonomous Vehicles and other interests!
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /assets/Logo/Logo-Transparent.png
+
+# Social Media icons
+social-media:
+  email: felix.dmr@gmail.com
+  linkedin: felixdmr
+  instagram: felixdmr
+  github: Pandalism
+
 
 
 # Used for Sitemap.xml and your RSS feed
@@ -20,6 +28,11 @@ baseurl: ""
 
 # set permalinks to be /catergories/year/month/day
 permalink: pretty
+
+
+
+
+
 
 #
 # !! You don't need to change any of the configuration flags below !!

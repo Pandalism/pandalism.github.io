@@ -4,15 +4,17 @@
 // Variables
 //
 // Colours
-$nav-colour: rgba(20,20,20,1);
-$nav-font-colour: rgba(255,255,255,1);
-$nav-link-colour: rgba(255,255,255,0.5);
-$soc-media-bg-colour: rgba(255, 255, 255,0.5);
+$nav-colour: rgba(20,20,20,0.9);
+$nav-font-colour: rgba(255,255,255,0.9);
+$nav-link-colour: rgba(255,255,255,0.6);
+$soc-media-bg-colour: rgba(255, 255, 255,0.6);
+$logo-bg-colour: rgba(255,255,255,0.9);
+
 $page-colour: rgba(255,255,255,1);
 $page-font-colour: rgba(0,0,0,1);
 
-
-// Padding-ratios
+// Padding-ratios, margins, etc.
+$nav-corner-radius: 2rem;
 
 // media widths
 $tablet-width: 800px;
