@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
+
     <article class="post">
+      <img src="http://netupdaters.com/site/wp-content/uploads/2015/02/02-broken-website.png" alt="">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <p>Sorry! Tried to update to a new template whilst i was working on rolling out my own and it broke.</p>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+      <p>Considering i'm trying to make my own layout/css/etc im just going to freeze the website in the mean time as i'd rather not dedicate time to something im getting rid of in a second.</p>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <p>in the meantime, i've rolled it back to a very old template which isnt very pretty nor does it have any of the modifications I made, but at least works for now. Follow on through here:</p>
+
+      <a href="{{ site.baseurl }}home" class="read-more">Link</a>
     </article>
-  {% endfor %}
 </div>
