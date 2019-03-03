@@ -15,8 +15,8 @@
 }
 
 nav {
-  color: $nav-font-colour;
-
+  // set text colour
+  text-align: right;
 
   a {
     // fonts and size are in _fonts.scss
@@ -24,15 +24,34 @@ nav {
     // display as block
     display: block;
 
-
     // remove bullet points and underline
     text-decoration: none;
   }
 
 
 
-  a:hover, a.current{
+  a:hover {
     text-decoration: line-through;
-    font-weight: 600;
+  }
+
+}
+
+
+.soc-media-container {
+  display: flex;
+
+  div.soc-media-icon{
+    padding: 1rem;
+    background-color: $soc-media-bg-colour;
+    border-radius: 2rem;
+    border: 0.1rem;
+    border-style: solid;
+    border-color: $nav-colour;
+  }
+
+  img {
+    object-fit: contain;
+    height: 3rem;
+    margin: auto;
   }
 }
