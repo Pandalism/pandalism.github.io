@@ -54,18 +54,19 @@
   }
 
   .close_nav_icon{
-  // space out to the right as far as possible
-  margin-left: auto;
-  // display itself
-  display: none;
+    // space out to the right as far as possible
+    margin-left: auto;
+    // display itself
+    display: none;
 
-  // make img behave as it should
-  object-fit: contain;
-  height: 100%;
+    // make img behave as it should
+    object-fit: contain;
+    height: 100%;
 
-  // set icon like properties
-  background-color: $logo-bg-colour;
-  border-radius: $nav-corner-radius-mobile;
+    // set icon like properties
+    background-color: $logo-bg-colour;
+    border-radius: $nav-corner-radius-mobile;
+
   }
 
 
@@ -119,5 +120,6 @@
 }
 
 .hide-menu {
+
   display: none;
 }

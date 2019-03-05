@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 // If nav icon is clicked, toggle drop down menu
 $("img.nav_icon").click(function(){
-  console.log("mouse clicked!");
+  // console.log("mouse clicked!");
   if (checkMobile() )   {
     toggleMenu()
   }
