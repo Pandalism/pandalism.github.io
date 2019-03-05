@@ -1,6 +1,8 @@
 /* ========================================================================== */
 /*  Navigation mobile top bar */
 /* ========================================================================== */
+
+
 @media only screen and (max-width: $tablet-width) {
   .navbar {
     text-align: left;
@@ -117,9 +119,11 @@
     display: none;
 }
 
-}
 
 .hide-menu {
 
-  display: none;
+    display: none;
+  }
+
+
 }
