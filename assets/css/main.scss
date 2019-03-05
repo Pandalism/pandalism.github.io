@@ -18,6 +18,8 @@ $nav-corner-radius: 2rem;
 $nav-corner-radius-mobile: 1rem;
 
 // media widths and base font size (used for scaling)
+// $high-dpi-setting:1000px;
+// $high-dpi-rem:10px;
 $tablet-width: 800px;
 $tablet-rem: 10px;
 $mobile-width: 315px;
@@ -56,6 +58,9 @@ html {
 @media only screen and (max-width: $xs-mobile-width){
   html {
     font-size: $xs-mobile-rem;
+  }
+
+  body {
   }
 }
 
