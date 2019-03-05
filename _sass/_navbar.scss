@@ -24,8 +24,8 @@
 nav {
   // set text colour
   text-align: right;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   a {
     // fonts and size are in _fonts.scss
@@ -50,12 +50,15 @@ nav {
   display: flex;
 
   div.soc-media-icon{
+    // make some space inside to the icons, so that they are more centered
     padding: 1rem;
+
+    //set icon colour
     background-color: $soc-media-bg-colour;
+    //set border-radius
     border-radius: $nav-corner-radius;
-    border: 0.1rem;
-    border-style: solid;
-    border-color: $nav-colour;
+    //space out items a little
+    margin: 0 0.1rem;
   }
 
   img {

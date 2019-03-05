@@ -5,5 +5,11 @@
 // import the overall layout css
 @import "macro-layout";
 
+// import mobile macro layout options
+@import "macro-layout-mobile";
+
 // import the navigation side/top bar
 @import "navbar";
+
+// import the navigation mobile top bar
+@import "navbar-mobile";

@@ -1,0 +1,34 @@
+/* ========================================================================== */
+/*  Macro-Mobile layout settings */
+/* ========================================================================== */
+
+@media only screen and (max-width: $tablet-width) {
+
+
+  .body-container{
+    /* unset display mode */
+    display: unset;
+  }
+
+  .nav-container{
+    /* undo side navbar and change to top navbar */
+    height: unset;
+    display: block;
+    padding: 0.5rem 0.5rem;
+
+    /* set the side nav to be permanently at the top */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+  }
+
+  .page-container{
+      margin-top: 5rem;
+      overflow-y:auto;
+  }
+
+
+
+}

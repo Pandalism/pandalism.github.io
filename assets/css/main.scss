@@ -15,15 +15,19 @@ $page-font-colour: rgba(0,0,0,1);
 
 // Padding-ratios, margins, etc.
 $nav-corner-radius: 2rem;
+$nav-corner-radius-mobile: 1rem;
 
-// media widths
+// media widths and base font size (used for scaling)
 $tablet-width: 800px;
-$mobile-width: 500px;
+$tablet-rem: 10px;
+$mobile-width: 315px;
+$mobile-rem: 8px;
+$xs-mobile-width: 230px;
+$xs-mobile-rem: 5px;
 
-//
+
 // IMPORTS
 //
-
 /* ========================================================================== */
 /*  Reset and normalize css */
 /* ========================================================================== */
@@ -39,9 +43,21 @@ $mobile-width: 500px;
 
 //set html font size for all rem sizing:
 html {
-  font-size: 10px;
+  font-size: $tablet-rem;
 }
-
+// make the font smaller and all the rem values if below most mobile widths
+// how you have such a small device no clue...
+@media only screen and (max-width: $mobile-width){
+  html {
+    font-size: $mobile-rem;
+  }
+}
+// i mean seriously...
+@media only screen and (max-width: $xs-mobile-width){
+  html {
+    font-size: $xs-mobile-rem;
+  }
+}
 
 @import "style";
 
