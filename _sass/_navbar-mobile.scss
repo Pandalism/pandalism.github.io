@@ -55,7 +55,7 @@
 
   nav{
     // make nav disappear by default
-    // display: none;
+    display: none;
 
     a {
       // center text
@@ -74,7 +74,7 @@
   }
 
 .soc-media-container{
-    // display: none;
+    display: none;
     margin: 0 auto 0.5rem;
     justify-content: center;
 
@@ -102,49 +102,3 @@
 }
 
 }
-
-
-
-// nav {
-//   // set text colour
-//   text-align: right;
-//   margin-top: 2rem;
-//   margin-bottom: 2rem;
-//
-//   a {
-//     // fonts and size are in _fonts.scss
-//
-//     // display as block
-//     display: block;
-//
-//     // remove bullet points and underline
-//     text-decoration: none;
-//   }
-//
-//
-//
-//   a:hover {
-//     text-decoration: line-through;
-//   }
-//
-// }
-
-
-// .soc-media-container {
-//   display: flex;
-//
-//   div.soc-media-icon{
-//     padding: 1rem;
-//     background-color: $soc-media-bg-colour;
-//     border-radius: $nav-corner-radius;
-//     border: 0.1rem;
-//     border-style: solid;
-//     border-color: $nav-colour;
-//   }
-//
-//   img {
-//     object-fit: contain;
-//     height: 3rem;
-//     margin: auto;
-//   }
-// }
