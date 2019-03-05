@@ -77,7 +77,24 @@
     // display: none;
     margin: 0 auto 0.5rem;
     justify-content: center;
+
+    div.soc-media-icon{
+       padding: 1rem;
+       background-color: $soc-media-bg-colour;
+       border-radius: $nav-corner-radius;
+       border: 0.1rem;
+       border-style: solid;
+       border-color: $nav-colour;
+     }
+
+     img {
+       object-fit: contain;
+       height: 2rem;
+       margin: auto;
+     }
   }
+
+
 
 .copyright-nav{
     //hide this copyright in the nav bar
