@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Website update!
+title: Website update
 category: website
 tags: website jekyll sass html css js
 published: true
@@ -24,7 +24,7 @@ Using placeholders and randomly selected colours, the site looked pretty terribl
 
 ![Testing what it would look like on an iPad]({{ "/assets/posts/2019-02-05 Website build update/3.png" | absolute_url}})
 
-And all with a little HTML, CSS and JS. Although I admit I went against my own self-imposed rule of not using any toolboxes in using jQuery, I quickly realised that just made everything so damn difficult.
+And all with a little HTML, CSS and JS. Although I admit I went against my own self-imposed rule of not using any toolboxes in using jQuery, I quickly realised that just made everything so damn difficult, so I allowed myself such a luxury.
 
 
 ## Transitioning into Jekyll and Sass
