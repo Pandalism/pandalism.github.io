@@ -4,18 +4,21 @@
   <h1>{{ site.name }}</h1>
   <h2>{{ site.tagline }}</h2>
   <h3>{{ site.description }}</h3>
-  <img class="nav_icon" src="https://via.placeholder.com/95x95" alt="">
+  <img class="nav_icon hidden-menu" src="/assets/icons/menu_70.png" alt="">
+  <!-- add close menu icon, use same class to keep identical shape but then hide -->
+  <!-- using another class -->
+  <img class="nav_icon hidden-menu hide-menu" src="/assets/icons/menu-_70.png" alt="">
 </div>
 
 <!-- naviation links -->
-<nav>
+<nav class="hidden-menu hide-menu">
   <a href="#" class="current">Home</a>
   <a href="#">About</a>
   <a href="#"></a>
 </nav>
 
 <!-- social media icons -->
-<div class="soc-media-container">
+<div class="soc-media-container hidden-menu hide-menu">
   {% include soc-media.html%}
 </div>
 

@@ -49,13 +49,29 @@
     height: 100%;
 
     // set icon like properties
-    background-color: $soc-media-bg-colour;
+    background-color: $logo-bg-colour;
     border-radius: $nav-corner-radius-mobile;
   }
 
+  .close_nav_icon{
+  // space out to the right as far as possible
+  margin-left: auto;
+  // display itself
+  display: none;
+
+  // make img behave as it should
+  object-fit: contain;
+  height: 100%;
+
+  // set icon like properties
+  background-color: $logo-bg-colour;
+  border-radius: $nav-corner-radius-mobile;
+  }
+
+
   nav{
     // make nav disappear by default
-    display: none;
+    // display: none;
 
     a {
       // center text
@@ -74,7 +90,6 @@
   }
 
 .soc-media-container{
-    display: none;
     margin: 0 auto 0.5rem;
     justify-content: center;
 
@@ -101,4 +116,8 @@
     display: none;
 }
 
+}
+
+.hide-menu {
+  display: none;
 }
