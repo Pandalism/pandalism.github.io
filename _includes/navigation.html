@@ -1,20 +1,20 @@
 <!-- portion of nav bar always visible -->
 <div class="navbar">
-  <img class="site_icon" src="/assets/logo/logo-transparent-light.png" alt=""> </img>
+  <img class="site_icon" src="{{ site.baseurl }}/assets/logo/logo-transparent-light.png" alt=""> </img>
   <h1>{{ site.name }}</h1>
   <h2>{{ site.tagline }}</h2>
   <h3>{{ site.description }}</h3>
-  <img class="nav_icon hidden-menu" src="/assets/icons/menu_70.png" alt="">
+  <img class="nav_icon hidden-menu" src="{{ site.baseurl }}/assets/icons/menu_70.png" alt="">
   <!-- add close menu icon, use same class to keep identical shape but then hide -->
   <!-- using another class -->
-  <img class="nav_icon hidden-menu hide-menu" src="/assets/icons/menu-_70.png" alt="">
+  <img class="nav_icon hidden-menu hide-menu" src="{{ site.baseurl }}/assets/icons/menu-_70.png" alt="">
 </div>
 
 <!-- naviation links -->
 <nav class="hidden-menu hide-menu">
   <a href="#" class="current">Home</a>
   <a href="#">About</a>
-  <a href="#"></a>
+  <a href="/Blog/">Blog</a>
 </nav>
 
 <!-- social media icons -->
