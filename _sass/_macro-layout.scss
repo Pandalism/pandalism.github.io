@@ -35,9 +35,9 @@ html, body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-right: 3rem;
-  padding-bottom: 2rem;
-  padding-left: 1rem;
+  padding-right: $nav-right-margin;
+  padding-bottom: $nav-bottom-margin;
+  padding-left: $nav-left-margin;
 }
 
 .page-container{

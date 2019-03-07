@@ -13,9 +13,20 @@ $logo-bg-colour: rgba(255,255,255,0.9);
 $page-colour: rgba(255,255,255,1);
 $page-font-colour: rgba(0,0,0,1);
 
+$banner-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+
 // Padding-ratios, margins, etc.
 $nav-corner-radius: 2rem;
 $nav-corner-radius-mobile: 1rem;
+
+$nav-left-margin: 1rem;
+$nav-right-margin: 3rem;
+$nav-bottom-margin: 2rem;
+
+$page-left-margin: 3rem;
+$page-top-margin: 1rem;
+$page-right-margin: 3rem;
+$page-max-width: 72rem;
 
 // media widths and base font size (used for scaling)
 // $high-dpi-setting:1000px;
