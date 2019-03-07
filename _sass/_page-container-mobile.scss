@@ -1,0 +1,58 @@
+/* ========================================================================== */
+/*  Main article body mobile changes */
+/* ========================================================================== */
+
+// sort out the footer at the end of the articles
+@media only screen and (max-width: $tablet-width) {
+  .copyright-post {
+
+    text-align: center;
+
+    img {
+      object-fit: contain;
+      height: 5rem;
+      margin: 3rem auto 1rem;
+      border-radius: $nav-corner-radius / 2;
+      background-color: $logo-bg-colour;
+    }
+
+
+    p {
+      font-size: 1.1rem;
+      display: block;
+    }
+  }
+
+
+  // table {
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //     // border: 1px solid black;
+  //     width: 80%;
+  //
+  //
+  // }
+  //
+  // thead {
+  //   border-bottom: 1px solid black;
+  // }
+  //
+  // tbody {
+  //
+  // }
+  //
+  // th, td {
+  //   padding: 0.5rem 1rem;
+  //
+  // }
+  //
+  // // if caption is included also modify that
+  // img + em, figcaption {
+  //     display: block;
+  //     text-align: center;
+  //     margin-bottom: 1rem;
+  //     max-width: 60%;
+  //     margin: 0 auto;
+  //
+  // }
+}
