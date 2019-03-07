@@ -5,7 +5,7 @@ title: Example-Page
 
 This is the test page. Here would be a short intro into whats happening Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. *Emphasis*, __boldness__, very _**bold** emphasis_ and ~~strikethroughs~~.
 
 
 ## level 2 header
