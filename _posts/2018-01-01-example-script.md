@@ -26,9 +26,9 @@ cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
 id est laborum.
 
 
-#### lvl 4
+#### lvl 4 How about some emoji :grinning:
 
-Lorem ipsum dolor sit, consectetur adipisicing elit, sed do eiusmod
+Hopefully this works: :fearful:. Lorem ipsum dolor sit, consectetur adipisicing elit, sed do eiusmod :shit::shit::shit::raised_hands::rage1:
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
 ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
