@@ -88,27 +88,42 @@
     }
 
     // deal with how tables are displayed
+
     table {
+        margin-top: 2em;
         margin-left: auto;
         margin-right: auto;
         // border: 1px solid black;
-        width: 80%;
+        min-width: 60%;
+    }
 
+    // special wrapper div change
+    .testing{
+      overflow-x: scroll;
+      width: 80%;
 
     }
 
     thead {
       border-bottom: 1px solid black;
+      background-color: $table-head-colour;
     }
 
-    tbody {
+    tr:nth-child(2n) {
+      background-color: $table-even-colour;
+    }
 
+    tr:nth-child(2n+1) {
+      background-color: $table-odd-colour;
     }
 
     th, td {
       padding: 0.5rem 1rem;
 
     }
+
+
+
 
     // if caption is included also modify that
     img + em, figcaption {
