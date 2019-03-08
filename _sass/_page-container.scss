@@ -2,36 +2,7 @@
 /*  Main article body */
 /* ========================================================================== */
 
-// Start dealing with banner-image and banner-title
-.banner-image img{
-  // make sure image fits properlly and gets cropped
-  object-fit: cover;
-  width: 100%;
-  height: 30rem;
-}
 
-.banner-title {
-  // position title on top of banner
-  position: absolute;
-  top: 0rem;
-  height: 30rem;
-  width: 100%;
-
-  //justify to bottom of heading
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  //set gradient over banner
-  background: $banner-gradient;
-
-  // set banner title position and margins
-  h1 {
-    margin-left: $page-left-margin;
-    margin-bottom: 1rem;
-  }
-
-}
 
 // main post margins
 .post {
@@ -42,31 +13,6 @@
   margin-top: $page-top-margin;
 }
 
-// set css for the letter head.
-.letterhead {
-  img {
-    object-fit: cover;
-    width: 10rem;
-    height: 10rem;
-    border-radius: $nav-corner-radius;
-    background-color: $logo-bg-colour;
-    display: inline;
-    vertical-align: bottom;
-
-
-  }
-
-  h1 {
-    display: inline;
-    vertical-align: bottom;
-    margin-left: 1rem;
-
-  }
-
-  .date {
-    margin-top: 1rem;
-  }
-}
 
 .article {
     // how images and captions are are treated
