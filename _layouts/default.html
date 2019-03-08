@@ -16,44 +16,7 @@
         <!-- container for articles and pages -->
         <div class="page-container">
 
-          <!-- If banner image is present -->
-          <div class="banner-image hidden">
-            <img src="https://via.placeholder.com/1200x400" alt="Banner Image">
-          </div>
-
-          <div class="banner-title hidden">
-            <h1>heading 1</h1>
-          </div>
-
-
-          <div class="post w-banner no-banner">
-
-            <!-- dates, title and tags -->
-            <div class="letterhead">
-
-              <img src="https://via.placeholder.com/500x500" alt="" class="">
-              <h1 class=""> heading 1 non banner</h1>
-              <p class="date">2019-02-03</p>
-              <p class="tags">[<code>tag1 tag2 tag3</code>]</p>
-
-            </div>
-
-            <!-- main article -->
-            <div class="article">
-                      {{ content }}
-
-
-            </div>
-
-            <!-- copyright for mobile view -->
-            <div class="copyright-post">
-              <img src="{{ site.baseurl }}/assets/logo/logo-transparent-light.png" alt="">
-              <p>Copyright © {{ site.time | date: '%Y' }} Pandalism</p>
-            </div>
-
-          </div>
-
-
+          {{content}}
 
         </div>
 

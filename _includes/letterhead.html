@@ -1,0 +1,29 @@
+<div class="letterhead">
+
+  {% unless page.banner %}
+
+  {% if page.category == "Debugging" %}
+  <img src="https://via.placeholder.com/500x500" alt="" class="">
+  {% endif %}
+
+
+  <h1 class="">{{page.title}}</h1>
+  {% endunless %}
+
+  <!-- logic for adding the date for posts -->
+  {% if page.layout == "post" %}
+  <p class="date">{{ page.date | date_to_long_string }}</p>
+  {% endif %}
+
+  <!-- logic for iterating and linking tags -->
+  <p class="tags">[
+
+    {% for tag in page.tags %}
+    <a href="#">
+      <code><nobr>{{tag}}</nobr></code>
+    </a>&nbsp;
+    {% endfor %}
+
+      ]</p>
+
+</div>
