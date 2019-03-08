@@ -47,4 +47,14 @@ veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
 ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-id est laborum.
+id est laborum. Next up is a load of html code:
+
+
+### level 3 - now we see some js code:
+```javascript
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
+#### lvl 4 and un-marked code too:
