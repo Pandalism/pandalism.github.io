@@ -26,8 +26,8 @@ social-media:
 url: http://felixdmr.com
 baseurl: ""
 
-# set permalinks to be /catergories/year/month/day
-permalink: pretty
+# set permalinks to be /year/month/day/title
+permalink: /:year/:month/:day/:title/
 
 
 # Plugin options
