@@ -100,6 +100,13 @@ em, figcaption {
   font-style: italic;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid black;
+  max-width: 50%;
+  margin: auto;
+}
+
 strong {
   font-weight: 600;
 }

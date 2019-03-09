@@ -41,6 +41,7 @@
         margin-right: auto;
         // border: 1px solid black;
         min-width: 60%;
+        border-collapse: separate;
     }
 
     // special wrapper div change
@@ -51,8 +52,26 @@
     }
 
     thead {
-      border-bottom: 1px solid black;
+      // border: 1px solid black;
+      // border-bottom: 1px solid black;
+      // border-radius: $nav-corner-radius;
       background-color: $table-head-colour;
+
+      th {
+        border-width: 1px;
+        border-color: transparent; // transparent
+        border-style: solid;
+        // border-radius:  $nav-corner-radius;
+      }
+      th:nth-child(1) {
+        border-radius: $nav-corner-radius 0 0 0;
+      }
+
+      th:nth-last-child(1) {
+        border-radius: 0 $nav-corner-radius 0 0;
+      }
+
+
     }
 
     tr:nth-child(2n) {
@@ -67,6 +86,22 @@
       padding: 0.5rem 1rem;
 
     }
+
+    tr:nth-last-child(1) {
+        border-width: 1px;
+        border-color: transparent; // transparent
+        border-style: solid;
+        // border-radius:  $nav-corner-radius;
+
+      td:nth-child(1) {
+        border-radius: 0 0 0$nav-corner-radius ;
+      }
+
+      td:nth-last-child(1) {
+        border-radius: 0 0 $nav-corner-radius 0 ;
+      }
+    }
+
 
 
 
@@ -84,6 +119,7 @@
     // space out paragraphs more
     p {
       margin-bottom: 1rem;
+      margin-top: 1rem;
     }
 
     // make sure anchors are same colour as text
@@ -91,6 +127,42 @@
       color: inherit;
     }
 }
+
+
+.blog-post{
+  margin-top: $blog-post-top-margin;
+  margin-bottom: $blog-post-bottom-margin;
+
+  a {
+    text-decoration: none;
+  }
+
+
+  .category{
+    display: inline-flex;
+    width: 5rem;
+    height: 5rem;
+    border-radius: $nav-corner-radius / 2;
+    background-color: $category-bg-colour;
+    padding: 0.5rem;
+
+    img {
+      object-fit: contain;
+      max-height: 100%;
+      max-width: 100%;
+      padding: 0;
+    } }
+
+  h3 {
+    display: inline;
+    vertical-align: bottom;
+    margin-left: 1rem;
+
+  }
+
+}
+
+
 
 // sort out the footer at the end of the articles
 .copyright-post {
