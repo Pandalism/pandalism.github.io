@@ -10,13 +10,30 @@ permalink: /blog/
   {% for post in site.posts %}
     <article class="blog-post">
 
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        {% if post.category %}
+        <div class="category">
+          <img src="{{site.baseurl}}/assets/icons/category/{{post.category}}.png" alt="" class="">
+        </div>
 
-      <div class="entry">
+
+        {% else if %}
+        <div class="category">
+          <img src="https://via.placeholder.com/400x400" alt="" class="">
+        </div>
+        {% endif %}
+
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+
+      <div class="blog-post-excerpt">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="blog-post-more"><p>Read More</p></a>
+
     </article>
+
+    <hr>
+
   {% endfor %}
 </div>
