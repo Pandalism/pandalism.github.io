@@ -34,6 +34,8 @@ permalink: /:year/:month/:day/:title/
 emoji:
   src: "/assets/"
 
+paginate: 2
+paginate_path: "/blog/page:num/"
 
 
 # Jekyll 3 now only supports Kramdown for Markdown
@@ -57,6 +59,7 @@ plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jemoji # Adds github emoji's
+  - jekyll-paginate
 
 # Exclude these files from your production _site
 exclude:
