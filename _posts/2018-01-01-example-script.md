@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Example page of text"
+category: debugging
 tags: example-page example-tags
 ---
 
