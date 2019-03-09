@@ -2,8 +2,10 @@
 
   {% unless page.banner %}
 
-  {% if page.category == "Debugging" %}
-  <img src="https://via.placeholder.com/500x500" alt="" class="">
+  {% if page.category %}
+  <img src="assets/icons/category/{{page.category.png}}" alt="" class="">
+  {% else if %}
+  <img src="https://via.placeholder.com/400x400" alt="" class="">
   {% endif %}
 
 
