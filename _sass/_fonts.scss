@@ -58,14 +58,30 @@ h5, h6 {
   color: inherit;
 }
 
-p, figcaption, code{
+p, figcaption, code, li{
   font-size: 1.4rem;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
-  line-height: 2.3rem;
+  line-height: 2.1rem;
   color: inherit;
 }
+
+ol, ul, dl{
+  padding-left: $page-left-margin / 2;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+ul {
+
+  list-style: disc inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
 
 table {
   font-size: 1.4rem;
@@ -87,6 +103,10 @@ em, figcaption {
 strong {
   font-weight: 600;
 }
+
+
+
+
 
 /* Nav bar fonts and font sizes */
 .navbar {
