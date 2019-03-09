@@ -15,7 +15,7 @@ avatar: /assets/Logo/Logo-Transparent.png
 
 # Social Media icons
 social-media:
-  email: felix.dmr@gmail.com
+  email: contactfelix@felixdmr.com
   linkedin: felixdmr
   # instagram: felixdmr
   github: Pandalism
@@ -30,13 +30,9 @@ baseurl: ""
 permalink: pretty
 
 
-
-
-
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+# Plugin options
+emoji:
+  src: "asssets/emoji"
 
 
 
