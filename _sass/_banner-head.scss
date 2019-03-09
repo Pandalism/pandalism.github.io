@@ -36,17 +36,22 @@
 
 // set css for the letter head.
 .letterhead {
-  img {
-    object-fit: cover;
+  .category{
+    display: inline-flex;
     width: 10rem;
     height: 10rem;
     border-radius: $nav-corner-radius;
-    background-color: $logo-bg-colour;
-    display: inline;
-    vertical-align: bottom;
+    background-color: $category-bg-colour;
+    padding: 1rem;
 
+    img {
+      object-fit: contain;
+      max-height: 100%;
+      max-width: 100%;
+    }
 
   }
+
 
   h1 {
     display: inline;

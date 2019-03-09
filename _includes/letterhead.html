@@ -3,9 +3,15 @@
   {% unless page.banner %}
 
   {% if page.category %}
-  <img src="assets/icons/category/{{page.category}}.png" alt="" class="">
+  <div class="category">
+    <img src="{{site.baseurl}}/assets/icons/category/{{page.category}}.png" alt="" class="">
+  </div>
+
+
   {% else if %}
-  <img src="https://via.placeholder.com/400x400" alt="" class="">
+  <div class="category">
+    <img src="https://via.placeholder.com/400x400" alt="" class="">
+  </div>
   {% endif %}
 
 
@@ -18,6 +24,7 @@
   {% endif %}
 
   <!-- logic for iterating and linking tags -->
+  {% if page.tags %}
   <p class="tags">[
 
     {% for tag in page.tags %}
@@ -27,5 +34,6 @@
     {% endfor %}
 
       ]</p>
+    {% endif %}
 
 </div>
