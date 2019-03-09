@@ -3,6 +3,7 @@ layout: post
 title: "Example page of text"
 category: debugging
 tags: example-page example-tags
+published: false
 ---
 
 This is the test page. Here would be a short intro into whats happening Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

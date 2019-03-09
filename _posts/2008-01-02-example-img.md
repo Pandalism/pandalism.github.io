@@ -4,6 +4,7 @@ title: "Example page of images"
 banner: "https://via.placeholder.com/1200x600"
 category: debugging
 tags: example-page example-tags example-images
+published: false
 ---
 
 This is the test page. Here would be a short intro into whats happening Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
