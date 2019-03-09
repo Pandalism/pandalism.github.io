@@ -32,7 +32,7 @@ permalink: pretty
 
 # Plugin options
 emoji:
-  src: "asssets/emoji"
+  src: "/assets/"
 
 
 
