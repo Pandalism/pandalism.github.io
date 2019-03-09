@@ -163,6 +163,11 @@
 }
 
 
+.pagination{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 // sort out the footer at the end of the articles
 .copyright-post {
