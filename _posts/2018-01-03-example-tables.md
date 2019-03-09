@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Example page of text"
-category: Debugging
+title: "Example page of tables"
+category: debugging
 tags: example-page example-tags example-images
 ---
 

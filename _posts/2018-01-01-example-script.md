@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Example page of text"
-category: Debugging
+category: debugging
 tags: example-page example-tags
 ---
 
@@ -48,6 +48,7 @@ ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
 id est laborum. Next up is a load of html code:
+
 ```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -68,4 +69,35 @@ function test() {
 }
 ```
 
-#### lvl 4 and un-marked code too:
+#### lvl 4 block quotes too
+
+> Quotes are important things to put in special boxes, because they were said by important people:
+
+- Someone famous, probably.
+
+### horizontal lines
+
+---
+
+***
+
+___
+
+##### lists
+
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses

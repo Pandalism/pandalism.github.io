@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Example page of text"
+title: "Example page of images"
 banner: "https://via.placeholder.com/1200x600"
-category: Debugging
+category: debugging
 tags: example-page example-tags example-images
 ---
 
