@@ -1,8 +1,8 @@
 
 <!-- social media icon for email -->
-{% if site.social-media.email %}
+{% if site.social-media.email_ciphered %}
 <div class="soc-media-icon">
-  <a href="#"><img src="{{ site.baseurl }}/assets/icons/email.png" alt=""></img> </a>
+  <a id="email_obsf" href="{{site.social-media.email_ciphered}}"><img src="{{ site.baseurl }}/assets/icons/email.png" alt=""></img> </a>
 </div>
 {% endif %}
 

@@ -15,7 +15,9 @@ avatar: /assets/Logo/Logo-Transparent.png
 
 # Social Media icons
 social-media:
-  email: contactfelix@felixdmr.com
+  email_ciphered: you+need+js+for+this+to+work
+  email_key: "20,14,28,71,26,10,95,7,68,4,7,74,5,27,31,78,52,14,12,31,66,12,11,70,5,65,17,4,109"
+  # email: "mailto: "
   linkedin: felixdmr
   # instagram: felixdmr
   github: Pandalism
