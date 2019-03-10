@@ -16,7 +16,7 @@
 
 .article {
     // how images and captions are are treated
-    img{
+    img, video{
         // contain image in sizes
         object-fit: contain;
 
