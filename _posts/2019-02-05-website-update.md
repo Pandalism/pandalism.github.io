@@ -51,5 +51,5 @@ At this point I also started focusing more on the general design of the page and
 *How it looks like on Desktop*
 
 
-![Mobile]({{{site.url}}/{{page.assets}}/6.png)
+![Mobile]({{site.url}}/{{page.assets}}/6.png)
 *How it looks like on Mobile*
