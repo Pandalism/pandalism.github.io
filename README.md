@@ -16,11 +16,13 @@ I figure it'll be a pretty standard webpage structure:
 ## Roadmap
 To remind myself what I'd like to achieve here:
  - [x] v0.1 - Start the site!
- - [ ] v0.5 - Site has a landing page following the structure outlined before, but uses the theme from [Jekyll Now](https://github.com/barryclark/jekyll-now)
- - [ ] v1.0 - Same content/structure/features but now using my own layouts/themes/design
- - [ ] v1.5 - Add tagging/categories
- - [ ] v2.0 - Make it pretty/snazzy/fancy.:bowtie:
-
+ - [x] v0.5 - Site has a landing page following the structure outlined before, but uses the theme from [Jekyll Now](https://github.com/barryclark/jekyll-now)
+ - [x] v1.0 - Same content/structure/features but now using my own layouts/themes/design :bowtie:
+ - [ ] v1.1 - expand icon set to sub categories
+ - [ ] v1.2 - make banner pictures appear on the mini icons next to blog entries
+ - [ ] v1.3 - Add projects and project layout
+ - [ ] v1.4 - Add tagging/categories
+ - [ ] v2.0 - Update design pending criticisims
 
 ## Credits
 I seriously would have gone nowhere if I had gone back to trying to do everything in just HTML, CSS and JS. I knew I wanted a static site but until I found out about static site generators it looked like a gargantuan effort to make a blog:no_mouth:.
