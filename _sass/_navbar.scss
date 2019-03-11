@@ -59,14 +59,14 @@ nav {
 
   div.soc-media-icon{
     // make some space inside to the icons, so that they are more centered
-    padding: 1rem;
+    padding: 0.5rem;
 
     //set icon colour
     background-color: $soc-media-bg-colour;
     //set border-radius
-    border-radius: $nav-corner-radius;
+    border-radius: $nav-corner-radius / 2;
     //space out items a little
-    margin: 0 0.1rem;
+    margin: 0 0.3rem;
   }
 
   img {
