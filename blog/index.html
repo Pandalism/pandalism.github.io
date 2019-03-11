@@ -1,0 +1,58 @@
+---
+layout: page
+title: "Blog"
+category: programming
+---
+
+
+<div class="blog-posts">
+  {% for post in paginator.posts %}
+    <article class="blog-post">
+
+        {% if post.category %}
+        <div class="category">
+          <img src="{{site.baseurl}}/assets/icons/category/{{post.category}}.png" alt="" class="">
+        </div>
+
+
+        {% else if %}
+        <div class="category">
+          <img src="https://via.placeholder.com/400x400" alt="" class="">
+        </div>
+        {% endif %}
+
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+
+      <div class="blog-post-excerpt">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="blog-post-more"><p>Read More</p></a>
+
+    </article>
+
+    <hr>
+
+  {% endfor %}
+
+  <!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      <p>Previous</p>
+    </a>
+  {% else %}
+    <span class="previous"><p>Previous</p></span>
+  {% endif %}
+  <span class="page_number ">
+    <p>Page: {{ paginator.page }} of {{ paginator.total_pages }}</p>
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next"><p>Next</p></a>
+  {% else %}
+    <span class="next "><p>Next</p></span>
+  {% endif %}
+</div>
+
+</div>

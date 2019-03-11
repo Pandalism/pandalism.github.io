@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+
+<body>
+  <a href="/blog/">
+  <div class="splash-container">
+    <div class="splash-box">
+
+      <div class="splash-layer">
+        <img id="ears_img" src="{{site.url}}/page-assets/splash/ears.png" alt="">
+      </div>
+      <div class="splash-layer">
+        <img id="eyes_img" src="{{site.url}}/page-assets/splash/eyes.png" alt="">
+      </div>
+      <div class="splash-layer">
+        <img id="nose_img" src="{{site.url}}/page-assets/splash/nose.png" alt="">
+      </div>
+
+    </div>
+    <!-- <p id="position">[0,0]</p> -->
+  </div>
+  <div class="splash-title">
+      {{content}}
+  </div>
+
+  </a>
+
+  <link rel="stylesheet" href="{{site.url}}/page-assets/splash/splash.css">
+  <script type="text/javascript" src="{{site.url}}/page-assets/splash/splash.js">
+
+</script>
+
+</body>
+</html>

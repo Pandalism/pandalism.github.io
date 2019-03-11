@@ -1,0 +1,77 @@
+/* ========================================================================== */
+/*  Navigation side/top bar */
+/* ========================================================================== */
+.navbar{
+  text-align: right;
+
+  h3 {
+    margin-top: 0.5rem;
+  }
+}
+
+.nav_icon{
+  display: none;
+  object-fit: contain;
+  height: 10rem;
+  border-radius: $nav-corner-radius;
+  background-color: $logo-bg-colour;
+}
+
+.close-menu{
+  display: none;
+}
+
+.site_icon{
+  object-fit: contain;
+  height: 10rem;
+  border-radius: $nav-corner-radius;
+  background-color: $logo-bg-colour;
+}
+
+
+nav {
+  // set text colour
+  text-align: right;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  a {
+    // fonts and size are in _fonts.scss
+
+    // display as block
+    display: block;
+
+    // remove bullet points and underline
+    text-decoration: none;
+  }
+
+
+
+  a:hover {
+    text-decoration: line-through;
+  }
+
+}
+
+
+.soc-media-container {
+  display: flex;
+
+  div.soc-media-icon{
+    // make some space inside to the icons, so that they are more centered
+    padding: 0.5rem;
+
+    //set icon colour
+    background-color: $soc-media-bg-colour;
+    //set border-radius
+    border-radius: $nav-corner-radius / 2;
+    //space out items a little
+    margin: 0 0.3rem;
+  }
+
+  img {
+    object-fit: contain;
+    height: 3rem;
+    margin: auto;
+  }
+}

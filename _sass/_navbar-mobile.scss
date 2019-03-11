@@ -1,0 +1,129 @@
+/* ========================================================================== */
+/*  Navigation mobile top bar */
+/* ========================================================================== */
+
+
+@media only screen and (max-width: $tablet-width) {
+  .navbar {
+    text-align: left;
+    // change display type to flexbox
+    display: flex;
+    /* justify-content: space-between; */
+    height: 5rem;
+
+    h1 {
+      margin-top: auto;
+      margin-bottom: auto;
+      // space out slightly from icon
+      margin-left: 0.5rem;
+
+      font-size: 3.3rem;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 600;
+      line-height: 3.3rem;
+    }
+
+    h2, h3{
+      display: none;
+    }
+  }
+
+  .site_icon{
+
+    // make img behave as it should
+    object-fit: contain;
+    height: 100%;
+
+    // set mobile icon like properties
+    border-radius: $nav-corner-radius-mobile;
+  }
+
+
+  .nav_icon{
+    // space out to the right as far as possible
+    margin-left: auto;
+    // display itself
+    display: unset;
+
+    // make img behave as it should
+    object-fit: contain;
+    height: 100%;
+
+    // set icon like properties
+    background-color: $logo-bg-colour;
+    border-radius: $nav-corner-radius-mobile;
+  }
+
+  .close_nav_icon{
+    // space out to the right as far as possible
+    margin-left: auto;
+    // display itself
+    display: none;
+
+    // make img behave as it should
+    object-fit: contain;
+    height: 100%;
+
+    // set icon like properties
+    background-color: $logo-bg-colour;
+    border-radius: $nav-corner-radius-mobile;
+
+  }
+
+
+  nav{
+    // make nav disappear by default
+    // display: none;
+
+    a {
+      // center text
+      text-align: center;
+
+      font-size: 2rem;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      line-height: 2.2rem;
+
+      margin-bottom: 0;
+    }
+
+
+  }
+
+.soc-media-container{
+    margin: 0 auto 0.5rem;
+    justify-content: center;
+
+    div.soc-media-icon{
+       padding: 1rem;
+       background-color: $soc-media-bg-colour;
+       border-radius: $nav-corner-radius;
+       border: 0.1rem;
+       border-style: solid;
+       border-color: $nav-colour;
+     }
+
+     img {
+       object-fit: contain;
+       height: 2rem;
+       margin: auto;
+     }
+  }
+
+
+
+.copyright-nav{
+    //hide this copyright in the nav bar
+    display: none;
+}
+
+
+.hide-menu {
+
+    display: none;
+  }
+
+
+}

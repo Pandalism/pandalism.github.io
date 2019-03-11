@@ -1,0 +1,90 @@
+---
+---
+//
+// Variables
+//
+// Colours
+$nav-colour: rgba(20,20,20,0.9);
+$nav-font-colour: rgba(255,255,255,0.9);
+$nav-link-colour: rgba(255,255,255,0.6);
+$soc-media-bg-colour: rgba(255, 255, 255,0.6);
+$logo-bg-colour: rgba(255,255,255,0.9);
+
+$page-colour: rgba(255,255,255,1);
+$category-bg-colour: rgba(200,200,200,1);
+$page-font-colour: rgba(0,0,0,1);
+
+$banner-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+$table-odd-colour: rgba(0,0,0,0.1);
+$table-even-colour: rgba(0,0,0,0.15);
+$table-head-colour: rgba(200,200,200,1);
+
+// Padding-ratios, margins, etc.
+$nav-corner-radius: 2rem;
+$nav-corner-radius-mobile: 1rem;
+
+$nav-left-margin: 1rem;
+$nav-right-margin: 3rem;
+$nav-bottom-margin: 2rem;
+
+$page-left-margin: 3rem;
+$page-top-margin: 3rem;
+$page-right-margin: 3rem;
+$page-max-width: 72rem;
+
+$blog-post-top-margin: 1rem;
+$blog-post-bottom-margin: 1rem;
+
+// media widths and base font size (used for scaling)
+// $high-dpi-setting:1000px;
+// $high-dpi-rem:10px;
+$tablet-width: 800px;
+$tablet-rem: 10px;
+$mobile-width: 315px;
+$mobile-rem: 8px;
+$xs-mobile-width: 230px;
+$xs-mobile-rem: 5px;
+
+
+// IMPORTS
+//
+/* ========================================================================== */
+/*  Reset and normalize css */
+/* ========================================================================== */
+@import "reset";
+// @import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/* ========================================================================== */
+/* ========================================================================== */
+/*  Own CSS code */
+/* ========================================================================== */
+/* ========================================================================== */
+
+//set html font size for all rem sizing:
+html {
+  font-size: $tablet-rem;
+}
+// make the font smaller and all the rem values if below most mobile widths
+// how you have such a small device no clue...
+@media only screen and (max-width: $mobile-width){
+  html {
+    font-size: $mobile-rem;
+  }
+}
+// i mean seriously...
+@media only screen and (max-width: $xs-mobile-width){
+  html {
+    font-size: $xs-mobile-rem;
+  }
+
+  body {
+  }
+}
+
+@import "style";
+
+@import "emoji";
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "highlights";

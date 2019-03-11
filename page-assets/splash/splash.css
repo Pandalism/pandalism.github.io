@@ -1,0 +1,39 @@
+.splash-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.splash-box{
+  /* border: 1px solid black; */
+  width: 40rem;
+  height: 40rem;
+  position: static;
+}
+
+.splash-layer{
+position: relative;
+}
+
+#ears_img {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  transform: translate(0px,00px);
+}
+
+#eyes_img {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  transform: translate(0px,0px);
+}
+
+#nose_img {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  transform: translate(0px,0px);
+}

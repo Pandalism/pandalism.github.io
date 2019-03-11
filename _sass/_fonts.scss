@@ -1,0 +1,156 @@
+/* ========================================================================== */
+/*  Fonts and fontsizes */
+/* ========================================================================== */
+
+@import url('https://rsms.me/inter/inter.css');
+
+/*insert fall back fontface*/
+
+// set font and font sizes
+body {
+  font-family:'Inter', sans-serif;
+  color: rgba(0,0,0,1);
+}
+
+h1 {
+  font-size: 5rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 6.5rem;
+  color: inherit;
+}
+
+
+h2 {
+  font-size: 3.3rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 4rem;
+  color: inherit;
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 3.3rem;
+  color: inherit;
+}
+
+h4 {
+  font-size: 2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  line-height: 2.7rem;
+  color: inherit;
+}
+
+h5, h6 {
+  font-size: 1.7rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 2.3rem;
+  color: inherit;
+}
+
+p, figcaption, code, li{
+  font-size: 1.4rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: inherit;
+}
+
+ol, ul, dl{
+  padding-left: $page-left-margin / 2;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+}
+
+ul {
+
+  list-style: disc inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+
+table {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2.3rem;
+  color: inherit;
+}
+
+thead {
+  font-weight: 600;
+}
+
+em, figcaption {
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+  max-width: 50%;
+  margin: auto;
+}
+
+strong {
+  font-weight: 600;
+}
+
+
+
+
+
+/* Nav bar fonts and font sizes */
+.navbar {
+  h1 {
+
+  }
+  h2 {
+    font-size: 3rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 4rem;
+    color: inherit;
+  }
+
+  h3{
+    font-size: 2rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 2.7rem;
+    color: inherit;
+  }
+}
+
+nav {
+
+  a {
+    font-size: 2rem;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 3rem;
+    color: $nav-link-colour;
+  }
+
+  a.current{
+    font-weight: 600;
+  }
+}

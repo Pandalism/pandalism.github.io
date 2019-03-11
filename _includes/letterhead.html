@@ -1,0 +1,39 @@
+<div class="letterhead">
+
+  {% unless page.banner %}
+
+  {% if page.category %}
+  <div class="category">
+    <img src="{{site.baseurl}}/assets/icons/category/{{page.category}}.png" alt="" class="">
+  </div>
+
+
+  {% else if %}
+  <div class="category">
+    <img src="https://via.placeholder.com/400x400" alt="" class="">
+  </div>
+  {% endif %}
+
+
+  <h1 class="">{{page.title}}</h1>
+  {% endunless %}
+
+  <!-- logic for adding the date for posts -->
+  {% if page.layout == "post" %}
+  <p class="date">{{ page.date | date_to_long_string }}</p>
+  {% endif %}
+
+  <!-- logic for iterating and linking tags -->
+  {% if page.tags %}
+  <p class="tags">[
+
+    {% for tag in page.tags %}
+    <a href="#">
+      <code><nobr>{{tag}}</nobr></code>
+    </a> &nbsp;
+    {% endfor %}
+
+      ]</p>
+    {% endif %}
+
+</div>

@@ -1,0 +1,30 @@
+<!-- portion of nav bar always visible -->
+<div class="navbar">
+  <img class="site_icon" src="{{ site.baseurl }}/assets/logo/logo-transparent-light.png" alt=""> </img>
+  <h1>{{ site.name }}</h1>
+  <h2>{{ site.tagline }}</h2>
+  <h3>{{ site.description }}</h3>
+  <img class="nav_icon hidden-menu" src="{{ site.baseurl }}/assets/icons/menu_70.png" alt="">
+  <!-- add close menu icon, use same class to keep identical shape but then hide -->
+  <!-- using another class -->
+  <img class="nav_icon hidden-menu hide-menu" src="{{ site.baseurl }}/assets/icons/menu-_70.png" alt="">
+</div>
+
+<!-- naviation links -->
+<nav class="hidden-menu hide-menu">
+  {% comment %}
+  <a href="/" {% if site.baseurl == "/" %} class="current" {% endif %}>Splash</a>
+  {% endcomment %}
+  <a href="/blog/" {% if page.dir == "/blog/" %} class="current" {% endif %}>Blog</a>
+  <a href="/about/" {% if page.dir == "/about/" %} class="current" {% endif %} >About</a>
+
+</nav>
+<!-- social media icons -->
+<div class="soc-media-container hidden-menu hide-menu">
+  {% include soc-media.html%}
+</div>
+
+<!-- desktop copyright location -->
+<div class="copyright-nav">
+  <p>Copyright © {{ site.time | date: '%Y' }} Pandalism</p>
+</div>
