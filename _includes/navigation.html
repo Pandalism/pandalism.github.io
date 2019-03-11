@@ -12,11 +12,13 @@
 
 <!-- naviation links -->
 <nav class="hidden-menu hide-menu">
-  <a href="/blog/" class="current">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
-</nav>
+  {% comment %}
+  <a href="/" {% if site.baseurl == "/" %} class="current" {% endif %}>Splash</a>
+  {% endcomment %}
+  <a href="/blog/" {% if page.dir == "/blog/" %} class="current" {% endif %}>Blog</a>
+  <a href="/about/" {% if page.dir == "/about/" %} class="current" {% endif %} >About</a>
 
+</nav>
 <!-- social media icons -->
 <div class="soc-media-container hidden-menu hide-menu">
   {% include soc-media.html%}
