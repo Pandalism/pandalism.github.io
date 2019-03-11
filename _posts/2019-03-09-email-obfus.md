@@ -14,7 +14,7 @@ Email spammers use bots to crawl the internet and make note of the mailto: links
 
 For more information [wikipedia](https://en.wikipedia.org/wiki/Email_spam), and a couple of other sites, can explain exactly how these bots work and what techniques work and which don't. But I didn't pay much attention to these other than a cursory glance, mostly because I kind of wanted to a) practice my javascript and b) try to figure it out myself.
 
-I figured the key to hiding the email was a simple XOR encryption/encoding. XOR operations are one of the key parts of symmetric cryptography, and actually if the key is as long as the plaintext, XOR encryption is [apparently effectively unbreakable](http://www.cs.miami.edu/home/burt/learning/Csc609.051/notes/02.html). In this case its not really cryptography because the client gets both the 'key' and the 'ciphertext'. However I'd say almost all bots don't truly execute javascript (they certainly read it though), so giving them over both uncombined will almost certainly work.
+I figured the key to hiding the email was a simple XOR encryption/encoding. XOR operations are one of the key parts of symmetric cryptography, and actually if the key is as long as the plaintext, XOR encryption is [apparently effectively unbreakable](http://www.cs.miami.edu/home/burt/learning/Csc609.051/notes/02.html). In this case its not really cryptography because everyone, including the spam bots, get both the 'key' and the 'ciphertext'. However I'd say almost all bots don't truly execute javascript (they certainly read it though), so giving them over both uncombined will almost certainly work.
 
 The previous link is probably better at explaining it but what's great about XOR is that its super simple due to the following:
 
