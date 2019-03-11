@@ -25,7 +25,7 @@ social-media:
 
 
 # Used for Sitemap.xml and your RSS feed
-url: http://felixdmr.com
+url: https://felixdmr.com
 baseurl: ""
 
 # set permalinks to be /year/month/day/title
