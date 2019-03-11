@@ -10,7 +10,7 @@ I figure it'll be a pretty standard webpage structure:
  * Projects
     * Subproject page 1
     * Subproject page 2
- * Contact/SocialMedia stuff? <- this will go in footer
+ * Contact/Social-media stuff? <- this will go in footer
 
 
 ## Roadmap
