@@ -7,11 +7,11 @@ tags: archives gifs after-effects engines chemical-reactions
 assets: post-assets/2017-01-22-combustion-gif
 ---
 
-Looping gifs have always kinda mesmerised me, so when I came across [this amazing video from Warped Perception](https://www.youtube.com/watch?v=jdW1t8r8qYc) I knew I just had to make a gif. *Warped Perception* are not the first in making videos of engines with transparent heads or windows, as previously *Petri Ranki* had done it with a [two stroke](https://www.youtube.com/watch?v=BrWpF6YiSDs) and many model engine builders had been incorporating glass cylinders into their [creations](https://www.youtube.com/watch?v=6M9Yqctk_Tg).
+Looping gifs have always kinda mesmerised me, so when I came across [this amazing video from Warped Perception](https://www.youtube.com/watch?v=jdW1t8r8qYc) I knew I just had to make a gif. *Warped Perception* are not the first in making videos of engines with transparent heads or windows, as previously *Petri Ranki* had done it with a [two stroke](https://www.youtube.com/watch?v=BrWpF6YiSDs), and many model engine builders had been incorporating glass cylinders into their [creations](https://www.youtube.com/watch?v=6M9Yqctk_Tg) over the years.
 
-However, they have definitely made one of the best videos out there, perfectly showcasing the 4-strokes in the Otto Cycle in the classic ['L-head' layout](https://en.wikipedia.org/wiki/Cam-in-block). If you look closely you can even see the 'wasted spark' characteristic of simple engines. Mechanically interesting, chemical reaction and in a slow-mo seemless loop? I think it might be a [/r/perfectloops](https://www.reddit.com/r/perfectloops/), [/r/mechanical_gifs](https://www.reddit.com/r/r/mechanical_gifs), and [/r/chemicalreactiongifs](https://www.reddit.com/r/chemicalreactiongifs) triple crown winner...
+However, this latest is one of the best videos out there, perfectly showcasing the 4-strokes in the Otto Cycle in the classic ['L-head' layout](https://en.wikipedia.org/wiki/Cam-in-block). If you look closely you can even see the 'wasted spark' of simple engines. Mechanically interesting, chemical reaction and in a slow-mo seemless loop? I think it might be a [/r/perfectloops](https://www.reddit.com/r/perfectloops/), [/r/mechanical_gifs](https://www.reddit.com/r/r/mechanical_gifs), and [/r/chemicalreactiongifs](https://www.reddit.com/r/chemicalreactiongifs) triple crown winner...
 
-Anyways heres the full loop:
+Anyways, less bullshit, here's the full loop:
 
 <video autoplay loop>
   <source src= "{{site.url}}/{{page.assets}}/720p_compressed.mp4" type="video/mp4">

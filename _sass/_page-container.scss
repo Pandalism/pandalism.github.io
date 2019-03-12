@@ -34,7 +34,6 @@
     }
 
     // deal with how tables are displayed
-
     table {
         margin-top: 2em;
         margin-left: auto;
@@ -42,6 +41,58 @@
         // border: 1px solid black;
         min-width: 60%;
         border-collapse: separate;
+
+        thead {
+          // border: 1px solid black;
+          // border-bottom: 1px solid black;
+          // border-radius: $nav-corner-radius;
+          background-color: $table-head-colour;
+
+          th {
+            border-width: 1px;
+            border-color: transparent; // transparent
+            border-style: solid;
+            // border-radius:  $nav-corner-radius;
+          }
+          th:nth-child(1) {
+            border-radius: $nav-corner-radius 0 0 0;
+          }
+
+          th:nth-last-child(1) {
+            border-radius: 0 $nav-corner-radius 0 0;
+          }
+
+
+        }
+
+        tr:nth-child(2n) {
+          background-color: $table-even-colour;
+        }
+
+        tr:nth-child(2n+1) {
+          background-color: $table-odd-colour;
+        }
+
+        th, td {
+          padding: 0.5rem 1rem;
+
+        }
+
+        tr:nth-last-child(1) {
+            border-width: 1px;
+            border-color: transparent; // transparent
+            border-style: solid;
+            // border-radius:  $nav-corner-radius;
+
+          td:nth-child(1) {
+            border-radius: 0 0 0$nav-corner-radius ;
+          }
+
+          td:nth-last-child(1) {
+            border-radius: 0 0 $nav-corner-radius 0 ;
+          }
+        }
+
     }
 
     // special wrapper div change
@@ -51,57 +102,13 @@
 
     }
 
-    thead {
-      // border: 1px solid black;
-      // border-bottom: 1px solid black;
-      // border-radius: $nav-corner-radius;
-      background-color: $table-head-colour;
 
-      th {
-        border-width: 1px;
-        border-color: transparent; // transparent
-        border-style: solid;
-        // border-radius:  $nav-corner-radius;
-      }
-      th:nth-child(1) {
-        border-radius: $nav-corner-radius 0 0 0;
-      }
-
-      th:nth-last-child(1) {
-        border-radius: 0 $nav-corner-radius 0 0;
-      }
-
-
+    blockquote{
+      background: $blockquote-colour;
+      border-left: 10px solid $blockquote-colour-edge;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
     }
-
-    tr:nth-child(2n) {
-      background-color: $table-even-colour;
-    }
-
-    tr:nth-child(2n+1) {
-      background-color: $table-odd-colour;
-    }
-
-    th, td {
-      padding: 0.5rem 1rem;
-
-    }
-
-    tr:nth-last-child(1) {
-        border-width: 1px;
-        border-color: transparent; // transparent
-        border-style: solid;
-        // border-radius:  $nav-corner-radius;
-
-      td:nth-child(1) {
-        border-radius: 0 0 0$nav-corner-radius ;
-      }
-
-      td:nth-last-child(1) {
-        border-radius: 0 0 $nav-corner-radius 0 ;
-      }
-    }
-
 
 
 
