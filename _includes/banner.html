@@ -1,7 +1,12 @@
 {% if page.banner %}
 <!-- If banner image is present -->
 <div class="banner-image">
+  {% if page.banner contains "http" %}
   <img src={{page.banner}} alt="Banner Image">
+  {% else %}
+  <img src={{site.url}}/{{page.banner}} alt="Banner Image">
+  {% endif %}
+
 </div>
 
 <div class="banner-title">
