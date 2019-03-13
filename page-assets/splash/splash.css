@@ -42,8 +42,8 @@ a.splash-link{
   text-decoration: none;
   color: rgba(20,20,20,0.5);
   animation-name: splash-title-animation;
-  animation-delay: 2s;
-  animation-duration: 6s;
+  /* animation-delay: 2s; */
+  animation-duration: 8s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   /* animation-play-state: paused; */
@@ -56,6 +56,9 @@ a.splash-link{
 @keyframes splash-title-animation {
   0% {
   color: rgba(20,20,20,0);
+  }
+  50% {
+    color: rgba(20,20,20,0);
   }
   100% {
   color: rgba(20,20,20,0.5);
