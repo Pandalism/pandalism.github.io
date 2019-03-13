@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Looping Four Stroke Combustion"
-banner: post-assets/2017-01-22-combustion-gif/banner.jpg
+banner: post-assets/2017-01-22-combustion-gif/banner.png
 category: creativity
 subcategory: video
 tags: archives gifs after-effects engines chemical-reactions
