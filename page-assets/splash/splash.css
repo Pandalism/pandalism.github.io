@@ -40,9 +40,10 @@ position: relative;
 
 a.splash-link{
   text-decoration: none;
+  color: rgba(20,20,20,0.5);
   animation-name: splash-title-animation;
   animation-delay: 2s;
-  animation-duration: 4s;
+  animation-duration: 6s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-play-state: paused;
