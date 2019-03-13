@@ -38,6 +38,25 @@ position: relative;
   transform: translate(0px,0px);
 }
 
+a.splash-link{
+  text-decoration: none;
+  animation-name: splash-title-animation;
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+}
+
 .splash-title h1 {
   visibility: hidden;
+}
+
+@keyframes splash-title-animation {
+  0% {
+  color: rgba(20,20,20,0);
+  }
+  100% {
+  color: rgba(20,20,20,0.5);
+  }
 }
