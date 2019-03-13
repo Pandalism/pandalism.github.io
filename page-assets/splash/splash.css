@@ -46,11 +46,11 @@ a.splash-link{
   animation-duration: 6s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
 }
 
 .splash-title h1 {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 @keyframes splash-title-animation {
