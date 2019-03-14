@@ -94,7 +94,9 @@
 
 .soc-media-container{
     margin: 0 auto 0.5rem;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     div.soc-media-icon{
        padding: 1rem;
@@ -106,7 +108,8 @@
      }
 
      img {
-       object-fit: contain;
+       -o-object-fit: contain;
+          object-fit: contain;
        height: 2rem;
        margin: auto;
      }

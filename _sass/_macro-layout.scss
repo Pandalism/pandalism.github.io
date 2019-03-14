@@ -14,6 +14,8 @@ html, body {
 
 .body-container{
   /* set display mode to flexible */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   /* make sure div takes full page vertically */
   height: 100%;
@@ -26,15 +28,26 @@ html, body {
   /* set physical properties */
   height: 100%;
   max-width: 80rem;
-  flex: 3;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 
 
 
   /* set internal alginments and padding for naviagtion*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-right: $nav-right-margin;
   padding-bottom: $nav-bottom-margin;
   padding-left: $nav-left-margin;
@@ -45,7 +58,9 @@ html, body {
   background-color: $page-colour;
   /* set physical properties */
   position: relative;
-  flex: 6;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
   min-height: 100%;
 
   /*set sctoll behaviour */

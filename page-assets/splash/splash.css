@@ -1,8 +1,17 @@
 .splash-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
@@ -19,38 +28,63 @@ position: relative;
 
 #ears_img {
   position: absolute;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
-  transform: translate(0px,00px);
+  -webkit-transform: translate(0px,00px);
+      -ms-transform: translate(0px,00px);
+          transform: translate(0px,00px);
 }
 
 #eyes_img {
   position: absolute;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
-  transform: translate(0px,0px);
+  -webkit-transform: translate(0px,0px);
+      -ms-transform: translate(0px,0px);
+          transform: translate(0px,0px);
 }
 
 #nose_img {
   position: absolute;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
-  transform: translate(0px,0px);
+  -webkit-transform: translate(0px,0px);
+      -ms-transform: translate(0px,0px);
+          transform: translate(0px,0px);
 }
 
 a.splash-link{
   text-decoration: none;
   color: rgba(20,20,20,0.5);
-  animation-name: splash-title-animation;
+  -webkit-animation-name: splash-title-animation;
+          animation-name: splash-title-animation;
   /* animation-delay: 2s; */
-  animation-duration: 8s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   /* animation-play-state: paused; */
 }
 
 .splash-title h1 {
   /* visibility: hidden; */
+}
+
+@-webkit-keyframes splash-title-animation {
+  0% {
+  color: rgba(20,20,20,0);
+  }
+  50% {
+    color: rgba(20,20,20,0);
+  }
+  100% {
+  color: rgba(20,20,20,0.5);
+  }
 }
 
 @keyframes splash-title-animation {
