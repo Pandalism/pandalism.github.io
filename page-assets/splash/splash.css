@@ -20,10 +20,31 @@
   width: 40rem;
   height: 40rem;
   position: static;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+      -ms-transform: perspective(800px);
+          transform: perspective(800px);
 }
 
-.splash-layer{
+.splash-ears{
 position: relative;
+-webkit-transform: translateZ(-50px);
+    -ms-transform: translateZ(-50px);
+        transform: translateZ(-50px);
+}
+
+.splash-eyes{
+  position: relative;
+  -webkit-transform: translateZ(0px);
+      -ms-transform: translateZ(0px);
+          transform: translateZ(0px);
+}
+
+.splash-nose{
+  position: relative;
+  -webkit-transform: translateZ(50px);
+      -ms-transform: translateZ(50px);
+          transform: translateZ(50px);
 }
 
 #ears_img {
@@ -31,9 +52,9 @@ position: relative;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  -webkit-transform: translate(0px,00px);
-      -ms-transform: translate(0px,00px);
-          transform: translate(0px,00px);
+  /* -webkit-transform: translate(0px,0px);
+      -ms-transform: translate(0px,0px);
+          transform: translate(0px,0px); */
 }
 
 #eyes_img {
@@ -41,9 +62,9 @@ position: relative;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  -webkit-transform: translate(0px,0px);
+  /* -webkit-transform: translate(0px,0px);
       -ms-transform: translate(0px,0px);
-          transform: translate(0px,0px);
+          transform: translate(0px,0px); */
 }
 
 #nose_img {
@@ -51,9 +72,9 @@ position: relative;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  -webkit-transform: translate(0px,0px);
+  /* -webkit-transform: translate(0px,0px);
       -ms-transform: translate(0px,0px);
-          transform: translate(0px,0px);
+          transform: translate(0px,0px); */
 }
 
 a.splash-link{

@@ -30,17 +30,20 @@ function updateParallax(currentMousePos){
   const ratio_eyes = 0.02;
   const ratio_nose = 0.06;
 
-  $("#ears_img").css('transform', 'translate(' + (currentMousePos.x*ratio_ears) + 'px,' + (currentMousePos.y*ratio_ears) + 'px) ' +
-'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.1) + ') ' +
-'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.1) + ') ');
+  $('.splash-box').css('transform', 'perspective(1600px) rotateY(' + (currentMousePos.x_rel * 50).toString() + 'deg) ' +
+'rotateX('  + (currentMousePos.y_rel * -50).toString() + 'deg)'  );
 
-
-  $("#eyes_img").css('transform', 'translate(' + (currentMousePos.x*ratio_eyes) + 'px,' + (currentMousePos.y*ratio_eyes) + 'px) ' +
-'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.15) + ') ' +
-'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.15) + ') ');
-  $("#nose_img").css('transform', 'translate(' + (currentMousePos.x*ratio_nose) + 'px,' + (currentMousePos.y*ratio_nose) + 'px) ' +
-'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.3) + ') ' +
-'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.2) + ') ');
+//   $("#ears_img").css('transform', 'translate(' + (currentMousePos.x*ratio_ears) + 'px,' + (currentMousePos.y*ratio_ears) + 'px) ' +
+// 'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.1) + ') ' +
+// 'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.1) + ') ');
+//
+//
+//   $("#eyes_img").css('transform', 'translate(' + (currentMousePos.x*ratio_eyes) + 'px,' + (currentMousePos.y*ratio_eyes) + 'px) ' +
+// 'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.15) + ') ' +
+// 'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.15) + ') ');
+//   $("#nose_img").css('transform', 'translate(' + (currentMousePos.x*ratio_nose) + 'px,' + (currentMousePos.y*ratio_nose) + 'px) ' +
+// 'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.3) + ') ' +
+// 'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.2) + ') ');
 
 
 
