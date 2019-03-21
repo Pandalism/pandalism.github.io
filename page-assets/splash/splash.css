@@ -35,9 +35,9 @@ position: relative;
 
 .splash-eyes{
   position: relative;
-  -webkit-transform: translateZ(0px);
-      -ms-transform: translateZ(0px);
-          transform: translateZ(0px);
+  -webkit-transform: translateZ(10px);
+      -ms-transform: translateZ(10px);
+          transform: translateZ(10px);
 }
 
 .splash-nose{
