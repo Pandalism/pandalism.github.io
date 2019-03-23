@@ -17,7 +17,7 @@ I started with just creating three divs/layers with the ears, eyes and nose. The
 ![Ears are a bit like shapes on a plane, so they should squish when perspective is off axis]({{ site.url }}/{{ page.assets }}/perspective.png)
 *Ears are a bit like shapes on a plane, so they should squish when perspective is off axis*
 
-In the end, it was looking much better, it clearly followed the mouse and had some semblance of depth. However I wasn't entirely pleased with it. For starters, it was messy, using three different transforms (`translate`, `scaleX`, `scaleY`); and secondly it wasn't fully accurate. perspective also implies that when those previously mentioned planes
+In the end, it was looking much better, it clearly followed the mouse and had some semblance of depth. However I wasn't entirely pleased with it. For starters, it was messy, using three different transforms (`translate`, `scaleX`, `scaleY`) on three different layers; and secondly it wasn't fully accurate. perspective also implies that when those previously mentioned planes
 
 ![Image of the the about page]({{ site.url }}/{{ page.assets }}/first-attempt.gif)
 *The effect looks respectable now*
@@ -26,7 +26,7 @@ In the end, it was looking much better, it clearly followed the mouse and had so
 
 
 ## Second attempt
-I originally stayed away from using 3D transforms directly, mostly because I incorrectly assumed it was still a relatively unsupported CSS3 feature. However, a quick check on [caniuse.com](https://caniuse.com/#feat=transforms3d) shows that actually 90% of current browsers fully support it already, with most desktop browsers being capable of doing it since ~2010 (except for IE, which took another 4 years as per usual). Since I was using animations and other weirder CSS elements then I thought might as well use the full potential of CSS3 transforms. Finding how to fall back smoothly for non css3 browsers was left for another day.
+I originally stayed away from using 3D transforms directly, mostly because I incorrectly assumed it was still a relatively unsupported CSS3 feature. However, a quick check on [caniuse.com](https://caniuse.com/#feat=transforms3d) shows that actually 90% of current browsers fully support it already, with most desktop browsers being capable of doing it since ~2010 (except for IE, which took another 4 years as per usual). Since I was using animations and other weirder CSS elements then I thought might as well use the full potential of CSS3 transforms. Finding how to fall back smoothly for non css3 browsers was left for another day. Now after tweaking the container and layer structure a little its left much simpler, with a `perspective`, `rotateX` and `rotateY` css stylings applied to the main container, and then a `translateZ` applied to the individual layers to set the distances.
 
 
 ### Credit
