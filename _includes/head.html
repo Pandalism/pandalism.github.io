@@ -2,7 +2,7 @@
 <head>
 
   <!--- Title is site name unless theres a page title too, then it gets added --->
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
   <!--- Include the meta tags including viewport & site description --->
   {% include meta.html %}
