@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Making a Parallax splash page"
-banner:
+banner: "post-assets/2019-03-26-parallax-splash/first-attempt.gif"
 category: programming
 sub-category: webdev
-tags: webdev github-page blog parallax splash
-assets: "post-assets/2019-03-14-parallax-splash"
+tags: webdev github-page blog parallax splash css javascript
+assets: "post-assets/2019-03-26-parallax-splash"
 published: false
 ---
 
