@@ -6,7 +6,7 @@ category: programming
 sub-category: webdev
 tags: webdev github-page blog parallax splash css javascript
 assets: "post-assets/2019-03-26-parallax-splash"
-published: false
+published: true
 ---
 
 [Side scrolling games have used parallax for many decades already](https://gamicus.gamepedia.com/Parallax_scrolling), giving a sensation of depth with very simple graphics. It took a while but shortly after the release of CSS3, websites started popping up with it too, bringing that depth into the internet, sometimes as a gimmick, sometimes [to great effect for interactive stories](http://www.sbs.com.au/theboat/). I always liked it and set out to have some sort of parallaxed aspect to the blog. Here's how I made the splash screen to the website.
@@ -53,3 +53,10 @@ The result seemed more natural so it's what I ended up using for the welcome spl
 As per usual, I kinda went along reinventing the wheel for no reason, and it would have probably been simpler to just use the correct tool (CSS3 perspective + rotate transforms) from the beginning. Eh, it was fun though...
 
 ### Credit
+[W3Schools on CSS transforms](https://www.w3schools.com/cssref/css3_pr_transform.asp)
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+
+[CSS Tricks](https://css-tricks.com/almanac/properties/t/transform/)
+
+[jQuery on mouse events](http://api.jquery.com/event.pagex/)
