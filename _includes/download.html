@@ -1,0 +1,11 @@
+<!-- YAML variables are: name, filetype and link  -->
+<!--  filetype not required -->
+
+<a href="{{include.link}}">
+  {% if include.filetype %}
+    <img class="download-icon" src="{{ site.url }}/assets/icons/files/{{include.filetype}}.png" alt="">
+  {% elif %}
+    <img class="download-icon" src="{{ site.url }}/assets/icons/files/file.png" alt="">
+  {% endif %}
+<em>{{include.name}}</em>
+</a>
