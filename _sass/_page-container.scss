@@ -133,6 +133,13 @@
     a {
       color: inherit;
     }
+
+    // special situation for download icons
+    .download-icon {
+      // ensure it doesnt spill out the sides nor is the height stupidly large either
+      max-width: 100%;
+      max-height: 10rem;
+    }
 }
 
 
