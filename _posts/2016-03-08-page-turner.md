@@ -1,13 +1,18 @@
 ---
 layout: post
-title: Turning pages by touch [Archives]
-category: Programming
+title: Turning pages of a non-touch enabled app with touch
+category: programming
 tags: archives programming autohotkey utilities
-todo: add-banner-foto
+excerpt_separator: <!--more-->
+published: true
 ---
+
 I always love the laptop-tablet hybrids, although admittedly I don't use the tablet functionality half as much as I'd like. Sometimes its just because mouse and keyboard are far superior and make sense, and sometimes its because touch functionality and UX is just not where it should be. For example, the surface book is a great device to read comics, the colours are nice, the tablet is the right format  but my favourite comic reader, [YACReader](http://www.yacreader.com/) just doesn't take touch input.
 
+<!--more-->
+
 This kinda annoyed me, so I decided to use [autohotkey](https://autohotkey.com/) to fix the situation. Now if you don't know what autohotkey is, [it's a simple, relatively old, event driven scripting language](https://en.wikipedia.org/wiki/AutoHotkey). It is known for being pretty flexible and having been used to make pretty silly apps but its primary usage is making context aware macros or scripts, attached to hotkeys and it does this **extremely** well. It's pretty weird, clunky and at this point has a bit of a dead community, but it does its task so well it was a piece of cake to implement what I wanted.
+
 
 So here is the script (apologies for no syntax highlighting but its an obscurish language):
 
@@ -59,8 +64,11 @@ This is the goto when the left mouse button gets pressed (normal touch gets regi
 
 Its so simple but works great. I used that snippet and put it within my usual default script which I run on start up, which has a bunch of other snippets to make my life easier and implement my macros and what not. Nonetheless AHK also lets you compile it so that anyone can run it, even without installing it. Some anti-virus don't like it because the key-hooks can be abused to make keyloggers but if you want you can download either here:
 
-[![YACPageTurn.ahk]({{ "/assets/posts/2016-03-08-Page-Turner/AutoHotkey-Script-Icon.png" | absolute_url}})]({{ "/assets/posts/2016-03-08-Page-Turner/YACPageTurn.ahk" | absolute_url}})
+{% include download.html link="https://1drv.ms/u/s!Amgx-OdgW8vIh9BV2FrvtACHNQh-7A" filetype="exe" name="YACPageTurner.exe"%}
 
 or
 
-[![YACPageTurn.exe]({{ "/assets/posts/2016-03-08-Page-Turner/AutoHotkey-Logo-Icon.png" | absolute_url}})]({{ "/assets/posts/2016-03-08-Page-Turner/YACPageTurn.exe" | absolute_url}})
+{% include download.html link="https://1drv.ms/u/s!Amgx-OdgW8vIh9BU2kfZ99y9-2zlPg" filetype="ahk" name="YACPageTurner.ahk"%}
+
+### Credits
+Various Autohotkey forums and tutorials.
