@@ -3,7 +3,7 @@ layout: post
 title: "First Post!"
 banner:
 category: programming
-sub-category: webdev
+subcategory: webdev
 tags: jekyll github-page blog webdev
 published: true
 ---

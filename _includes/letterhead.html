@@ -2,7 +2,13 @@
 
   {% unless page.banner %}
 
-  {% if page.category %}
+  {%  if page.subcategory %}
+  <div class="category">
+    <img src="{{site.baseurl}}/assets/icons/category/{{page.subcategory}}.png" alt="" class="">
+  </div>
+
+
+  {% else if page.category %}
   <div class="category">
     <img src="{{site.baseurl}}/assets/icons/category/{{page.category}}.png" alt="" class="">
   </div>
