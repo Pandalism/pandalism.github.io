@@ -9,7 +9,12 @@ category: programming
   {% for post in paginator.posts %}
     <article class="blog-post">
 
-        {% if post.category %}
+        {% if post.subcategory %}
+        <div class="category">
+          <img src="{{site.baseurl}}/assets/icons/category/{{post.subcategory}}.png" alt="" class="">
+        </div>
+
+        {% else if post.category %}
         <div class="category">
           <img src="{{site.baseurl}}/assets/icons/category/{{post.category}}.png" alt="" class="">
         </div>
@@ -17,7 +22,7 @@ category: programming
 
         {% else if %}
         <div class="category">
-          <img src="https://via.placeholder.com/400x400" alt="" class="">
+          <img src="{{site.baseurl}}/assets/icons/category/other.png" alt="" class="">
         </div>
         {% endif %}
 
