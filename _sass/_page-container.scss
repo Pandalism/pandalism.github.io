@@ -134,6 +134,10 @@
       color: inherit;
     }
 
+    a:hover {
+      color: $page-highlight-colour;
+    }
+
     // special situation for download icons
     .download-icon {
       // ensure it doesnt spill out the sides nor is the height stupidly large either
