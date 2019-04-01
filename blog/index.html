@@ -8,6 +8,7 @@ category: blog
 <div class="blog-posts">
   {% for post in paginator.posts %}
     <article class="blog-post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
 
         {% if post.subcategory %}
         <div class="category">
@@ -26,14 +27,15 @@ category: blog
         </div>
         {% endif %}
 
-        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <h3>{{ post.title }}</h3>
 
+        </a>
 
       <div class="blog-post-excerpt">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="blog-post-more"><p>Read More</p></a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="blog-post-more"><h5>Read More</h5></a>
 
     </article>
 

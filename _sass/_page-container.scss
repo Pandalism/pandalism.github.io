@@ -151,6 +151,10 @@
     text-decoration: none;
   }
 
+  a:hover {
+    color: $page-highlight-colour;
+  }
+
 
   .category{
     display: -webkit-inline-box;
@@ -169,6 +173,11 @@
       max-width: 100%;
       padding: 0;
     } }
+
+  a:hover .category{
+    background-color: $nav-highlight-colour;
+  }
+
 
   h3 {
     display: inline;
