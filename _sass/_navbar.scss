@@ -50,7 +50,7 @@ nav {
 
 
   a:hover {
-    text-decoration: line-through;
+    color: $nav-highlight-colour;
   }
 
 }
@@ -70,7 +70,12 @@ nav {
     //set border-radius
     border-radius: $nav-corner-radius / 2;
     //space out items a little
-    margin: 0 0.3rem;
+    margin: 0.7rem 0.7rem 0.7rem;
+
+  }
+
+  div.soc-media-icon:hover{
+    background-color: $nav-highlight-colour;
   }
 
   img {
