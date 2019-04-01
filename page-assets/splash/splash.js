@@ -33,6 +33,8 @@ function updateParallax(currentMousePos){
   $('.splash-box').css('transform', 'perspective(1600px) rotateY(' + (currentMousePos.x_rel * 50).toString() + 'deg) ' +
 'rotateX('  + (currentMousePos.y_rel * -50).toString() + 'deg)'  );
 
+  $('.splash-container').css('filter', 'blur(' + ((Math.abs(currentMousePos.y_rel) +  Math.abs(currentMousePos.x_rel)) *  5).toString() + 'px)'  );
+
 //   $("#ears_img").css('transform', 'translate(' + (currentMousePos.x*ratio_ears) + 'px,' + (currentMousePos.y*ratio_ears) + 'px) ' +
 // 'scaleX(' + (1 - Math.abs(currentMousePos.x_rel)*0.1) + ') ' +
 // 'scaleY(' + (1 - Math.abs(currentMousePos.y_rel)*0.1) + ') ');
