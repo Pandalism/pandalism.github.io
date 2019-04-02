@@ -28,18 +28,18 @@ Whilst linux allows us unlimited control using just a simple SSH, its sometimes 
 ### Step 1: Create the boot SD card
 Download the latest image from the Raspberry Pi [website](https://www.raspberrypi.org/downloads/raspbian/), making sure to select the 'Rasbian with desktop'. Then use your usual boot drive creator as usual to load the image on to the SD card and make it bootable. I personally love [Rufus](https://rufus.akeo.ie/) due to its simplicity, portability and speed; alternatives can be [UNetbootin](https://unetbootin.github.io/) and [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/).
 
-![Rufus in Action]({{ "https://rufus.akeo.ie/pics/rufus_en.png" | absolute_url }})
+![Rufus in Action](https://rufus.ie/pics/rufus_en.png)
 
 #### Step 2: Make sure SSH will run on startup
 The main reason to even explain such simple first steps is to not forget this vital part. The RPi by default will not have SSH running, and we require SSH to be able to access the RPi terminal without using a monitor/keyboard/mouse plugged in. To activate SSH, navigate to your freshly made SD card and place an empty file in the root folder (that's D: in my case), named `ssh`. The easiest way to do this, in windows anyways, is to make a text file and change the name, making sure to delete the `.txt`at the end. If you can't access the file extension, just go to 'view' in the top bar and make sure 'show known extensions' is ticked.
 
-![Add the 'ssh' file]("{{site.url}}/{{page.assets}}/1.png")
-![Add the 'ssh' file]("{{site.url}}/{{page.assets}}/2.png")
+![Add the 'ssh' file]({{site.url}}/{{page.assets}}/1.png)
+![Add the 'ssh' file]({{site.url}}/{{page.assets}}/2.png)
 
 ### Step 3:
 Now just plug in the SD card, power and Ethernet cables and watch the lights blink!
 
-![RPi on fire]("https://thumbs.gfycat.com/BriefAmpleAmericankestrel-size_restricted.gif")
+![RPi on fire](https://thumbs.gfycat.com/BriefAmpleAmericankestrel-size_restricted.gif)
 
 ### Step 4:
 Now that the RPi is connected, we need to connect to it through SSH. To do this first we need to find the IP address, and surprisingly, the easiest way is probably to access your router. In my case the virgin media hub shows you pretty clearly which is your router:
