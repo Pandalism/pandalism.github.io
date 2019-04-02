@@ -5,7 +5,7 @@ category: technology
 subcategory: domotics
 tags: raspberry-pi remote-desktop headless teamviewer guide
 assets: "post-assets/2018-08-27-headless-rpi"
-published: false
+published: true
 ---
 
 I might be projecting, but I believe a large portion of Raspberry Pi's out there will be currently sitting in their owner's drawers, not doing much at all since the hype around the device has settled down. I thought it would be a great little thing to use as a server for domotics, local websites and what not, so why not put it in a dark little corner and run it headless? And while we are at it, why not have a remote desktop?
