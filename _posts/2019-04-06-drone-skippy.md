@@ -45,20 +45,20 @@ The build was relatively simple, and although my other builds way back were on t
 </div></div>
 
 ## Flying it for the first time (The Fall)
-All built up, it was looking sweet, like a tiny angry air beating machine. I was so excited to try it out I even hovered it inside my room (Note this is a terrible idea, those props will fuck your day up or your belongings). I double checked the failsafes, the lost quad beeping mode, the calibration and then charged up the batteries and waited.
+All built up, it was looking sweet, like a tiny angry air beating machine. I was so excited to try it out I even hovered it inside my room (Note this is a terrible idea, those props **will** fuck your day up or your belongings). I double checked the failsafes, the lost quad beeping mode, the calibration and then charged up the batteries and waited.
 
 When Saturday finally arrived I headed down to my local fields, loaded with equipment and spares, and a little too much confidence. Again I double checked the screws and retightened everything, checked the failsafes, checked the camera was working, and set off. Now, flying small drones in `acro` mode with goggles is actually quite hard; it didn't look like the [smooth videos on youtube, darting between trees and derelict construction sites](https://www.youtube.com/watch?v=1MBW8zoZUR4). There was a lot of panic strafing and accidental bopping against the floor. Nonetheless sooner or later I was flying, albeit cautiously, between goal posts and doing simple flips. Overall good day, but the sun was coming down and it was time to pack up.
 
 > "But then again, what harm could one more flight do?" - My dumb dumb self
 
-I lost visual reference and speed across the field into the floor, hitting it hard and sending it flying back up, spinning another 20 meters into some bushes. Since I was wearing goggles I couldn't see where it landed and the spinning had seriously disorientated me. But its fine, what else is the find-lost-quad mode for? Of course that's when it hit me, that if I had lost video signal, it's probably because the battery ejected, and if it did that then the ESCs can't beep and its all fucked.
+I lost visual reference and speed across the field into the floor, hitting it hard and sending it flying back up, spinning another 20 meters into some bushes. Since I was wearing goggles I couldn't see where it landed and the spinning had seriously disorientated me. But its fine, what else is the find-lost-quad mode for? Of course that's when it hit me, that if I had lost video signal, it's probably because the **battery ejected**, and if it did that then the ESCs can't beep and its all fucked.
 
 I searched and searched, methodically across all the bushes on the side of the field, to no avail. Then going to check the goggles themselves to see the recorded FPV videos I realised I hadn't recorded anything at all, instead taking stills when I thought it was turned on.
 
 ![Still before take off]({{ site.url }}/{{ page.assets }}/5.jpg)
 *My last beacon of hope ended up being this shitty still*
 
-At midnight I left, and came around looking again next Sunday, and then the Monday morning before work, and Tuesday, and ... etc. By the next Saturday I admitted defeat and declared Skippy (named post mortem due to its proclivity to skip on the floor) officially MIA. Goddamnit.
+At midnight I left, and came around looking again next Sunday, and then the Monday morning before work, and Tuesday, and ... etc. By the next Saturday I admitted defeat and declared Skippy (named post mortem due to its proclivity to skip on the floor) officially MIA. **Goddamnit**.
 
 ## Conclusion
 Lessons learned (the expensive way):
