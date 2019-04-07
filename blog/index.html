@@ -4,7 +4,6 @@ title: "Blog"
 category: blog
 ---
 
-
 <div class="blog-posts">
   {% for post in paginator.posts %}
     <article class="blog-post">
@@ -15,13 +14,13 @@ category: blog
           <img src="{{site.baseurl}}/assets/icons/category/{{post.subcategory}}.png" alt="" class="">
         </div>
 
-        {% else if post.category %}
+        {% elsif post.category %}
         <div class="category">
           <img src="{{site.baseurl}}/assets/icons/category/{{post.category}}.png" alt="" class="">
         </div>
 
 
-        {% else if %}
+        {% else %}
         <div class="category">
           <img src="{{site.baseurl}}/assets/icons/category/other.png" alt="" class="">
         </div>
