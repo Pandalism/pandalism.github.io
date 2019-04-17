@@ -37,8 +37,6 @@ Note:
 
 ###### Last updated: 2019-04-07
 
-I wouldn't consider my self an 'Eco-Warrior', but I do care for this planet, and wish to see its **full** splendour intact (or as intact as can be) well into my old age and my children's old age and my children's children's old age; I guess the more selfish argument for ecological sustainability.
-
 Now, large companies will always shift the blame on consumers, [but we all know that is bullshit](https://blogs.scientificamerican.com/observations/more-recycling-wont-solve-plastic-pollution/), and that really the strongest environmental protection comes from reasonable, scientifically backed regulations. [However our individual behaviours do have a non-trivial effect, and it is something I personally want to work on](https://www.vox.com/the-goods/2018/10/12/17967738/climate-change-consumer-choices-green-renewable-energy).
 
 Environmental sustainability is a god-damn **tricky** subject in of itself, without considering the issues with measuring and data collection, so how do we figure what are the most unsustainable aspects of our life? Sometimes it feels like we are shooting in the dark ("Buy coconut oil, its good for the environment", [Is it though](https://www.onegreenplanet.org/environment/is-your-obsession-with-coconuts-harming-the-environment/)?).
