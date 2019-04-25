@@ -31,16 +31,17 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 
 [![]({{site.url}}/{{page.assets}}/co2.png)*Plot of CO2 emitted*]({{site.url}}/{{page.assets}}/co2.png)
 
-Note:
+###### Notes:
   - 2016 & 2017 only considers Flights
   - 2018 only has half a years worth of data on Electrical Energy and gas
 
 ###### Last updated: 2019-04-07
+<br>
 
-##### Assumptions
+#### Assumptions
 There are a lot of assumptions here:
  - Does not include missed or cancelled flights.
- - Flights calculated with [ICAO one](https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx).
+ - Flights calculated with [ICAO carbon offset calculator](https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx).
  - No impact factors for height of CO2 emission.
  - Diesel:	2.68kg/L, Petrol:	2.31	kg/L, Gas:	2.27	kg/m3, Electricity:	0.53	kg/kwh.
  - Does not include taxis, trains or other forms of transport.

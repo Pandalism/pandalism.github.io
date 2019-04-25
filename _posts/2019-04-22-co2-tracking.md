@@ -6,7 +6,7 @@ category: sustainability
 subcategory: co2
 tags: sustainability footprint impact
 assets: "post-assets/2019-04-22-co2-tracking"
-published: false
+published: true
 ---
 
 I wouldn't consider my self an 'Eco-Warrior', but I do care for this planet, and wish to see its **full** splendor intact (or as intact as can be) well into my old age and my children's old age and my children's children's old age; I guess the more selfish argument for ecological sustainability. Regardless I like to try to figure out how much of an impact I'm having on the earth myself.
@@ -20,6 +20,10 @@ Finding the Environmental sustainability is a god-damn **tricky** subject in of 
 Here's when my unhealthy obsession with tracking everything and making a spreadsheet for the most trivial things comes in handy. Utility meters tell us much of our gas, electricity and water usage, so I just used that. Then I keep track of running costs for all my vehicles including fuel usage, so I have litres put into the car (which translates directly to CO2 emitted). Also, due to various reasons I had been keeping track of all my flights; so using some online calculators, you can figure out CO2 emitted pretty easily.
 
 [![Excel sheet 2019]({{ site.url }}/{{ page.assets }}/excelsheet.png)*The excel with 2019 partially filled out*]({{ site.url }}/{{ page.assets}}/excelsheet.png)
+
+## Result
+
+The results will be continuously updated and monitored and can be found [here in my footprint section]({{ site.url }}/footprint).
 
 ## Further Ideas
 This is only really a start, and I would like to investigate my footprint further little by little, as time allows it. Some ideas:

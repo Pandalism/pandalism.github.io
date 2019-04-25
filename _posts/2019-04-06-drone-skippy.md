@@ -9,7 +9,7 @@ assets: "post-assets/2019-04-06-drone-skippy"
 published: true
 ---
 
-So back in November [I posted on Instagram](https://www.instagram.com/p/BpdWFCClF1m/?utm_source=ig_web_button_share_sheet) about the new drone/quadcopter I had very built, in an attempt to get back into drones and FPVracing. After that first post though, a keen eye will notice I never mentioned it again, until now. This is the rise and fall of Skippy.
+So back in November [I posted on Instagram](https://www.instagram.com/p/BpdWFCClF1m/?utm_source=ig_web_button_share_sheet) about the new drone/quadcopter I just built, in an attempt to get back into drones and FPVracing. After that first post though, a keen eye will notice I never mentioned it again, until now. This is the rise and fall of Skippy.
 
 ## The build (The Rise)
 
