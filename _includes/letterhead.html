@@ -7,10 +7,14 @@
     <img src="{{site.baseurl}}/{{page.letterheadIcon}}" alt="" class="">
   </div>
 
+  {%  elsif layout.letterheadIcon %}
+  <div class="category">
+    <img src="{{site.baseurl}}/{{layout.letterheadIcon}}" alt="" class="">
+  </div>
+
   {%  elsif page.subcategory %}
   <div class="category">
     <img src="{{site.baseurl}}/assets/icons/category/{{page.subcategory}}.png" alt="" class="">
-
   </div>
 
   {% elsif page.category %}
