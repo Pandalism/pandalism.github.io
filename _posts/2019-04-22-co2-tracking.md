@@ -28,7 +28,7 @@ This is only really a start, and I would like to investigate my footprint furthe
 Look, I'm not going to go count every piece of trash, nor can I realistically change my lifestyle to have zero landfill waste. However it would be interesting to know the household output of landfill vs recycling, and how it changes over the year and what can be improved. Maybe some sort of rPi weighing scale for bins? are smart bins a thing?
 
 ##### Food type and source impacts.
-There are times I can't believe the 100 mile diet and other locally sourced foods actually benefit the environment at all, but you have to admit, getting bananas and avocados shipped across the Atlantic in **huge bunker oil burning ship** can't be good either. This would be more of a short term experiment I'd guess, as this is an absolute pain to do LCA (LifeCycle Analysis) on food and the supermarket infrastructure. Would also reflect the benefits of a low-meat diet (However I can **never** give up bananas and avocados).
+There are times I can't believe the 100 mile diet and other locally sourced foods actually benefit the environment at all, but you have to admit, getting bananas and avocados shipped across the Atlantic in **huge bunker oil burning ship** can't be good either. This would be more of a short term experiment I'd guess, as this is an absolute pain to do LCA (LifeCycle Analysis) on food and the supermarket infrastructure. Would also reflect the benefits of a low-meat diet (However I can't see myself giving up bananas and avocados).
 
 ##### Track buy-vs-reuse-vs-upcycle.
 I already am rather prone to fixing my devices, buying second hand, and attempt to freecyle everything, but it would be nice to some how measure this, or keep track? However no clue how to do so at the moment.
