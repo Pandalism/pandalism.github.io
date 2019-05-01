@@ -9,21 +9,21 @@ assets: "post-assets/2019-05-02-sdcard-holder"
 published: true
 ---
 
-In one of my organisational spree's I quickly got distracted with the fact that my microSD flash cards were in disarray and loosely placed here and there. Clearly, organising my room had to take a break whilst I sorted this out.
+Whilst cleaning up my room I quickly got distracted with the fact that my microSD flash cards were in disarray and loosely placed here and there. Clearly, organising my room had to take a break whilst I sorted this out.
 
 ## Studies
 So first was to figure out the general gist of the holder. So I put some microSD and normal cards on a standard credit card, and figured it looked quite good! If thin, could fit in a wallet, would be easy to stash with camera equipment and would hold ~6 microSD cards. Sounded pretty good.
 
 ![laid out]({{ site.url }}/{{ page.assets }}/draft_landscape.jpg)*General layout I wanted*
 
-Using some trusty vernier calipers and some googling, I used solidworks to CAD up the basic microSD card shape, and also looked at the dimensions of the larger SDcards for what I figure might be needed for a pressfit.
+Using some trusty vernier calipers and some googling, I used Solidworks to CAD up the basic microSD card shape, and also looked at the dimensions of the larger SDcards for what I figure might be needed for a pressfit.
 
 ![laid out]({{ site.url }}/{{ page.assets }}/sd_cad.png)*Simple SDCard outline*
 
-I already figured it would require two pieces stuck together to achieve the sort of reliable hold I was seeking, but I still wanted to print a smaller test piece to check the fit and amend accordingly before I spent a good hour printing the final pieces.
+I already decided it would require two pieces stuck together to achieve the sort of reliable hold I was seeking, but I still wanted to print a smaller test piece to check the fit and amend accordingly before I spent a good hour printing the final pieces.
 
 ![test print]({{ site.url }}/{{ page.assets }}/testcad.png)*Test print*
-![Initial print]({{ site.url }}/{{ page.assets }}/init_print.jpg)*Printed out, note the warping from removing the really thin piece from the 3dprinter*
+![Initial print]({{ site.url }}/{{ page.assets }}/init_print.jpg)*Printed out. note the warping from removing the piece from the 3dprinter base*
 ![MicroSD fit]({{ site.url }}/{{ page.assets }}/init_fit.jpg)*MicroSD slots turned out to be a smidge too narrow*
 ![SD thickness]({{ site.url }}/{{ page.assets }}/init_pressfit.jpg)*The sandwhich between two layers would create the pressfit on the larger cards, but here it was clear the layer needed to be a thicker*
 
