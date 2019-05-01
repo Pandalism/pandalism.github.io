@@ -33,13 +33,13 @@ After incorporating the changes to the slot and thickness of the gaps using what
 
 ![Final CAD]({{ site.url }}/{{ page.assets }}/finishedCAD.png)*How the final CAD looked like mocked up*
 
-And all that was left is to send to the printer! Of course, I never had time to set up my printer properly nor tune the parameters so the prints aren't of the best quality. You can easily see some dodgy layer here, and the much thinner upper piece ended up with a warped corner.
+And all that was left is to send to the printer! Of course, I never had time to set up my printer properly nor tune the parameters so the prints aren't of the best quality. You can easily see some dodgy layer here, and the much thinner upper piece ended up with a warped corner. 
 
 ![Printing]({{ site.url }}/{{ page.assets }}/printing.jpg)*Printing!*
 
 ![Lid]({{ site.url }}/{{ page.assets }}/redo_lid.jpg)*Upper piece had to be reprinted*
 
-In the end though I was well pleased with the result. It looked fine and held on to the cards perfectly well. Strong enough that the cards wouldn't fall out with rigorous shaking, but still really easy to pull out. Can't complain
+Once glued together though I was well pleased with the result. It looked fine and held on to the cards perfectly well. Strong enough that the cards wouldn't fall out with rigorous shaking, but still really easy to pull out. Can't complain.
 
 ![Finished Product]({{ site.url }}/{{ page.assets }}/finished.png)*Finished Product!*
 
