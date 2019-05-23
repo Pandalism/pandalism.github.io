@@ -34,6 +34,7 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 ###### Notes:
   - 2016 & 2017 only considers Flights
   - 2018 only has half a years worth of data on Electrical Energy and gas
+  - [More information on this in this blog post.]({{site.url}}/2019/04/22/co2-tracking/)
 
 ###### Last updated: 2019-04-07
 <br>
