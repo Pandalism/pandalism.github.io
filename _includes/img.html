@@ -1,0 +1,26 @@
+{% comment %}
+Include to embed single local images. It will try to display a _thumb
+version of the image until it is clicked on which will open the full sized image
+in a new window.
+
+If it does not find an appropiate _thumb version of the image it will use onerror
+JavaScript fallback to select the main image anyways.
+
+Hopefully this reduces loading times of somewindows significantly since the
+images are the primary reason for slow loading times.
+
+example use:
+{% include pic.html assetsFolder=exampleAssetsFolder link=pictureName caption=anExampleCaption %}
+
+insert in code to replace usual markdown aspects.
+
+{% endcomment %}
+
+
+
+<a href="{{site.url}}/{{include.assetsFolder}}/{{include.link}}" target="_blank">
+  <img src="{{site.url}}/{{include.assetsFolder}}/{{include.link | replace: '.', '_thumb.'}}"
+   alt="{{include.caption}}"
+   onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{include.link}}'">
+  <em>{{include.caption}}</em>
+</a>
