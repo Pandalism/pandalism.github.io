@@ -66,7 +66,7 @@ Its so simple but works great. I used that snippet and put it within my usual de
 
 {% include download.html link="https://1drv.ms/u/s!Amgx-OdgW8vIh9BV2FrvtACHNQh-7A" filetype="exe" name="YACPageTurner.exe"%}
 
-or
+<center><p> or </p></center>
 
 {% include download.html link="https://1drv.ms/u/s!Amgx-OdgW8vIh9BU2kfZ99y9-2zlPg" filetype="ahk" name="YACPageTurner.ahk"%}
 
