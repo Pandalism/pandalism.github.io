@@ -49,13 +49,13 @@ category: blog
       <p>Newer</p>
     </a>
   {% else %}
-    <span class="previous"><p>Previous</p></span>
+    <span class="previous"><p>Newer</p></span>
   {% endif %}
   <span class="page_number ">
     <p>Page: {{ paginator.page }} of {{ paginator.total_pages }}</p>
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next"><p>Next</p></a>
+    <a href="{{ paginator.next_page_path }}" class="next"><p>Older</p></a>
   {% else %}
     <span class="next "><p>Older</p></span>
   {% endif %}
