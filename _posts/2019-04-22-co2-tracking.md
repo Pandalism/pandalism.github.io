@@ -19,7 +19,8 @@ Finding the Environmental sustainability is a god-damn **tricky** subject in of 
 
 Here's when my unhealthy obsession with tracking everything and making a spreadsheet for the most trivial things comes in handy. Utility meters tell us much of our gas, electricity and water usage, so I just used that. Then I keep track of running costs for all my vehicles including fuel usage, so I have litres put into the car (which translates directly to CO2 emitted). Also, due to various reasons I had been keeping track of all my flights; so using some online calculators, you can figure out CO2 emitted pretty easily.
 
-[![Excel sheet 2019]({{ site.url }}/{{ page.assets }}/excelsheet.png)*The excel with 2019 partially filled out*]({{ site.url }}/{{ page.assets}}/excelsheet.png)
+{% include img.html assetsFolder=page.assets link='excelsheet.png' caption="The excel with 2019 partially filled out" %}
+
 
 ## Result
 
