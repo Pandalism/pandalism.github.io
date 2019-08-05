@@ -17,21 +17,51 @@
 .article {
     // how images and captions are are treated
     img, video{
-        // contain image in sizes
-        object-fit: contain;
+      // contain image in sizes
+      object-fit: contain;
 
-        // center image
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+      // center image
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
 
-        // apply minor padding
-        padding: 1rem 1rem 1rem 1rem;
+      // apply minor padding
+      padding: 1rem 1rem 1rem 1rem;
 
-        // ensure it doesnt spill out the sides nor is the height stupidly large either
-        max-width: 100%;
-        max-height: 30rem;
+      // ensure it doesnt spill out the sides nor is the height stupidly large either
+      max-width: 100%;
+      max-height: 30rem;
     }
+
+    // create special image slideshow css
+    .slideshow-container{
+      position: relative;
+      .prev, .next{
+
+        position: absolute;
+        top:50%;
+        font-size: 30px;
+        // background-color: rgba(0,0,0,0.8);
+        padding: 20px;
+        margin-top: -20px;
+      }
+      .next{
+        right: 0;
+      }
+
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.4);
+
+      }
+
+
+    }
+
+    .slideshow-page{
+
+    }
+
+
 
     // deal with how tables are displayed
     table {

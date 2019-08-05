@@ -1,0 +1,38 @@
+{% comment %}
+Include to embed images as a slideshow. It will try to display _thumb
+versions of the image until it is clicked on which will open the full sized image
+in a new window.
+
+If it does not find an appropiate _thumb version of the image it will use onerror
+JavaScript fallback to select the main image anyways.
+
+Hopefully this reduces loading times of some pages significantly since the
+images are the primary reason for slow loading times.
+
+example use:
+{% include pic.html assetsFolder=exampleAssetsFolder link=img_array caption=caption_array %}
+
+insert in code to replace usual markdown aspects.
+
+{% endcomment %}
+
+
+<div class="slideshow-container" style="border: 1px solid red;">
+  {% for img in include.link %}
+    <div class="slideshow-page" style="border: 1px solid red;">
+
+
+      <a href="{{site.url}}/{{include.assetsFolder}}/{{img}}" target="_blank">
+        <img src="{{site.url}}/{{include.assetsFolder}}/{{img | replace: '.', '_thumb.'}}"
+         alt="{{include.caption}}"
+         onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{include.link}}'">
+        <em>{{include.caption}}</em>
+
+
+      </a>
+    </div>
+  {% endfor %}
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
