@@ -10,11 +10,14 @@ Hopefully this reduces loading times of some pages significantly since the
 images are the primary reason for slow loading times.
 
 example use:
-{% include pic.html assetsFolder=exampleAssetsFolder link=img_array caption=caption_array %}
+{% include pic.html assetsFolder=exampleAssetsFolder link=img_array caption=caption_array showindex = 1 %}
 
 insert in code to replace usual markdown aspects.
 
 {% endcomment %}
+
+
+{% assign ind = include.showindex | default: 1 %}
 
 
 <div class="slideshow-container" style="border: 1px solid red;">
@@ -36,3 +39,8 @@ insert in code to replace usual markdown aspects.
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
+
+<script>
+var slideShow{{ind}}Ind = 0;
+var slideShow{{ind}}Elements = document.getElementById('id');
+</script>
