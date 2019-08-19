@@ -20,27 +20,44 @@ insert in code to replace usual markdown aspects.
 {% assign ind = include.showindex | default: 1 %}
 
 
-<div class="slideshow-container" style="border: 1px solid red;">
+<div class="slideshow-container" id="slide-ind{{ind}}">
+
   {% for img in include.link %}
-    <div class="slideshow-page" style="border: 1px solid red;">
+    <div class="slideshow-page fade">
 
 
       <a href="{{site.url}}/{{include.assetsFolder}}/{{img}}" target="_blank">
         <img src="{{site.url}}/{{include.assetsFolder}}/{{img | replace: '.', '_thumb.'}}"
          alt="{{include.caption}}"
-         onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{include.link}}'">
-        <em>{{include.caption}}</em>
+         onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{img}}'">
+
+
+        <em>{{include.caption[forloop.index0]}}</em>
 
 
       </a>
     </div>
   {% endfor %}
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1, {{ind}})">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, {{ind}})">&#10095;</a>
 
 </div>
 
 <script>
+// set initial index
 var slideShow{{ind}}Ind = 0;
-var slideShow{{ind}}Elements = document.getElementById('id');
+
+// collect slideshow-pages within slideshow container
+var slideShow{{ind}}Elements = Array.from(document.getElementById('slide-ind{{ind}}').children);
+// remove the references to the previous and next arrows
+slideShow{{ind}}Elements.pop();
+slideShow{{ind}}Elements.pop();
+
+// get overall length
+var slideShow{{ind}}Length = slideShow{{ind}}Elements.length;
+// set first slide to visible
+changeSlideShowPage(0, {{ind}})
+
+
+
 </script>

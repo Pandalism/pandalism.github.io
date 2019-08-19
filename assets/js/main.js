@@ -99,3 +99,43 @@ function convert2str(a_num) {
   return a
 
 }
+
+// =============================================================================
+// functions for slideshow images
+// =============================================================================
+function changeSlideShowPage(x, slideShowIndex) {
+
+  // reference the slideShow{{ind}}Elements array
+  var tempElements = this["slideShow".concat(slideShowIndex,'Elements') ]
+
+  for (elements in tempElements) {
+    // remove all active elements
+    tempElements[elements].className = tempElements[elements].className.replace(" active", "")
+  }
+
+  tempElements[x].className += " active";
+
+  return true
+}
+
+
+function plusSlides(y, slideShowIndex) {
+
+  // find current index and the length
+  var tempCurrent = this["slideShow".concat(slideShowIndex,'Ind')]
+  var tempLength = this["slideShow".concat(slideShowIndex,'Length')]
+
+  // add the slide change to the current index, and modulo with length to get
+  // new index
+
+  tempCurrent += y;
+  tempCurrent = tempCurrent % tempLength;
+
+  // change slideshow page
+  changeSlideShowPage(tempCurrent, slideShowIndex)
+
+  // propagate that back to current index in global
+  this["slideShow".concat(slideShowIndex,'Ind')] = tempCurrent;
+
+  return true
+}
