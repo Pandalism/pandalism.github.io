@@ -14,7 +14,7 @@ Just another weekend dusting off the 3D printer! This time making an adapter bra
 ## Rowing machine seat adapter
 Some time ago I got a rowing machine off of freecycle.org, however as per usual freecycle shenanigans, the seat was missing. So it lived in my garage for the last couple of months whilst I figured out what to convert it to or how to reuse it.
 
-Lo and behold I saw one of those sit-up trainers laying in the trash cycling home one day. I noticed that the headrest portion looked ideal for exactly that purpose! Long story short, made a two piece 3d printed adapter plate which adapts the hole pattern from one to the other, and now I have a functioning rowing machine!
+Lo and behold I saw one of those sit-up trainers laying in the trash cycling home one day. I noticed that the headrest portion looked ideal for exactly that purpose! Long story short, made a two piece 3D printed adapter plate which adapts the hole pattern from one to the other, and now I have a functioning rowing machine!
 
 {% assign img_array = "ad_headrest.jpg|ad_idea.jpg|ad_layers.png|ad_printing.jpg|ad_printed.jpg|ad_fitted.jpg|ad_inplace.jpg" | split: "|" %}
 
