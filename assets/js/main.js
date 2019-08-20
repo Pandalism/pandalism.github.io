@@ -129,6 +129,9 @@ function plusSlides(y, slideShowIndex) {
   // new index
 
   tempCurrent += y;
+  if (tempCurrent < 0) {
+    tempCurrent = tempLength + tempCurrent;
+  }
   tempCurrent = tempCurrent % tempLength;
 
   // change slideshow page
