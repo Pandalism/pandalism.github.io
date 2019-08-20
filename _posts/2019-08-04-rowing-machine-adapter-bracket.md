@@ -6,7 +6,7 @@ category: technology
 subcategory: 3d-printing
 tags: rapid-prototyping 3d-printing CAD solidworks upcycling
 assets: "post-assets/2019-08-04-rowing-machine-adapter-bracket"
-published: false
+published: true
 ---
 
 Just another weekend dusting off the 3D printer! This time making an adapter bracket to fix a seat onto a rowing machine, and a tiny little wingnut thingy to help a friend who needed one for their easel.
