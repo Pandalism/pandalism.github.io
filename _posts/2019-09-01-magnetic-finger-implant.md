@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Magnetic Finger Implant"
-banner:
+image:
 category: technology
 subcategory: biohacking
 tags: magnets piercing tattoos cyberpunk
@@ -20,7 +20,7 @@ cking' a term which conveys a certain level of mistic and conjours images of som
 
 Medicine and biomedical engineering has come so far, one can only stop an admire the ability of mankind to overcome pathologies and diseases, whether its minor growth mistakes such as impacted wisdom teeth, or shortsightedness, to major and unbelievable procedures seen in organ transplants, open heart surgery. Its really remarkable how capable we have become to bring us back to baseline functional human. However that's really where it ends. Where are the **enhancements**? Where is the extra limbs and infrared capable eyes promised in all that sci-fi and cyberpunk media? I understand why the medical associations and  around the world don't allow it (apart from those pesky state-sponsored doping programmes that get leaked once in a while), but it still generally surprises me we haven't seen more advancements. I guess the military wouldn't be publishing papers...
 
-Regardless I'm clearly not the only one who thinks there is much potential here since the concept of 'biohacking' has been around for a while. I personally don't quite like the term, invoking imagery of underground communities churning out enhancements of the likes seen in ghost in the shell or Deux Ex: Revolution, when really 80% of the community only talks about nootropics (and 15% talk about absolute nonsense like magnetic healing). The concept and some of the experiments people have done on a DIY basis is nonetheless quite interesting, and it caught my attention. 
+Regardless I'm clearly not the only one who thinks there is much potential here since the concept of 'biohacking' has been around for a while. I personally don't quite like the term, invoking imagery of underground communities churning out enhancements of the likes seen in ghost in the shell or Deux Ex: Revolution, when really 80% of the community only talks about nootropics (and 15% talk about absolute nonsense like magnetic healing). The concept and some of the experiments people have done on a DIY basis is nonetheless quite interesting, and it caught my attention.
 
  repair of trauma invol fixing minor
 

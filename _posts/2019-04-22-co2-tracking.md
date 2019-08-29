@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tracking personal CO2 footprint"
-banner:
+image:
 category: sustainability
 subcategory: co2
 tags: sustainability footprint impact

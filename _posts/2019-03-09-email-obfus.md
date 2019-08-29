@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hiding from spammers with JavaScript"
-banner:
+image:
 category: programming
 subcategory: webdev
 tags: webdev security javascript obfuscation cryptography github-page blog
