@@ -20,12 +20,12 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 
 | Year        	| 2016   	| 2017   	| 2018   	| 2019   	|
 |-------------	|--------	|--------	|--------	|--------	|
-| **Total [kg]**| **3157**| **1675**| **4508**| **1973.7**|
-| Flights     	| 3156.8 	| 1674.5 	| 1406.4 	| 459.2  	|
-| Car         	|        	|        	| 1326.6 	| 699.2  	|
-| Motorbike   	|        	|        	| 752.8  	| 3.8    	|
-| Electricity 	|        	|        	| 837.0  	| 356.8  	|
-| Natural Gas 	|        	|        	| 185.0  	| 454.7  	|
+| **Total [kg]**| **2919**| **2313**| **3885**| **4745**|
+| Flights     	| 2919 	  |  1675	  | 1157 	  | 2420  	|
+| Car         	|        	|  639 	  | 1401	  | 864  	  |
+| Motorbike   	|        	|        	| 755  	  | 101   	|
+| Electricity 	|        	|        	| 328  	  | 761  	  |
+| Natural Gas 	|        	|        	| 243     | 600  	  |
 | Other       	|        	|        	|        	|        	|
 
 
@@ -36,7 +36,7 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
   - 2018 only has half a years worth of data on Electrical Energy and gas
   - [More information on this in this blog post.]({{site.url}}/2019/04/22/co2-tracking/)
 
-###### Last updated: 2019-04-07
+###### Last updated: 2019-09-01
 <br>
 
 #### Assumptions
