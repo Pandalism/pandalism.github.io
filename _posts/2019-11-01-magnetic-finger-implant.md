@@ -6,7 +6,7 @@ category: technology
 subcategory: biohacking
 tags: magnets piercing tattoos cyberpunk
 assets: "post-assets/2019-11-01-magnetic-finger-implant"
-published: true
+published: false
 ---
 
 I admit my often unrestrained curiosity makes me delve into subjects outside of engineering, and medicine is a particular topic I always wish I knew more of, thus its no surprise I particularly like the cross over of engineering and medicine, foremost in the aspect of enhancing or supplementing our bodies te better ourselves. Colloquially called 'biohacking', last year I decided to do one of the simpler and older procedures known as 'biohacking' and got a magnet implanted in my ring finger. Sound a bit nuts? Maybe, but this has been my experience so far:
