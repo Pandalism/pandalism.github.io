@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Functional Print: Double entry"
-banner:
+image: "post-assets/2019-08-04-rowing-machine-adapter-bracket/ad_printing.jpg"
 category: technology
 subcategory: 3d-printing
 tags: rapid-prototyping 3d-printing CAD solidworks upcycling

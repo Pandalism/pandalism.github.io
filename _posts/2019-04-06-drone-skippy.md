@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Rise and Fall of Skippy"
-banner: post-assets/2019-04-06-drone-skippy/3.jpg
+image: post-assets/2019-04-06-drone-skippy/3.jpg
 category: technology
 subcategory: drones
 tags: quadcopter drones fails

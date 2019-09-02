@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ALFie - Angry Little Flier"
-banner: "post-assets/2019-05-23-alfie-drone/tiny.jpg"
+image: "post-assets/2019-05-23-alfie-drone/tiny.jpg"
 category: technology
 subcategory: drones
 tags: quadcopter drones rapid-prototyping 3d-printing solidworks

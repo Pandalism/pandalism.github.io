@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pinhole camera mini-project"
-banner: "post-assets/2019-05-29-pinhole-camera/7.jpg"
+image: "post-assets/2019-05-29-pinhole-camera/7.jpg"
 category: creativity
 subcategory: photography
 letterhead-icon: post-assets/2019-05-29-pinhole-camera

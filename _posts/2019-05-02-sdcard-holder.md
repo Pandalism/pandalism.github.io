@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Functional Print: SDCard Holder"
-banner: post-assets/2019-05-02-sdcard-holder/banner.jpg
+image: post-assets/2019-05-02-sdcard-holder/banner.jpg
 category: technology
 subcategory: 3d-printing
 tags: rapid-prototyping 3d-printing sdcard CAD solidworks

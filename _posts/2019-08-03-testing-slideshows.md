@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Slideshow test page"
-banner:
+image:
 category: sustainability
 subcategory: co2
 tags: sustainability footprint impact
