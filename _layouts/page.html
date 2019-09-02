@@ -17,6 +17,15 @@ layout: default
 
   </div>
 
+  {% if jekyll.environment == "production" %}
+  {% if layout.comments %}
+  <div class="comments">
+  {% include disqus.html %}
+
+  </div>
+  {% endif %}
+  {% endif %}
+  
   <!-- copyright for mobile view -->
   <div class="copyright-post">
     <img src="{{ site.baseurl }}/assets/logo/logo-transparent-light.png" alt="">
