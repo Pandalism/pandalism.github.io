@@ -17,19 +17,20 @@ layout: default
 
   </div>
 
-  {% if jekyll.environment == "production" %}
+  <!-- copyright for mobile view -->
+  <div class="copyright-post">
+    <img src="{{ site.baseurl }}/assets/logo/logo-transparent-light.png" alt="">
+    <p>Copyright © {{ site.time | date: '%Y' }} Pandalism</p>
+  </div>
+
   {% if layout.comments %}
   <div class="comments">
   {% include disqus.html %}
 
   </div>
   {% endif %}
-  {% endif %}
-  
-  <!-- copyright for mobile view -->
-  <div class="copyright-post">
-    <img src="{{ site.baseurl }}/assets/logo/logo-transparent-light.png" alt="">
-    <p>Copyright © {{ site.time | date: '%Y' }} Pandalism</p>
-  </div>
+
+
+
 
 </div>
