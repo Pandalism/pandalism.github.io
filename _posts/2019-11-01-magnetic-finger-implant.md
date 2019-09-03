@@ -19,11 +19,12 @@ Nonetheless the reality is medicine and biomedical engineering has come so far, 
 
 {% include img.html assetsFolder=page.assets link='mantis_arms.jpg' caption="The mantis arms from cyberpunk2077 would be a fun, but entirely impractical, upgrade" %}
 
-I'm clearly not the only one who thinks the same either, [transumanism](https://en.wikipedia.org/wiki/Transhumanism) as a concept has been around for long, and the origins of 'grinder' style biohacking comes from the mid 80's. Which leads me to this little experiment i partook in right here, whilst I waited for the ability for a [self balancing tail](https://futurism.com/the-byte/robot-tail-balance), I decided to get a magnetic implant.
+I'm clearly not the only one who thinks the same either, [transumanism](https://en.wikipedia.org/wiki/Transhumanism) as a concept has been around for long, and the origins of 'grinder' style biohacking comes from the mid 80's. Which leads me to this little experiment i partook in right here, whilst I waited for the ability for a [self balancing tail](https://futurism.com/the-byte/robot-tail-balance), I decided to get a magnetic implant. I'm not gonna give you a whole spiel about the history or anything like that, instead I'll leave here some links from other blogs if you want more information:
 
-Originally pioneered by the body modification artists such as
-
-
+- []()
+- []()
+- []()
+- []()
 
 
 ## Risks
@@ -39,7 +40,7 @@ The other risk is having the magnet lose its protective biosafe cover whilst sti
 
 ## Implant
 
-I have no tattoos, and only ever had my ears pierced, so I was unsure how i'd deal with the whole implantting things under my skin aspect. In the end its quite simple:
+I have no tattoos, and only ever had my ears pierced, so I was unsure how i'd deal with the whole implanting things under my skin aspect. In the end its quite simple:
 - Anaesthetise with analgesic cream
 - Disinfect skin
 - Disinfect magnet
