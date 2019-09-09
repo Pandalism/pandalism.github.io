@@ -24,6 +24,10 @@ social-media:
   github: Pandalism
 
 
+# Collections
+collections:
+  projects:
+    output: false
 
 # Used for Sitemap.xml and your RSS feed
 url: https://felixdmr.com
