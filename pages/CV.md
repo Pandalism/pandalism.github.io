@@ -3,7 +3,7 @@ layout: page
 title: "Curriculum Vitae"
 category: life
 permalink: /CV/
-assets: page-assets/CV
+assets: page-assets/cv
 ---
 
 
