@@ -24,10 +24,11 @@ layout: default
   </div>
 
   {% if layout.comments %}
+  {% if jekyll.environment == "production" %}
   <div class="comments">
-  {% include disqus.html %}
-
+    {% include disqus.html %}
   </div>
+  {% endif %}
   {% endif %}
 
 
