@@ -40,7 +40,7 @@ The other risk is having the magnet lose its protective biosafe cover whilst sti
 
 ## Implant
 
-I have no tattoos, and only ever had my ears pierced, so I was unsure how i'd deal with the whole implanting things under my skin aspect. In the end its quite simple:
+I have no tattoos, and only ever had my ears pierced, so I was unsure how I'd deal with the whole implanting-things-under-the-skin aspect. In the end its quite simple:
 - Anaesthetise with analgesic cream
 - Disinfect skin
 - Disinfect magnet
@@ -61,6 +61,8 @@ That's right, not even stitches to hold it in place...
 
 ## A Year After - Downsides
 
+So two only aspects in my life where I 'feel' it getting in the way are washing the dishes and playing basketball. The former which I hate anyways (how do I still not have a dishwasher?) and the latter which I'm not terribly great at. Whilst its mostly just a great excuse for when I miss a layup, I do think it affects my off hand dribbling, just feeling its there. In the end this will probably be one of the main reasons I take it out once I'm done experimenting with it.
+
 ## Continuation and Final Notes
 
-Experiments! I mean, its in there now, so not much else to do other than have some fun with it. I have yet to get around to it but I particularly would love to test passing music and other stimuli through
+Experiments! I mean, its in there now, so not much else to do other than have some fun with it. I have yet to get around to it but I particularly would love to test passing music and other stimuli through with coils of wire. Or implementing some sort of security by using the magnetic properties, since adding a reed switch is easy, and the invisible aspect of it will make any malicious snoopers think its capacitive or fingerprint based.
