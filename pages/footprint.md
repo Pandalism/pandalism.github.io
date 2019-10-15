@@ -20,12 +20,12 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 
 | Year        	| 2016   	| 2017   	| 2018   	| 2019   	|
 |-------------	|--------	|--------	|--------	|--------	|
-| **Total [kg]**| **2919**| **2313**| **3885**| **4745**|
+| **Total [kg]**| **2919**| **2313**| **3885**| **5360**|
 | Flights     	| 2919 	  |  1675	  | 1157 	  | 2420  	|
-| Car         	|        	|  639 	  | 1401	  | 864  	  |
-| Motorbike   	|        	|        	| 755  	  | 101   	|
-| Electricity 	|        	|        	| 328  	  | 761  	  |
-| Natural Gas 	|        	|        	| 243     | 600  	  |
+| Car         	|        	|  639 	  | 1647	  | 1682  	|
+| Motorbike   	|        	|        	| 950  	  | 352   	|
+| Electricity 	|        	|        	| 342  	  | 369  	  |
+| Natural Gas 	|        	|        	| 272     | 538  	  |
 | Other       	|        	|        	|        	|        	|
 
 
@@ -36,7 +36,7 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
   - 2018 only has half a years worth of data on Electrical Energy and gas
   - [More information on this in this blog post.]({{site.url}}/2019/04/22/co2-tracking/)
 
-###### Last updated: 2019-09-01
+###### Last updated: 2019-10-15
 <br>
 
 #### Assumptions
@@ -45,7 +45,7 @@ There are a lot of assumptions here:
  - Does not (currently) include [well-to-tank factors](https://www.lowcvp.org.uk/Hubs/leb/TestingandAccreditation/WTTFactors.htm), which would inevitably increase the CO2 quite a bit.
  - Flights calculated with [ICAO carbon offset calculator](https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx).
  - No impact factors for height of CO2 emission.
- - Diesel:	2.68kg/L, Petrol:	2.31	kg/L, Gas:	2.27	kg/m3, Electricity:	0.53	kg/kwh.
+ - Diesel:	2.68kg/L, Petrol:	2.31	kg/L, Gas:	2.27	kg/m3, Electricity:	0.53	kg/kwh. Now includes Well-to-tank factors and is taken from the values calculated by the [UK Goverment](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2019).
  - Does not include taxis, trains or other forms of transport.
  - Does not include driving and energy usage once at the holiday destination.
  - Assumes for the car and motorcycle I was by myself.
