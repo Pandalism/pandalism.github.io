@@ -5,7 +5,7 @@ image:
 category: technology
 subcategory: biohacking
 tags: magnets piercing tattoos cyberpunk
-assets: "post-assets/2019-11-01-magnetic-finger-implant"
+assets: "post-assets/2020-06-21-magnetic-finger-implant"
 published: false
 ---
 
