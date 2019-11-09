@@ -1,0 +1,16 @@
+'.source.gfm, .text.md':
+  'insert-download':
+    'prefix': 'ins-download'
+    'body': '{% include download.html link="${1:LINK}" filetype="${2:FILE}" name="${3:NAME}" %}'
+  'insert-img':
+    'prefix': 'ins-img'
+    'body': '{% include img.html assetsFolder=page.assets link="${1:FILE}" caption="${2:CAPTION}" %}'
+  'insert-slideshow':
+    'prefix': 'ins-slide'
+    'body': """
+    {% assign img_array = "${1:EXAMPLE1.png|EXAMPLE2.png}" | split: "|" %}
+
+    {% assign caption_array = "${2:example cpation|caption 2}" | split: "|" %}
+
+    {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
+    """
