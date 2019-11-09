@@ -11,7 +11,10 @@ published: false
 
 Was fooling around with one of my other projects, and needed to make a gear to fit a wormdrive, it worked, but well, I realised I didnt really know how to make gears. So I took the plunge and started researching how to make gears parametrically for the future!
 
-##
+## Process
+
+Found an old motor that I had salvaged some god knows where with a tiny wormdrive on it, thought it would be quite nifty to use as a bearing ball lift for one of my upcoming
+
 
 ## Download
 
@@ -24,7 +27,7 @@ You can download the Solidworks CAD part below, all you need to do to use it is 
 
 Sent off a couple of the gears to the printer to test them out, and I'm quite pleased (not at the quality of the prints though, in fact, this just highlighted that I need to get around to tuning the printer). The gears looked like the meshed well and would spin nicely with little to no backlash when I attached them to scrap wood. Overall, quite happy.
 
-
+ins
 
 ## Credits
 [](http://www.cartertools.com/involute.html)
