@@ -25,7 +25,7 @@ You can download the Solidworks CAD part below, all you need to do to use it is 
 
 ## Prints!
 
-Sent off a couple of the gears to the printer to test them out, and I'm quite pleased (not at the quality of the prints though, in fact, this just highlighted that I need to get around to tuning the printer). The gears looked like the meshed well and would spin nicely with little to no backlash when I attached them to scrap wood. Overall, quite happy.
+Sent off a couple of the gears to the printer to test them out, and I'm quite pleased (not at the quality of the prints though. In fact, this just highlighted that I need to get around to tuning the printer). The gears looked like they meshed well and would spin nicely with little to no backlash when I attached them to scrap wood. Overall, quite happy.
 
 ins
 
