@@ -33,7 +33,7 @@ Well after much reading and googling on the topic, I was convinced, I was going 
 
 ## What am I really doing
 
-Buying 6 year old server equipment? Uff, it was a hard pill to swallow, and all because I was a bit miffed at my current NAS drive's capabilities.
+Buying 5 year old server equipment? Uff, it was a hard pill to swallow, and all because I was a bit miffed at my current NAS drive's capabilities.
 
 ... but what if it wasn't the NAS which led to slow transfer speeds? What if I'm an idiot?
 
@@ -50,15 +50,18 @@ But alas the server was ordered, and it would be a fun new project so I waited, 
 So clearly that had to be returned. No way was I accepting what was potentially a big bag of metal bits jumbled to high hell by the UPS centre...
 
 
-A reasonable person would through it away
-
+A reasonable person would take this as a sign that maybe, I don't need a server and maybe I should put these thoughts to sleep.
 
 ## Screw it buying it anyways
 
+But that person is not me. My eBay Saved Searches alerted me to a suspiciously cheap listing, £104, no bids, and I kept an eye on it; examining it for reasons as to why it would be so cheap compared to all the other listings. Alas, I think the only reason was because the seller forgot to add the "Gen8" qualifier to the title, and thus it received no attention. After a successful bidding war against no one, its now sitting in my living room, waiting to be tinkered with!
 
-and  You can download the Solidworks CAD part below, all you need to do to use it is change the 4 top parameters in the equations folder to modify it for your needs!
+
 
 {% include download.html link="https://1drv.ms/u/s!Amgx-OdgW8vIiNB691RvYYWjZLcf8g?e=tKCVzA" filetype="cad" name="Parametric_Gear_Export.SLDPRT" %}
+
+Bought some 16gb RAM, bought 3x14TB drives, and a E3-1260L CPU..
+
 
 
 ## Conclusions
