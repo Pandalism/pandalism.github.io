@@ -23,13 +23,13 @@ It was time to look into something better.
 
 First thing I thought was of the classic HP microservers, they always seemed like good bang for buck, and it had been many years since I last looked at them, surely the Gen10 releases would have gone down in price by now?
 
-Well... No. Not really, they were still +£400, +£600 if you wanted anything powerful, and after more research turns out that HP majorly messed up with this generation of microservers as they weren't really user-servicable, the AMD processors appeared anaemic (Opteron X3216) and were soldered on. The Gen10 Plus was a much better option, back to socketed intel processors and a fancy, yet still familar form factor. Nevertheless, being just released they are pretty expensive, [~£730 for the xeon version](https://www.ebuyer.com/964560-hpe-proliant-microserver-gen10-plus-performance-ultra-micro-tower-xeon-p18584-421).
+Well... No. Not really, they were still +£400, +£600 if you wanted anything powerful, and after more research turns out that HP majorly messed up with this generation of microservers as they weren't really user-servicable, the AMD processors appeared anaemic (Opteron X3216, X3418, X3421) and were soldered on, with little to no upgradeability. The Gen10 Plus was a much better option, back to socketed Intel processors and a slightly more compact, yet still familiar form factor. Nevertheless, being just released they are pretty expensive, [~£730 for the xeon version](https://www.ebuyer.com/964560-hpe-proliant-microserver-gen10-plus-performance-ultra-micro-tower-xeon-p18584-421).
 
-Well the old Gen8 would be dirt cheap then right? I remembered when ebuyer was practically giving them away with HPE cashback that ended up being (£120 for the basic unit)[{% page.assets %}/gen8_was_cheap.png]. But no, somehow, maybe due to the colossal let down that was gen10, server hardware had somehow APPRECIATED IN VALUE! Now looking more like £270 for the base price, and some units selling for £350. Insane.
+Well the old Gen8 would be dirt cheap then right? I remembered when ebuyer was practically giving them away with HPE cashback that ended up being [£120 for the basic unit]({{site.url}}/{{page.assets}}/gen8_was_cheap.png). But no, somehow, maybe due to the colossal let down that was gen10, server hardware had actually **appreciated in value**! Now looking more like £270 for the base price, and some units selling for £350. Insane.
 
 {% include img.html assetsFolder=page.assets link='gen8_ebay.png' caption="Gen8 Microservers recently sold on Ebay" %}
 
-Well after much reading and googling on the topic, I was convinced, I was going to buy the very server I had passed on 4 years ago. To my surprise saw one going reasonably cheap (£170), and I just went for it.
+Well after much reading and googling on the topic, my mind was set. I was going to buy the very server I had passed on 4 years ago. To my surprise saw one going at an OK price (£170), and I just went for it.
 
 ## What am I really doing
 
@@ -37,9 +37,9 @@ Buying 5 year old server equipment? Uff, it was a hard pill to swallow, and all 
 
 ... but what if it wasn't the NAS which led to slow transfer speeds? What if I'm an idiot?
 
-> "What if I'm an idiot?" - My dumb dumb self
+> "What if I'm an idiot?" - Rare moment of clear insight
 
-I quickly disconnected the powerline adapter and let my computer connect via wireless (2.5ghz). But the transfer speeds fell to less than 1MB/s. Hmm, not content I ran and got the longest ethernet cable I had and wired it from my living room all the way to the other corner of the house, and boom, on direct copper, **I was now seeing 100MB/s transfer speeds**. I didn't need a new NAS, I needed to throw the powerline adapters out of the window.
+I quickly disconnected the powerline adapter and let my computer connect via wireless (2.5ghz). But the transfer speeds fell to less than 1MB/s. Hmm, not content I ran and got the longest ethernet cable I had and wired it from my living room all the way to the other corner of the house, and boom, on direct copper, **I was now seeing 100MB/s transfer speeds**. Turns out I didn't need a new NAS, I needed to throw the powerline adapters out of the window.
 
 {% include img.html assetsFolder=page.assets link='gen8_ebay.png' caption="Proof of my silliness." %}
 
@@ -53,21 +53,21 @@ So clearly that had to be returned. No way was I accepting what was potentially 
 
 A reasonable person would take this as a sign that maybe, **I don't need a server and maybe I should put these thoughts to sleep**.
 
-## Screw it buying it anyways
+## Screw it, buying it anyways
 
-But that person is not me. My eBay Saved Searches alerted me to a suspiciously cheap listing, **£104**, no bids, and I kept an eye on it; examining it for reasons as to why it would be so cheap compared to all the other listings. Alas, I think the only reason was because the seller forgot to add the "Gen8" qualifier to the title, and thus it received no attention. After a successful bidding war against no one, its now sitting in my living room, waiting to be tinkered with! It again was improperly packaged and had a big old dent in it, but I'm keeping it.
+But that person is not me. It had gotten into my head that I needed to have minute control over my NAS, I needed to be able to tinker with it, to install what ever I wanted on it, I needed to have my own server.
 
-{% include img.html assetsFolder=page.assets link='gen8.jpg' caption="Average scene in a distribution centre" %}
+My eBay Saved Searches alerted me to a suspiciously cheap listing, **£104**, no bids, and I kept an eye on it; examining it for reasons as to why it would be so cheap compared to all the other listings. Alas, I think the only reason was because the seller forgot to add the "Gen8" qualifier to the title, and thus it received no attention. After a successful bidding war against no one, its now sitting in my living room, waiting to be tinkered with! It again was improperly packaged and had a big old dent in it, but I'm keeping it.
 
+{% include img.html assetsFolder=page.assets link='gen8.jpg' caption="HAL 9000" %}
 
-Bought some 16gb RAM, bought 3x14TB drives, and a E3-1260L CPU..
+I immediately bought some 16GB ram and an E3-1260L to swap in for another £80. This brings it on par with the cpu in the Gen10 Plus (Base: G5420) and above the best you could get with Gen10 (X3421), at about half the price.
+Also managed to get a proper steal on harddrives and have three 14TB drives incoming. I can't wait to get around to playing with FreeNAS, or Proxmox or whatever comes out of this!
 
-
+{% include img.html assetsFolder=page.assets link='processor_comparison.png' caption="HAL 9000" %}
 
 ## Conclusions
 
- - Sometimes you just want something and you will justify it anyway you want, but really, you just have to admit theres no rational reason why you want it; and thats OK.
+ - Sometimes you just want something and you will justify it anyway you want, but really, you just have to admit there's no rational reason why you want it; and that is OK.
  - Optimise before looking to buy something better. I see this often in the automotive world where suppliers are more than happy to just add more processing power when really, they should be looking at optimising the code. (OEM pays so who cares, right?)
- - Ask online sellers to please wrap up a server with more than a cereal box.
-
-Alas, Felix out.
+ - Ask online sellers to please wrap up a server with *more* than a **cereal box**.
