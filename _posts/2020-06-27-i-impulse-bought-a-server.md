@@ -15,7 +15,7 @@ Its always been a minor goal of mine to run my own server. This week I finally c
 
 Transferring files to my NAS drive for the umpteenth time in my life, I stared as the file transfer bar so slowly crept across the window, a measly 8MB/s at a time, mocking me as the estimated time to completion hovered around 5 hours, whilst the computer clock showed 11pm on a Tuesday night. No! I would not take this any longer. In a world of gigabit internet and cheap 14tb drives, I was done with this crappy Synology box which stuttered if I even looked at it wrong, which failed to work as a proper plex box, and which now crawled through this file transfer at a laughable pace.
 
-insert picture of sloooow transfer
+{% include img.html assetsFolder=page.assets link='transfer_speeds.jpg' caption="Not my screen cap, but my level of pain." %}
 
 It was time to look into something better.
 
