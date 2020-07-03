@@ -6,7 +6,7 @@ category: technology
 subcategory: electronics
 tags:  microserver computer NAS
 assets: "post-assets/2020-06-27-i-impulse-bought-a-server"
-published: false
+published: true
 ---
 
 Its always been a minor goal of mine to run my own server. This week I finally cracked and bought one, probably for all the wrong reasons.
@@ -41,7 +41,7 @@ Buying 5 year old server equipment? Uff, it was a hard pill to swallow, and all 
 
 I quickly disconnected the powerline adapter and let my computer connect via wireless (2.5ghz). But the transfer speeds fell to less than 1MB/s. Hmm, not content I ran and got the longest ethernet cable I had and wired it from my living room all the way to the other corner of the house, and boom, on direct copper, **I was now seeing 100MB/s transfer speeds**. Turns out I didn't need a new NAS, I needed to throw the powerline adapters out of the window.
 
-{% include img.html assetsFolder=page.assets link='gen8_ebay.png' caption="Proof of my silliness." %}
+{% include img.html assetsFolder=page.assets link='more_reasonable.png' caption="Suddenly it feels like 2020" %}
 
 But alas the server was ordered, and it would be a fun new project so I waited, excited at the thought of tinkering with my network again after so many years, excited at the possibilities of virtualisation on the server, maybe some offloading for Machine Learning tasks, or as a remote Matlab job handler? Nonetheless those small happy thoughts were dashed when it finally arrived, wrapped in nothing else but a **Weetabix box**.
 
