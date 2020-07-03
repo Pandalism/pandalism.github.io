@@ -31,25 +31,25 @@ Well the old Gen8 would be dirt cheap then right? I remembered when ebuyer was p
 
 Well after much reading and googling on the topic, my mind was set. I was going to buy the very server I had passed on 4 years ago. To my surprise saw one going at an OK price (£170), and I just went for it.
 
-## What am I really doing
+## What am I really trying to do?
 
 Buying 5 year old server equipment? Uff, it was a hard pill to swallow, and all because I was a bit miffed at my current NAS drive's capabilities.
 
 ... but what if it wasn't the NAS which led to slow transfer speeds? What if I'm an idiot?
 
-> "What if I'm an idiot?" - Rare moment of clear insight
+> "What if I'm an idiot?" - Me during a rare moment of clear insight
 
 I quickly disconnected the powerline adapter and let my computer connect via wireless (2.5ghz). But the transfer speeds fell to less than 1MB/s. Hmm, not content I ran and got the longest ethernet cable I had and wired it from my living room all the way to the other corner of the house, and boom, on direct copper, **I was now seeing 100MB/s transfer speeds**. Turns out I didn't need a new NAS, I needed to throw the powerline adapters out of the window.
 
 {% include img.html assetsFolder=page.assets link='gen8_ebay.png' caption="Proof of my silliness." %}
 
-But alas the server was ordered, and it would be a fun new project so I waited, excited at the thought of tinkering with my network again after so many years, excited at the possibilities of virtualisation on the server, maybe some offloading for Machine Learning tasks, or as a remote Matlab job handler? Nonetheless those small happy thoughts were dashed when it finally arrived, wrapped in nothing else but a Weetabix box.
+But alas the server was ordered, and it would be a fun new project so I waited, excited at the thought of tinkering with my network again after so many years, excited at the possibilities of virtualisation on the server, maybe some offloading for Machine Learning tasks, or as a remote Matlab job handler? Nonetheless those small happy thoughts were dashed when it finally arrived, wrapped in nothing else but a **Weetabix box**.
 
 {% include img.html assetsFolder=page.assets link='but_why.jpg' caption="Who thinks this is even remotely reasonable?" %}
 
 So clearly that had to be returned. No way was I accepting what was potentially a big bag of metal bits jumbled to high hell by the UPS centre...
 
-{% include img.html assetsFolder=page.assets link='package.gif' caption="Average scene in a distribution centre" %}
+{% include img.html assetsFolder=page.assets link='package.gif' caption="How I image most of my packages are treated" %}
 
 A reasonable person would take this as a sign that maybe, **I don't need a server and maybe I should put these thoughts to sleep**.
 
