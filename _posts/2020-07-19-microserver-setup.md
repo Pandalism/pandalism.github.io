@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Experiments in setting up a Server"
-image: "post-assets/2020-06-27-i-impulse-bought-a-server/banner.jpg"
+image: "post-assets/2020-07-19-microserver-setup/banner.jpg"
 category: technology
 subcategory: electronics
 tags:  microserver computer NAS
-assets: "post-assets/2020-06-27-i-impulse-bought-a-server"
+assets: "post-assets/2020-07-19-microserver-setup"
 published: false
 ---
 
@@ -13,29 +13,48 @@ After the other month's adventures in just buying the damn thing, this is the co
 
 ## Naming and turning the microserver on
 
-Most important part of getting server is finding the right name for it. I happen to follow the very simple rule of naming devices after famous AI or robots in movies and comics, so I just collect the names whenever I see them for this precise moment. Examples from my list:
+Most important part of getting server is finding the right name for it. I happen to follow the very simple rule of naming devices after Matrix characters, sticking to 'human' characters for my personal devices, and 'program' characters for the server/automated program type devices. So clearly the iLo (embedded server management) + Microserver combination meant I was going to call them Seraph and Oracle, respectively. The former acting as a gatekeeper for the latter!
 
- - jarvis - Iron Man's trusty AI from the first movies.
- - friday - Jarvis' replacement once he started getting a little to self-aware.
- - project-2501 - Spontanously sentinent AI which forms the main antagonist in the unmissable *Ghost in the Shell*.
- - tachikoma, uchikoma, logikoma - the goofy AI powered tankettes seen in *Ghost in the Shell's* TV show.
- - ava - Deceptive AI from *Ex Machina*
- - skynet - *Terminator's* apocalypse bringer
- - CASE, TARS - The two computers from *Interstellar*
- - HAL-9000 - Antagonist from *2001: A Space Odyssey*
- - agent-smith - *The Matrix* subroutine which ends up breaking free and becoming sentient, I think?
- - seraph, oracle, trainman, keymaker,
+Other naming conventions I had toyed with was famous AI in movies, such as Jarvis, Friday (iron man), skynet, HAL9000, CASE & TARS, and such. Nonetheless the naming convention that came a close second is characters from the classic *Ghost in the Shell*, with its fantastic movies and tv shows.
+
+## It starts off great...
+
+First step as always, is updating firmware and a fresh install, which led to the first issue. iLO, the embedded server management software allows you to connect to the server even when powered off, and boot it, control it via a virtual monitor, give health warnings, etc. Updating it made sense, and as soon as I did it became extremely sluggish and gave an ominous warning:
+
+ > Controller Firmware Revision 2.10.00: Embedded media manager failed initialisation
+
+{% include img.html assetsFolder=page.assets link='ilo_error.jpg' caption="Sadly I didnt get a chance to grab my own screen caps, but I was presented with this" %}
+
+The issue here was the iLO hadn't been updated in some time, meaning it had a bug that slowly was filling up the dedicated NAND memory. I admit it took much longer to figure out than it should have, and my googlefu failed me a couple of times but turns out the [HP advisory helps walk you right through](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-a00048622en_us) how to clear out the NAND on iLO 4 v2.6 and above. Done!
+
+## The OS
+What OS to run is a serious decision; it carries with it a measure of investment, and you don't want to turn around 6 months down the line and regret not having chosen X when Y is running almost perfectly and hosts all your network! Alas a decision had to be made, and I narrowed down to three options:
+ - **FreeNAS**, a FreeBSD distribution dedicated to providing solid NAS (Network Attached Storage) capabilities, with ZFS baked right in.
+ - **OpenMediaVault**, a Debian based Linux distribution dedicated to providing simple NAS setup, but since its based on Debian, is highly extensible.
+ - **Proxmox**, a Debian based Linux distribution dedicated to providing a solid *hypervisor*, with ZFS baked in.
+
+ I admit I wanted to like FreeNAS, when I played with the installation which had been shipped on the server, I could see its benefits
 
 
 
 
-## The First issues
+
+
+## ZFS on Open Media Vault
+
+
+## Conclusions
+
+## Credit
+
+
+
 
 Updating different firmwares
 
 updated ilo -> found issue with SD card reader
 
-more info -> https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-a00048622en_us
+more info ->
 
   Controller firmware revision 2.09.00 Embedded media manager encountered SL_AbortHandler during init
 
@@ -48,7 +67,7 @@ Looking at all the options of what OS to install, I concluded that really there 
 
 
 
-what a nightmare, i admit to have wasted much more time than neccesary just trying to install FreeNAS. The unit arrived with FreeNAS 11.2 but it was already out of date.
+what a nightmare, I admit to have wasted much more time than neccesary just trying to install FreeNAS. The unit arrived with FreeNAS 11.2 but it was already out of date.
 
 lack of clear docker/virtualisation support, the freebsd base, and a very elitist community (for real! show examples) topped it off and meant I gave up trying to install it.
 
