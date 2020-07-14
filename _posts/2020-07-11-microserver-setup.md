@@ -37,9 +37,26 @@ updated ilo -> found issue with SD card reader
 
 more info -> https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-a00048622en_us
 
-'''Controller firmware revision 2.09.00 Embedded media manager encountered SL_AbortHandler during init'''
+  Controller firmware revision 2.09.00 Embedded media manager encountered SL_AbortHandler during init
 
-## A Classic
+## Installing the os
+Looking at all the options of what OS to install, I concluded that really there was only a couple of ways to go about this:
+- FreeNAS + ZFS data
+- Open Media Vault + SnapraidFS and MergerFS
+- Open Media Vault + ZFS
+- Proxmox hypervisor + ZFS data drives
+
+
+
+what a nightmare, i admit to have wasted much more time than neccesary just trying to install FreeNAS. The unit arrived with FreeNAS 11.2 but it was already out of date.
+
+lack of clear docker/virtualisation support, the freebsd base, and a very elitist community (for real! show examples) topped it off and meant I gave up trying to install it.
+
+Instead I switched over to Openmediavault. In testing I saw that I could easily boot and install ubuntu server, so OMV installed in a breeze. Once in I tried out both snapraidfs and mergerfs and to be honest I'm still not sure what is preferable. I think ZFS is clearly superior for a well set up server, but it definitely carries more issues for a 4-bay small homeserver, although I can see why it has benefits.
+
+I think I will operate with both for a while anweeet
+
+
 
 
 
