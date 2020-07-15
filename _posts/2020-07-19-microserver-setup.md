@@ -33,14 +33,18 @@ What OS to run is a serious decision; it carries with it a measure of investment
  - **OpenMediaVault**, a Debian based Linux distribution dedicated to providing simple NAS setup, but since its based on Debian, is highly extensible.
  - **Proxmox**, a Debian based Linux distribution dedicated to providing a solid *hypervisor*, with ZFS baked in.
 
- I admit I wanted to like FreeNAS, when I played with the installation which had been shipped on the server, I could see its benefits
+ I admit I wanted to like **FreeNAS**, when I played with the installation which had been shipped on the server, I could see its benefits and it's ease of use, but the installation process was just much more of a pain than i'd like to admit. Using the virtual media through the iLO (mounting an ISO remotely) didn't work, and then it was extremely fussy with the flash drive. As I started looking through the forums, I realised how the community was not the most friendly, seeing responses that tended to be a bit more snarky than I would hope . Additionally I slowly realised that whilst it had a similar system for dockers and virtual machines, it wasn't quite the same as what I was used to in Linux.
 
+ This left me no alternative but to install **OpenMediaVault** instead. **Proxmox** looked quite interesting, but realistically, I'm no server administer, I just wanted a NAS with some minor docker and virtualisation capabilities, not the otherway around.
 
+The installation itself went smoothly, on to a 120gb SSD I had just bought (£17! Crazy prices when you think what I paid 3 years ago). The only hiccup here was the fact the SSD was connected to the "5th sata port" in the Microserver. This is usually used for the DVD drive, and when you have the RAID card set to AHCI mode, it won't boot from the 5th sata port. The solution was simple, I installed Ubuntu to a USB drive attached to the internal USB slot in the server, and with it, GRUB was installed. I then went in and edited the GRUB to boot into the SSD by default.
 
+Probably just installing GRUB on a drive and using that would have sufficed, but It just seamed easier to do it all from a micro installation of Ubuntu.
 
+## OpenMediaVault setup
 
+First thing to do was install the omv-extras plugin, this gives access to various things from the community including the ZFS plugin and the snapraidfs and mergerfs plugins, which are vital to the next step, setting up the data drives!
 
-## ZFS on Open Media Vault
 
 
 ## Conclusions
@@ -57,13 +61,6 @@ updated ilo -> found issue with SD card reader
 more info ->
 
   Controller firmware revision 2.09.00 Embedded media manager encountered SL_AbortHandler during init
-
-## Installing the os
-Looking at all the options of what OS to install, I concluded that really there was only a couple of ways to go about this:
-- FreeNAS + ZFS data
-- Open Media Vault + SnapraidFS and MergerFS
-- Open Media Vault + ZFS
-- Proxmox hypervisor + ZFS data drives
 
 
 
