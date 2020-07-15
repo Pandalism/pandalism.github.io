@@ -39,7 +39,7 @@ What OS to run is a serious decision; it carries with it a measure of investment
 
 The installation itself went smoothly, on to a 120gb SSD I had just bought (£17! Crazy prices when you think what I paid 3 years ago). The only hiccup here was the fact the SSD was connected to the "5th sata port" in the Microserver. This is usually used for the DVD drive, and when you have the RAID card set to AHCI mode, it won't boot from the 5th sata port. The solution was simple, I installed Ubuntu to a USB drive attached to the internal USB slot in the server, and with it, GRUB was installed. I then went in and edited the GRUB to boot into the SSD by default.
 
-Probably just installing GRUB on a drive and using that would have sufficed, but It just seamed easier to do it all from a micro installation of Ubuntu.
+Probably just installing GRUB on a drive and using that would have sufficed, but It just seamed easier to do it all from a micro installation of Ubuntu. There is a small issue with how the drives get enumerated meaning adding or removing harddrives will require tweaks to the GRUB config, although I think i can set it by device UUID or serial number instead... [In the mean time this guide gets me through.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
 
 ## OpenMediaVault setup
 
@@ -51,16 +51,7 @@ First thing to do was install the omv-extras plugin, this gives access to variou
 
 ## Credit
 
-
-
-
-Updating different firmwares
-
-updated ilo -> found issue with SD card reader
-
-more info ->
-
-  Controller firmware revision 2.09.00 Embedded media manager encountered SL_AbortHandler during init
+ - [How to fix your GRUB if it doesn't boot into linux]([In the mean time this guide gets me through.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
 
 
 
