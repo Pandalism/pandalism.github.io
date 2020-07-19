@@ -18,15 +18,15 @@ Admittedy I have been blessed/privileged to go on many a trip over the years, he
 ## CO2 and Water
 This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 
-| Year        	| 2016   	| 2017   	| 2018   	| 2019   	|
-|-------------	|--------	|--------	|--------	|--------	|
-| **Total [kg]**| **2919**| **2313**| **3885**| **5360**|
-| Flights     	| 2919 	  |  1675	  | 1157 	  | 2420  	|
-| Car         	|        	|  639 	  | 1647	  | 1682  	|
-| Motorbike   	|        	|        	| 950  	  | 352   	|
-| Electricity 	|        	|        	| 342  	  | 369  	  |
-| Natural Gas 	|        	|        	| 272     | 538  	  |
-| Other       	|        	|        	|        	|        	|
+| Year        	| 2016   	| 2017   	| 2018   	| 2019   	| 2020   	|
+|-------------	|--------	|--------	|--------	|--------	|--------	|
+| **Total [kg]**| **2919**| **2313**| **3885**| **6370**| **1806**|
+| Flights     	| 2919 	  |  1675	  | 1157 	  | 2544  	|374  	  |
+| Car         	|        	|  639 	  | 1647	  | 2066  	|782  	  |
+| Motorbike   	|        	|        	| 950  	  | 474   	|0  	    |
+| Electricity 	|        	|        	| 342  	  | 539  	  |222  	  |
+| Natural Gas 	|        	|        	| 272     | 749  	  |428  	  |
+| Other       	|        	|        	|        	|        	|  	      |
 
 
 [![]({{site.url}}/{{page.assets}}/co2.png)*Plot of CO2 emitted*]({{site.url}}/{{page.assets}}/co2.png)
@@ -34,9 +34,9 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 ###### Notes:
   - 2016 & 2017 only considers Flights
   - 2018 only has half a years worth of data on Electrical Energy and gas
-  - [More information on this in this blog post.]({{site.url}}/2019/04/22/co2-tracking/)
+  - [More information on this in this blog post,]({{site.url}}/2019/04/22/co2-tracking/) and [the next blog post on the topic.]({{site.url}}/2019/10/16/co2-update/)
 
-###### Last updated: 2019-10-15
+###### Last updated: 2020-07-19
 <br>
 
 #### Assumptions
