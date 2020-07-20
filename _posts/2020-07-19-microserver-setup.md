@@ -39,7 +39,7 @@ What OS to run is a serious decision; it carries with it a measure of investment
 
 The installation itself went smoothly, on to a 120gb SSD I had just bought (£17! Crazy prices when you think what I paid 3 years ago). The only hiccup here was the fact the SSD was connected to the "5th sata port" in the Microserver. This is usually used for the DVD drive, and when you have the embedded RAID card set to AHCI mode, it won't boot from the 5th sata port. The solution was simple, I installed Ubuntu to a USB drive attached to the internal USB slot in the server, and with it, GRUB was installed. I then went in and edited the GRUB to boot into the SSD by default.
 
-Probably just installing GRUB on a drive and using that would have sufficed, but It just seamed easier to do it all from a micro installation of Ubuntu. There is a small issue with how the drives get enumerated meaning adding or removing harddrives will require tweaks to the GRUB config, although I think i can set it by device UUID or serial number instead... [In the mean time this guide gets me through.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
+Probably just installing GRUB on a drive and using that would have sufficed, but It just seamed easier to do it all from a micro installation of Ubuntu. There is a small issue with how the drives get enumerated meaning adding or removing harddrives will require tweaks to the GRUB config, although I think I can set it by device UUID or serial number instead... [In the mean time this guide gets me through if I have any issues.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
 
 ## OpenMediaVault setup
 
@@ -50,6 +50,20 @@ To play around with ZFS first, I tried to install it, however I believe a depend
 Reading through the forums, I installed the Proxmox Kernel first (found under the OMV-Extras entry), had to tweak my GRUB configuration to ensure it booted into the proxmox kernel (its the one that ends in -pve) and then installed the ZFS via the command line, following [this guide](https://inlinuxveritas.com/Sk68PBb1U), or also [this guide](https://blog.linuxserver.io/2019/05/14/getting-started-with-zfs-on-linux/). Once that was done the plugin installed fine, and it appeared to work great on the sidebar.
 
 mergerfs and snapraidfs were simple to install, just go to the plugins and select them (mind you the mergerfs plugin we want is the *OpenMediaVault-unionfilesystems*)
+
+Insert picture with all the new side bar options
+
+## ZFS or Mergerfs + Snapraidfs?
+
+Choosing how to setup the data drives was also a big dilema in of itself.
+On one hand we have the very professional, very scalable, high data integrity capabilities of **Zettabyte FileSystem (ZFS)**. On the other hand its trivial to setup an array of drives which can check for bitrot and recover from single disk failures with just **snapraidfs**, then you can collect all the disks and present them as a single point using **mergerfs**.
+
+For now, I think I will stick to the **snapraidfs** and **mergerfs** combination, since I like that one can recover some data on undamaged drives no matter what, that I can expand it over time, and that it won't have to spin up all the drives for simple reads and writes. The major downside is that the data is not redundant until it is written onto the parity, and that is not real time. Nevertheless given the fact it is a simple media storage, I do not think it is so important.
+
+For the disks to store data, I bought three 14TB external harddrives (WD Elements) to take apart and use the harddrives inside. This is significantly cheaper than buying actual harddrives meant for internal use (£170 vs £300) but you lose on warranty and some specific minor features.
+
+These together set up as Parity, Data1 and Data2 will give a mindboggling 28tb of data. Now that I think about it I might have over done it, ha! The possibility remains to only use a Parity and Data1 for now, and add more of my old drives (2tb/6tb), such that you have 14TB Parity, 14TB Data1, 6TB Data2, 2TB Data3, for a total of 22tb, all with parity. This is the kind of flexibility not allowed by **ZFS**.
+
 
 ## docker
 
