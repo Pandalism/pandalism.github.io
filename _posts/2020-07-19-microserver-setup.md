@@ -65,6 +65,17 @@ For the disks to store data, I bought three 14TB external harddrives (WD Element
 These together set up as Parity, Data1 and Data2 will give a mindboggling 28tb of data. Now that I think about it I might have over done it, ha! The possibility remains to only use a Parity and Data1 for now, and add more of my old drives (2tb/6tb), such that you have 14TB Parity, 14TB Data1, 6TB Data2, 2TB Data3, for a total of 22tb, all with parity. This is the kind of flexibility not allowed by **ZFS**.
 
 
+
+
+## adding the harddrives
+
+show pictures of shucking
+
+https://www.michaelxander.com/diy-nas/
+
+## Set up notifications
+
+
 ## docker
 
 Pi-hole
@@ -80,6 +91,8 @@ OpenVPN
 https://blog.linuxserver.io/2019/07/16/perfect-media-server-2019/
 
 
+
+
 ## Credit
 
  - [How to fix your GRUB if it doesn't boot into linux]([In the mean time this guide gets me through.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
@@ -90,6 +103,11 @@ https://blog.linuxserver.io/2019/07/16/perfect-media-server-2019/
 
  - [/r/homelab's "start here" post](https://www.reddit.com/r/homelab/comments/5gz4yp/stumbled_into_rhomelab_start_here/)
 
+https://linuxschminux.wordpress.com/2012/03/19/when-terminal-output-is-too-long-for-your-stupid-terminal/
+
+https://codeopolis.com/posts/beginners-guide-to-portainer/#Introduction
+
+
 what a nightmare, I admit to have wasted much more time than neccesary just trying to install FreeNAS. The unit arrived with FreeNAS 11.2 but it was already out of date.
 
 lack of clear docker/virtualisation support, the freebsd base, and a very elitist community (for real! show examples) topped it off and meant I gave up trying to install it.
@@ -99,8 +117,51 @@ Instead I switched over to Openmediavault. In testing I saw that I could easily 
 I think I will operate with both for a while anweeet
 
 
+## pihole
+
+issue with networking:
+https://docs.pi-hole.net/docker/dhcp/
 
 
+first thing is had to make a macvlan
+
+https://blog.oddbit.com/post/2018-03-12-using-docker-macvlan-networks/
+https://www.portainer.io/2018/09/using-macvlan-portainer-io/
+
+tested on nginx made sure it was connecting correctly
+
+then made pihole as per
+
+https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/
+
+but making sure to select my own macvlan as the network adapter
+
+Next steps
+
+https://docs.pi-hole.net/guides/unbound/
+
+
+
+HDD: file:///D:/UserFiles/Downloads/Chrome/cert-ultrastar-dc-hc530-agency-approval.pdf
+
+https://www.westerndigital.com/products/data-center-drives/ultrastar-dc-hc500-series-hdd
+
+## plugins
+
+reset perms
+flash media
+diskstats
+
+
+https://netfomo.com/windows-apps/57-hard-disk-sentinel-standard-530-giveaway.html
+
+https://codeopolis.com/posts/beginners-guide-to-portainer/#Introduction
+
+https://www.youtube.com/c/DBTechYT/videos
+
+https://www.youtube.com/watch?v=BwgKd6LohQo
+
+https://www.youtube.com/watch?v=BwgKd6LohQo
 
 ## Conclusions
 
