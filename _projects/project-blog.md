@@ -9,13 +9,17 @@ img: page-assets/projects/blog/header.jpg
 tag: blog
 ---
 
-# Introduction
+## Introduction
 hello intro
-# Details
+## Details
 good by Introduction
 
-# Credits
+## Credits
 blah
 
-# Posts
-{% include taggedposts.html tag=page.tag %}}
+
+{% if page.tag %}
+## Posts
+{% include taggedposts.html tag=page.tag %}
+
+{% endif %}
