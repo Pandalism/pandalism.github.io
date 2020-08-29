@@ -7,7 +7,7 @@
 ################################################################################
 
 name: Pandalism
-tagline: AKA Felix DMR
+tagline: Felix DMR's blog
 description: Programming, Electronics, Autonomous Vehicles and other interests!
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
@@ -27,7 +27,7 @@ social-media:
 # Collections
 collections:
   projects:
-    output: false
+    output: true
 
 # Used for Sitemap.xml and your RSS feed
 url: https://felixdmr.com
