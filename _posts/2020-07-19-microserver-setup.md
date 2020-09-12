@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Experiments in setting up a Server"
+title: "I might have sold a microserver on impulse"
 image: "post-assets/2020-07-19-microserver-setup/banner.jpg"
 category: technology
 subcategory: electronics
@@ -9,118 +9,95 @@ assets: "post-assets/2020-07-19-microserver-setup"
 published: false
 ---
 
-After the other month's adventures in just buying the cursed microserver, this is the collection of adventures in getting it all working, and giving my network a much  needed overhaul.
+After the other month's adventures in just buying the cursed microserver, this is the collection of adventures in toiling away at getting it all working, and then selling it anyways.
 
-## Naming and turning the microserver on
+## Initial setup
 
-Most important part of getting server is finding the right name for it. I happen to follow the very simple rule of naming devices after Matrix characters, sticking to 'human' characters for my personal devices, and 'program' characters for the server/automated program type devices. So clearly the iLo (embedded server management) + Microserver combination meant I was going to call them Seraph and Oracle, respectively. The former acting as a gatekeeper for the latter!
+Initial steps were as expected, turn on the device, update all the firmware and start installing the proper OS. This was all done through the embedded computer management system otherwise called the integrated Lights Out (iLO). It was one of the primary reasons I particularly wanted the HP Microserver.
 
-Other naming conventions I had toyed with was famous AI in movies, such as Jarvis, Friday (iron man), skynet, HAL9000, CASE & TARS, and such. Nonetheless the naming convention that came a close second is characters from the classic *Ghost in the Shell*, with its fantastic movies and tv shows.
-
-## It starts off great...
-
-First step as always, is updating firmware and a fresh install, which led to the first issue. iLO, the embedded server management software allows you to connect to the server even when powered off, and boot it, control it via a virtual monitor, give health warnings, etc. Updating it made sense, and as soon as I did it became extremely sluggish and gave an ominous warning:
+This was progressing well, although the iLO interface was extremely sluggish and sometimes failed to sign in and then it hit me with a terrible sounding error:
 
  > Controller Firmware Revision 2.10.00: Embedded media manager failed initialisation
 
-{% include img.html assetsFolder=page.assets link='ilo_error.jpg' caption="Sadly I didnt get a chance to grab my own screen caps, but I was presented with this" %}
+Turns out it was a simple bug in the iLO firmware, solved with an update and a NAND memory flush, [as described here](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-a00048622en_us).
 
-The issue here was the iLO hadn't been updated in some time, meaning it had a bug that slowly was filling up the dedicated NAND memory. I admit it took much longer to figure out than it should have, and my googlefu failed me a couple of times but turns out the [HP advisory helps walk you right through](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-a00048622en_us) how to clear out the NAND on iLO 4 v2.6 and above. Done!
+## OS
 
-## The OS
-What OS to run is a serious decision; it carries with it a measure of investment, and you don't want to turn around 6 months down the line and regret not having chosen X when Y is running almost perfectly and hosts all your network! Alas a decision had to be made, and I narrowed down to three options:
- - **FreeNAS**, a FreeBSD distribution dedicated to providing solid NAS (Network Attached Storage) capabilities, with ZFS baked right in.
- - **OpenMediaVault**, a Debian based Linux distribution dedicated to providing simple NAS setup, but since its based on Debian, is highly extensible.
- - **Proxmox**, a Debian based Linux distribution dedicated to providing a solid *hypervisor*, with ZFS baked in.
+With that out of the way I reached the fork on the road where one debats on which OS and file system to install. To me the options were:
+- **Proxmox**, virtualisation OS, with the very robust ZFS.
+- **FreeNAS**, a NAS OS based on FreeBSD, also using  ZFS.
+- **OpenMediaVault**, another NAS OS but based on Debian, with the option to select ZFS or use the very popular combination of BtrFS/Ext4 and Mergerfs+Snapraid to provide similar redundancy.
 
- I admit I wanted to like **FreeNAS**, when I played with the installation which had been shipped on the server, I could see its benefits and it's ease of use, but the installation process was just much more of a pain than i'd like to admit. Using the virtual media through the iLO (mounting an ISO remotely) didn't work, and then it was extremely fussy with the flash drive. As I started looking through the forums, I realised how the community was not the most friendly, seeing responses that tended to be a bit more snarky than I would hope . Additionally I slowly realised that whilst it had a similar system for dockers and virtual machines, it wasn't quite the same as what I was used to in Linux.
+I did end up installing all, and really they all had similar capabilities (just a matter of configuration and installation) but my familiarity with linux and the fact that this was meant to be a NAS in the end meant I stuck to **OpenMediaVault**. I do have to say another reason is the fact the community appeared to be much more supportive on the forums compared to **FreeNAS** and more YouTube tutorials existed. I have no doubt that **FreeNAS** is a solid choice, and probably more robust and safe considering the FreeBSD base, but the slight tinge of arrogance and dismissive tones of the **FreeNAS** community stood out to me.
 
- This left me no alternative but to install **OpenMediaVault** instead. **Proxmox** looked quite [interesting](https://b3n.org/proxmox-vs-esxi/), but realistically, I'm no server administer, I just wanted a NAS with some minor docker and virtualisation capabilities, ands Proxmox feels like exactly the the other way around.
+## The upgrades
 
-The installation itself went smoothly, on to a 120gb SSD I had just bought (£17! Crazy prices when you think what I paid 3 years ago). The only hiccup here was the fact the SSD was connected to the "5th sata port" in the Microserver. This is usually used for the DVD drive, and when you have the embedded RAID card set to AHCI mode, it won't boot from the 5th sata port. The solution was simple, I installed Ubuntu to a USB drive attached to the internal USB slot in the server, and with it, GRUB was installed. I then went in and edited the GRUB to boot into the SSD by default.
+By now I had ordered a 128gb SSD to host the OS in the 5th internal SATA Port, along with the 16gb ECC memory and new CPU I bought, as mentioned in the last [blog](), it was looking like quite a powerful little NAS Box. Setting up the server to boot from the 5th port did require some tweaking due to some interesting BIOS limitations, but with a ubuntu install on a separate USB stick and some [GRUB modifications](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/) to select the right kernel and drive, it was booting into the SSD in no time.
 
-Probably just installing GRUB on a drive and using that would have sufficed, but It just seamed easier to do it all from a micro installation of Ubuntu. There is a small issue with how the drives get enumerated meaning adding or removing harddrives will require tweaks to the GRUB config, although I think I can set it by device UUID or serial number instead... [In the mean time this guide gets me through if I have any issues.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
+With **OpenMediaVault** installed, first thing to do was get the [omv-extras plugin](https://omv-extras.org/), this gives access to various things from the community including the **ZFS** plugin and the **snapraidfs** and **mergerfs** plugins, which are vital to the next step, setting up the data drives!
 
-## OpenMediaVault setup
+To play around with ZFS first, I tried to install it, however I believe a dependency mismatch somewhere in the plugin was causing it to fail, reading through the forums, I installed the Proxmox Kernel first (found under the OMV-Extras entry), had to tweak my GRUB configuration to ensure it booted into the proxmox kernel (its the one that ends in _-pve_) and then installed the ZFS via the command line, following [this guide](https://inlinuxveritas.com/Sk68PBb1U), or also [this guide](https://blog.linuxserver.io/2019/05/14/getting-started-with-zfs-on-linux/). Once that was done the plugin installed fine, and it appeared to work great on the sidebar.
 
-First thing to do was install the [omv-extras plugin](https://omv-extras.org/), this gives access to various things from the community including the **ZFS** plugin and the **snapraidfs** and **mergerfs** plugins, which are vital to the next step, setting up the data drives!
+**mergerfs** and **snapraidfs** were simple to install, just go to the plugins and select them (mind you the mergerfs plugin we want is actually called  *OpenMediaVault-unionfilesystems* for some reason)
 
-To play around with ZFS first, I tried to install it, however I believe a dependency mismatch somewhere in the plugin was causing it to fail, as can be seen below.
+I ended up choosing snapraidfs and set up two 14tb drives in the server, drives shucked from WD Elements external harddrives which works just fine for me and ended up being half price compared to an internal drive (why do they do that?).
 
-Reading through the forums, I installed the Proxmox Kernel first (found under the OMV-Extras entry), had to tweak my GRUB configuration to ensure it booted into the proxmox kernel (its the one that ends in -pve) and then installed the ZFS via the command line, following [this guide](https://inlinuxveritas.com/Sk68PBb1U), or also [this guide](https://blog.linuxserver.io/2019/05/14/getting-started-with-zfs-on-linux/). Once that was done the plugin installed fine, and it appeared to work great on the sidebar.
 
-mergerfs and snapraidfs were simple to install, just go to the plugins and select them (mind you the mergerfs plugin we want is the *OpenMediaVault-unionfilesystems*)
+Pictures of the shucking process and the drive testing
 
-Insert picture with all the new side bar options
 
-## ZFS or Mergerfs + Snapraidfs?
-
-Choosing how to setup the data drives was also a big dilema in of itself.
-On one hand we have the very professional, very scalable, high data integrity capabilities of **Zettabyte FileSystem (ZFS)**. On the other hand its trivial to setup an array of drives which can check for bitrot and recover from single disk failures with just **snapraidfs**, then you can collect all the disks and present them as a single point using **mergerfs**.
-
-For now, I think I will stick to the **snapraidfs** and **mergerfs** combination, since I like that one can recover some data on undamaged drives no matter what, that I can expand it over time, and that it won't have to spin up all the drives for simple reads and writes. The major downside is that the data is not redundant until it is written onto the parity, and that is not real time. Nevertheless given the fact it is a simple media storage, I do not think it is so important.
-
-For the disks to store data, I bought three 14TB external harddrives (WD Elements) to take apart and use the harddrives inside. This is significantly cheaper than buying actual harddrives meant for internal use (£170 vs £300) but you lose on warranty and some specific minor features.
-
-These together set up as Parity, Data1 and Data2 will give a mindboggling 28tb of data. Now that I think about it I might have over done it, ha! The possibility remains to only use a Parity and Data1 for now, and add more of my old drives (2tb/6tb), such that you have 14TB Parity, 14TB Data1, 6TB Data2, 2TB Data3, for a total of 22tb, all with parity. This is the kind of flexibility not allowed by **ZFS**.
+## The Stack
 
 
 
 
-## adding the harddrives
+## The Twist
+Now that everything was running smoothly and I was playing with virtualisation and docker containers in the network, I took a step back, and decided to sell it!
 
-show pictures of shucking
+Surprising maybe, but as I was going through the process of setting it all up and upgrading and running into little issues here and there I realised a couple of things:
+- My previous setup was actually quite good already, the basic Synology + Nvidia Shield is an extremely powerful Plex setup, with hardware transcoding built in meaning there was actually no performance difference (the server cannot use hardware transcoding sadly)
+- The server was actually quite a bit louder too. Its not very significant, but I like being able to have the flexibility of placing my setup where needed, without having to consider fan noises, and the previous NAS was damn near silent compared.
+- Power consumption was an interesting concept. I soon realised the Gen8 Microserver was pulling anywhere between 35W idle to 60W when just cruising along, even when completely turned off, the iLO system was pulling 5W! In comparison, the NAS was pulling 11W at idle to 35W when pushed, with the Shield pulling 1.5W to 5.5W in the same situation.
+- I took a long hard look at myself and my hoarding tendencies and realised I wanted to try to minimize the clutter in my life, and downsize everything.
 
-https://www.michaelxander.com/diy-nas/
+This meant I came to the conclusion, that whilst I initially thought that I wanted a monolithic network setup with a powerful, always-on server to do everything, it was going to be louder, bulkier and more power hungry than a completely decentralised setup. So with the lessons learned from this whole debacle I set forth with my _'network goals'_:
 
-## Set up notifications
+- Synology or similar NAS with docker capabilities to serve files and host the download stack (_transmission_, _sonarr_, _radarr_, _jackett_, _openvpn_).
+- Raspberry Pi with Pi-hole Ad blocking and cron jobs, Wake-On-Lan scripts, VPN server to handle 24/7 management and external access to my network.
+- Nvidia Shield to act as a Plex server (if it works so well why change)
+- Intel NUC or other Ultra Small Form Factor PC to be a heavy lifting virtualisation and docker container for specific routine tasks and experiments with cloud computing pipelines, such as Computer Vision processing and other things which wouldn't run well on the NAS or Raspi.
 
+I hope this would give me some strong granularity of power use/noise, whilst still having 24/7 access to the network. It would still be as compact overall as having the Gen8, with more flexibility in positioning around the room, and easier transport.
 
-## docker
+So I sold the server, however the whole process of setting it up was highly educational and taught me exactly what I want out of my homelab/network, and even after the upgrades, I still made a tidy £120 profit!
 
-Pi-hole
-plex
+## Current setup
+As it stands, the Raspberry Pi 3B is running DietOS with pihole and docker on it. The pi-hole handling the DHCP for my whole network since the silly internet companies router doesn't let me use my own DNS otherwise.
 
-downloader + sonarr + lidarr
+The NAS folders are mounted through both Samba for the media files, and NFS for the configuration files (needed to solve issues with file locks). The docker runs the full download stack mentioned before, which it slightly struggles with but as long as I don't prod it too much it stays up.
 
-OpenVPN
+The NAS is still my currend DS214play which sadly just barely misses the opportunity of using docker (as it is one of the last enclosures released with 32-bit intel chips), so I am waiting for the upgrade at some point in the future.
 
+Network Diagram
 
-## Conclusions
+## Conclusion
+This whole thing was a bit of a wild ride personally and a lot of time was put into playing with these systems, but now I am much more knowledgeable on both the tools used (docker, bash, ssh, GRUB, basic network security) and how I want my setup to look like in the future. I could have written a lot, lot more but this time I actually have this one well documented in my projects folder, in case I ever attempt a new network topology again (I admit the HP microserver Gen10+ is looking very reasonable lately...)
 
-https://blog.linuxserver.io/2019/07/16/perfect-media-server-2019/
+All in all, a fun little couple of weeks!
 
+## Credit and Further links
 
-
-
-## Credit
-
- - [How to fix your GRUB if it doesn't boot into linux]([In the mean time this guide gets me through.](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
-
+ - [How to fix your GRUB if it doesn't boot into linux](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
  - [List of Awesome selfhosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
-
  - [/r/homelab's wiki with many helpful tips and ideas](https://www.reddit.com/r/homelab/wiki/software#wiki_homelab_software)
-
  - [/r/homelab's "start here" post](https://www.reddit.com/r/homelab/comments/5gz4yp/stumbled_into_rhomelab_start_here/)
-
-https://linuxschminux.wordpress.com/2012/03/19/when-terminal-output-is-too-long-for-your-stupid-terminal/
-
-https://codeopolis.com/posts/beginners-guide-to-portainer/#Introduction
-
-
-what a nightmare, I admit to have wasted much more time than neccesary just trying to install FreeNAS. The unit arrived with FreeNAS 11.2 but it was already out of date.
-
-lack of clear docker/virtualisation support, the freebsd base, and a very elitist community (for real! show examples) topped it off and meant I gave up trying to install it.
-
-Instead I switched over to Openmediavault. In testing I saw that I could easily boot and install ubuntu server, so OMV installed in a breeze. Once in I tried out both snapraidfs and mergerfs and to be honest I'm still not sure what is preferable. I think ZFS is clearly superior for a well set up server, but it definitely carries more issues for a 4-bay small homeserver, although I can see why it has benefits.
-
-I think I will operate with both for a while anweeet
+- [Perfect Media Server - 2019 Edition](https://blog.linuxserver.io/2019/07/16/perfect-media-server-2019/)
+- [Fix long terminal outputs](https://linuxschminux.wordpress.com/2012/03/19/when-terminal-output-is-too-long-for-your-stupid-terminal/)
+- [Guide to portainer](https://codeopolis.com/posts/beginners-guide-to-portainer/#Introduction)
 
 
-## pihole
 
-issue with networking:
-https://docs.pi-hole.net/docker/dhcp/
+
 
 
 first thing is had to make a macvlan
@@ -162,9 +139,3 @@ https://www.youtube.com/c/DBTechYT/videos
 https://www.youtube.com/watch?v=BwgKd6LohQo
 
 https://www.youtube.com/watch?v=BwgKd6LohQo
-
-## Conclusions
-
- - Sometimes you just want something and you will justify it anyway you want, but really, you just have to admit there's no rational reason why you want it; and that is OK.
- - Optimise before looking to buy something better. I see this often in the automotive world where suppliers are more than happy to just add more processing power when really, they should be looking at optimising the code. (OEM pays so who cares, right?)
- - Ask online sellers to please wrap up a server with *more* than a **cereal box**.
