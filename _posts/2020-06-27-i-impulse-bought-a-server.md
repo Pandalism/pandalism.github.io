@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I might have bought a microserver on impulse"
+title: "Bought a microserver on impulse"
 image: "post-assets/2020-06-27-i-impulse-bought-a-server/banner.jpg"
 category: technology
 subcategory: electronics
