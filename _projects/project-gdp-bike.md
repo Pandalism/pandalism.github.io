@@ -41,16 +41,17 @@ My familiarity with R/C vehicles and drones meant I was in charge of the electri
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=2%}
 
-## Technologies/Skills used
- - Matlab/Simulink
- - Subversion
+### Technologies/Skills used
+ - Matlab and Simulink
+ - Subversion version control
  - Model creation, verification and validation
+ - Basic Electronics
 
-## Credits
-blah
+### Credits
+Most sincere gratitude to the University for the opportunity and my good friend Fran Infante for being my right hand man and helping me so much during the project even when I was starting to feature-creep.
 
 {% if page.tag %}
-## Posts
+### Posts
 {% include taggedposts.html tag=page.tag %}
 
 {% endif %}
