@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Group Design Project: Range Extended Electic Motorcycle"
+title: "Group Design Project: Range Extended Electric Motorcycle"
 category: motorcycles
 assets: page-assets/projects/gdp-bike
 startdate: 2014-10-01
