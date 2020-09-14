@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "I might have sold a microserver on impulse"
-image: "post-assets/2020-07-19-microserver-setup/banner.jpg"
+image: "post-assets/2020-09-15-microserver-setup/banner.jpg"
 category: technology
 subcategory: electronics
 tags:  microserver computer NAS
-assets: "post-assets/2020-07-19-microserver-setup"
+assets: "post-assets/2020-09-15-microserver-setup"
 published: false
 ---
 
@@ -20,6 +20,9 @@ This was progressing well, although the iLO interface was extremely sluggish and
  > Controller Firmware Revision 2.10.00: Embedded media manager failed initialisation
 
 Turns out it was a simple bug in the iLO firmware, solved with an update and a NAND memory flush, [as described here](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-a00048622en_us).
+
+{% include img.html assetsFolder=page.assets link='ilo_error.jpg' caption="Error message in question" %}
+
 
 ## OS
 
@@ -76,12 +79,12 @@ As it stands, the Raspberry Pi 3B is running DietOS with pihole and docker on it
 
 The NAS folders are mounted through both Samba for the media files, and NFS for the configuration files (needed to solve issues with file locks). The docker runs the full download stack mentioned before, which it slightly struggles with but as long as I don't prod it too much it stays up.
 
-The NAS is still my currend DS214play which sadly just barely misses the opportunity of using docker (as it is one of the last enclosures released with 32-bit intel chips), so I am waiting for the upgrade at some point in the future.
+The NAS is still my current DS214play which sadly just barely misses the opportunity of using docker (as it is one of the last enclosures released with 32-bit intel chips), so I am waiting for the upgrade at some point in the future.
 
 Network Diagram
 
 ## Conclusion
-This whole thing was a bit of a wild ride personally and a lot of time was put into playing with these systems, but now I am much more knowledgeable on both the tools used (docker, bash, ssh, GRUB, basic network security) and how I want my setup to look like in the future. I could have written a lot, lot more but this time I actually have this one well documented in my projects folder, in case I ever attempt a new network topology again (I admit the HP microserver Gen10+ is looking very reasonable lately...)
+This whole thing was a bit of a wild ride personally and a lot of time was put into playing with these systems, but now I am much more knowledgeable on both the tools used (docker, bash, ssh, GRUB, basic network security) and how I want my setup to look like in the future. I could have written a lot, lot more but this time I actually have this one well documented in my projects folder, in case I ever attempt a new network topology again (I admit the HP microserver Gen10+ is looking very reasonable lately...).
 
 All in all, a fun little couple of weeks!
 
