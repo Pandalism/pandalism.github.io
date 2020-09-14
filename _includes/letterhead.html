@@ -33,6 +33,7 @@
   {% endif %}
 
   <!-- logic for iterating and linking tags -->
+  {% if page.layout == "post" %}
   {% if page.tags %}
   <p class="tags">[
 
@@ -43,6 +44,7 @@
     {% endfor %}
 
       ]</p>
+    {% endif %}
     {% endif %}
 
 </div>
