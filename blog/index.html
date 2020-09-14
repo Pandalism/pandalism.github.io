@@ -31,7 +31,9 @@ category: blog
         </a>
 
       <div class="blog-post-excerpt">
-        {{ post.excerpt }}
+        {% assign var_open_curl = "}" %}
+        {% assign var_close_curl = "}" %}
+        {{ post.excerpt | replace: var_open_curl, '+' | replace: var_close_curl, '+' }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="blog-post-more"><h5>Read More</h5></a>
