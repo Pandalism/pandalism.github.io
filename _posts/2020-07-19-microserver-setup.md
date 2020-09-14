@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "I might have sold a microserver on impulse"
+title: "I might have sold the microserver on impulse"
 image: "post-assets/2020-09-15-microserver-setup/banner.jpg"
 category: technology
 subcategory: electronics
-tags:  microserver computer NAS
+tags:  microserver computer NAS docker network
 assets: "post-assets/2020-09-15-microserver-setup"
 published: false
 ---
@@ -31,7 +31,7 @@ With that out of the way I reached the fork on the road where one debats on whic
 - **FreeNAS**, a NAS OS based on FreeBSD, also using  ZFS.
 - **OpenMediaVault**, another NAS OS but based on Debian, with the option to select ZFS or use the very popular combination of BtrFS/Ext4 and Mergerfs+Snapraid to provide similar redundancy.
 
-I did end up installing all, and really they all had similar capabilities (just a matter of configuration and installation) but my familiarity with linux and the fact that this was meant to be a NAS in the end meant I stuck to **OpenMediaVault**. I do have to say another reason is the fact the community appeared to be much more supportive on the forums compared to **FreeNAS** and more YouTube tutorials existed. I have no doubt that **FreeNAS** is a solid choice, and probably more robust and safe considering the FreeBSD base, but the slight tinge of arrogance and dismissive tones of the **FreeNAS** community stood out to me.
+I did end up installing all, and really they all had similar capabilities (just a matter of configuration and installation) but my familiarity with linux and the fact that this was meant to be a NAS in the end meant I stuck to **OpenMediaVault**. _I do have to say another reason is the fact the community appeared to be much more supportive on the forums compared to **FreeNAS** and more YouTube tutorials existed for the former_. I have no doubt that **FreeNAS** is a solid choice, and probably more robust and safe considering the FreeBSD base, but the slight tinge of arrogance and dismissive tones of the **FreeNAS** community stood out to me.
 
 ## The upgrades
 
@@ -43,13 +43,26 @@ To play around with ZFS first, I tried to install it, however I believe a depend
 
 **mergerfs** and **snapraidfs** were simple to install, just go to the plugins and select them (mind you the mergerfs plugin we want is actually called  *OpenMediaVault-unionfilesystems* for some reason)
 
-I ended up choosing snapraidfs and set up two 14tb drives in the server, drives shucked from WD Elements external harddrives which works just fine for me and ended up being half price compared to an internal drive (why do they do that?).
+I ended up choosing snapraidfs and set up two 14tb drives in the server, drives shucked from WD Elements external harddrives which works just fine for me and ended up being half price compared to the [very same drives they are based on](https://www.westerndigital.com/products/data-center-drives/ultrastar-dc-hc500-series-hdd).
 
 
-Pictures of the shucking process and the drive testing
+
+{% assign img_array = "banner.jpg|cpu_stats.png|drive_testing.png|zfs_fail_2.png|plugins_working.png" | split: "|" %}
+
+{% assign caption_array = "Changing out the CPU|Success!|Testing shucked drives for bad sectors, note the fan!|The previously mentioned ZFS error|The community plugins I was referring to" | split: "|" %}
+
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
 
 
-## The Stack
+
+## The Software Stack
+With OpenMediaVault fully setup, all my media drives fully functional, the notification and automated test scripts running, it was now time to actually play with the software.
+
+Installing _Portainer_ for the first time I quickly came to love _docker_, it made container creation and managment an absolute breeze, letting you see the log files and trivially open up a console in the container. It really was a whole knew discovery. That led to the usual download stack often seen around with _Transmission-OpenVPN_ providing both vpn tunnelling and downloading to a bunch of download managers like _sonarr_, _lidarr_, _radarr_, _jackett_ etc.
+
+I also poked a bit into setting up _pihole_, which worked great except for the fact that I would have preferred using the DHCP server to pass them the DNS server, particularly for devices like the TV. Alas my silly ISP router doesn't allow custom DNS so it was all just too much of a hassle to setup a DHCP server which wouldn't be on 24/7.
+
+From there I dove deeper and tested the matlab and mlflow containers, with mixed results (matlab was giving me license issues) and then on to the virtual machines, both from the internal KVM
 
 
 
@@ -81,64 +94,22 @@ The NAS folders are mounted through both Samba for the media files, and NFS for 
 
 The NAS is still my current DS214play which sadly just barely misses the opportunity of using docker (as it is one of the last enclosures released with 32-bit intel chips), so I am waiting for the upgrade at some point in the future.
 
-Network Diagram
+{% include img.html assetsFolder=page.assets link='network.png' caption="My Network as it stands today" %}
 
 ## Conclusion
-This whole thing was a bit of a wild ride personally and a lot of time was put into playing with these systems, but now I am much more knowledgeable on both the tools used (docker, bash, ssh, GRUB, basic network security) and how I want my setup to look like in the future. I could have written a lot, lot more but this time I actually have this one well documented in my projects folder, in case I ever attempt a new network topology again (I admit the HP microserver Gen10+ is looking very reasonable lately...).
+This whole thing was a bit of a wild ride personally and a lot of time was put into playing with these systems, but now I am much more knowledgeable on both the tools used (_docker_, _bash_, _ssh_, _GRUB_, basic network security, file permissions, etc) and how I want my setup to look like in the future. I could have written a lot, lot more but this time I actually have this one well documented in my projects folder, in case I ever attempt a new network topology again (I admit the HP microserver Gen10+ is looking very reasonable lately...).
 
 All in all, a fun little couple of weeks!
 
 ## Credit and Further links
 
  - [How to fix your GRUB if it doesn't boot into linux](https://www.linux.com/training-tutorials/how-rescue-non-booting-grub-2-linux/)
+ - [Free Hard Disk Sentinel for testing harddrives](https://netfomo.com/windows-apps/57-hard-disk-sentinel-standard-530-giveaway.html)
  - [List of Awesome selfhosted software](https://github.com/awesome-selfhosted/awesome-selfhosted)
  - [/r/homelab's wiki with many helpful tips and ideas](https://www.reddit.com/r/homelab/wiki/software#wiki_homelab_software)
  - [/r/homelab's "start here" post](https://www.reddit.com/r/homelab/comments/5gz4yp/stumbled_into_rhomelab_start_here/)
 - [Perfect Media Server - 2019 Edition](https://blog.linuxserver.io/2019/07/16/perfect-media-server-2019/)
-- [Fix long terminal outputs](https://linuxschminux.wordpress.com/2012/03/19/when-terminal-output-is-too-long-for-your-stupid-terminal/)
+- [Fix long terminal outputs to fit in the screen](https://linuxschminux.wordpress.com/2012/03/19/when-terminal-output-is-too-long-for-your-stupid-terminal/)
 - [Guide to portainer](https://codeopolis.com/posts/beginners-guide-to-portainer/#Introduction)
-
-
-
-
-
-
-first thing is had to make a macvlan
-
-https://blog.oddbit.com/post/2018-03-12-using-docker-macvlan-networks/
-https://www.portainer.io/2018/09/using-macvlan-portainer-io/
-
-tested on nginx made sure it was connecting correctly
-
-then made pihole as per
-
-https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/
-
-but making sure to select my own macvlan as the network adapter
-
-Next steps
-
-https://docs.pi-hole.net/guides/unbound/
-
-
-
-HDD: file:///D:/UserFiles/Downloads/Chrome/cert-ultrastar-dc-hc530-agency-approval.pdf
-
-https://www.westerndigital.com/products/data-center-drives/ultrastar-dc-hc500-series-hdd
-
-## plugins
-
-reset perms
-flash media
-diskstats
-
-
-https://netfomo.com/windows-apps/57-hard-disk-sentinel-standard-530-giveaway.html
-
-https://codeopolis.com/posts/beginners-guide-to-portainer/#Introduction
-
-https://www.youtube.com/c/DBTechYT/videos
-
-https://www.youtube.com/watch?v=BwgKd6LohQo
-
-https://www.youtube.com/watch?v=BwgKd6LohQo
+- [DB tech makes great videos on using docker and other selfhosted hardware](https://www.youtube.com/c/DBTechYT/videos)
+- [TechnoDadLife also has fantastic videos, between both, there's nothing they don't cover of OpenMediaVault](https://www.youtube.com/watch?v=5rtGBwBuzQE)
