@@ -6,7 +6,9 @@ letterheadIcon: "assets/icons/tag.png"
 <ul>
 {% for post in site.tags[page.tag] %}
   <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-    {{ post.excerpt | truncate: 200}}
+    {% assign var_open_curl = "{" %}
+    {% assign var_close_curl = "}" %}
+    {{ post.excerpt | replace: var_open_curl, '+' | replace: var_close_curl, '+' | truncate: 200}}
   </li>
 {% endfor %}
 </ul>
