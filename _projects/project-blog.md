@@ -5,7 +5,7 @@ category: life
 assets: page-assets/projects/blog
 startdate:
 enddate: none
-image: page-assets/projects/blog/header.jpg
+image: page-assets/projects/gdp-bike/banner.jpg
 tag: blog
 ---
 
