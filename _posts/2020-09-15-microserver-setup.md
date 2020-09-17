@@ -6,7 +6,7 @@ category: technology
 subcategory: electronics
 tags:  microserver computer NAS docker network
 assets: "post-assets/2020-09-15-microserver-setup"
-published: false
+published: true
 ---
 
 After the other month's adventures in just buying the cursed microserver, this is the collection of adventures in toiling away at getting it all working, and then selling it anyways.
