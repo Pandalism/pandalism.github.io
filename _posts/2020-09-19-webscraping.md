@@ -8,10 +8,12 @@ assets: "post-assets/2020-09-19-webscraping"
 published: true
 ---
 
-I will always admit I suffer from digital compulsive hoarding, practically saving everything digital I interact with. Example: If I watch it on Netflix or Amazon, I'll go download it right after, even if I never watch it again. In a similar fashion I wanted to save all the videos from the bootcamp I just did, to safeguard incase I need to ever refer to them in the future (I don't share it out, simply for personal consumption). Considering I hadn't had much webscraping practice before I thought it was good mini-project.
+I will always admit I suffer from **digital compulsive hoarding**, practically saving everything digital I interact with. If I watch it on Netflix or Amazon, I'll go download it right after, even if I never watch it again.
+
+In a similar fashion I wanted to save all the videos from the bootcamp I just did, to safeguard in case I need to ever refer to them in the future (not to share, promise!). Considering I hadn't had much webscraping practice before I thought it was good mini-project.
 
 ## Sifting through the source code
-So using the trusty developer mode in Chrome makes this a walk in the park. Really, it's how I'd usually just download the undownloadable, but automating ~100's of clicks staves away the RSI.
+So using the trusty developer mode in Chrome makes this a walk in the park. It's how I'd usually just download the undownloadable, but automating ~1000's of clicks keeps the RSI-monster away.
 
 Poking around, it appeared the anchor links for the 'next' arrow were conveniently tagged `next`, and the video was nested within the only `<iframe>` in the whole page. If there was no video, then no `<iframe>`.
 
