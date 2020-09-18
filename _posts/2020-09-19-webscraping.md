@@ -5,7 +5,7 @@ image: "post-assets/2020-09-19-webscraping/3.png"
 category: programming
 tags:  webscraping python
 assets: "post-assets/2020-09-19-webscraping"
-published: false
+published: true
 ---
 
 I will always admit I suffer from digital compulsive hoarding, practically saving everything digital I interact with. Example: If I watch it on Netflix or Amazon, I'll go download it right after, even if I never watch it again. In a similar fashion I wanted to save all the videos from the bootcamp I just did, to safeguard incase I need to ever refer to them in the future (I don't share it out, simply for personal consumption). Considering I hadn't had much webscraping practice before I thought it was good mini-project.
