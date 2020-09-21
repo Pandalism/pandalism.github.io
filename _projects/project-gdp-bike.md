@@ -7,15 +7,13 @@ assets: page-assets/projects/gdp-bike
 startdate: 2014-10-01
 enddate: 2015-07-01
 image: page-assets/projects/gdp-bike/banner.jpg
+published: true
 ---
 
-This was my Group Design Project to finish the **MEng Mechanical Engineering degree** in Southampton, back in 2015. It was a great project, where we took a small off-road bike and replaced the motor with a 11kW electric powertrain. The project was to build an electric motorcycle, and then create a modular simulation platform to mimic it, capable of being extended with hybrid logic.
+This was my Group Design Project to finish the **MEng Mechanical Engineering degree** in Southampton, back in 2015. It was a great project, where we took a small off-road bike and replaced the motor with a 11kW electric powertrain. The project was to **build an electric motorcycle**, and then create a **modular simulation platform** to model it, with the added capability of being extended to include hybrid **powertrains**.
 
-{% if page.tags %}
 
 ## Simulation Platform
-
-{% endif %}
 
 The task of making the simulation framework and most of the modules fell upon me, and for this I decided to use **Simulink**, even though I had never used it before, just because I felt somewhat inspired by the **Dymola** based lap-time simulation that I saw during my time in **Redbull Racing**. The idea was to make the simulation modular via 'Variant Models' which would load on startup, present them in a simple GUI, so the user could select the models to be used, and then run the simulation.
 
@@ -41,11 +39,18 @@ My familiarity with R/C vehicles and drones meant I was in charge of the electri
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=2%}
 
+## Things I would have done differently
+I believe sections of the models could have been done in **Simscape** which is for acausal physical modelling. Nonetheless at the time Simscape was a bit poorly supported particularly for logging.
+
+The only other aspect is that the GUI and framework were done kinda haphazardly, with only a semblance of direction from the beginning, in hindsight I'd have saved a lot of time jumping straight into what we needed and focusing on that, letting other sections and models become more developed.
+
 ### Technologies/Skills used
  - Matlab and Simulink
  - Subversion version control
  - Model creation, verification and validation
  - Basic Electronics
+
+
 
 ### Credits
 Most sincere gratitude to the University for the opportunity and my good friend Fran Infante for being my right hand man and helping me so much during the project even when I was starting to feature-creep.
