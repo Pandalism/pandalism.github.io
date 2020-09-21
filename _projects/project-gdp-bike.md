@@ -25,7 +25,7 @@ I am pretty pleased with how it ended looking, the autoloading of models was a b
 
 {% assign img_array = "variant_find.png|gui.png|overall_model.png|bike_model.png|fuelcell_model.png|motor_model.png|plots.png" | split: "|" %}
 
-{% assign caption_array = "As the gui starts up, it looks for the different models placed in the folders|Image of the GUI with populated dropdown boxes to select the models, driver model, test path and various other aspects|The overall simulation framework looks as follows, with bike, driver, road and kinematics subsections|" | split: "|" %}
+{% assign caption_array = "As the gui starts up, it looks for the different models placed in the folders|Image of the GUI with populated dropdown boxes to select the models, driver model, test path and various other aspects|The overall simulation framework looks as follows, with bike, driver, road and kinematics subsections|Inside the motorcycle block, it was split into variant models for the subsystems like wheels, motors, controllers, etc.|The models were simple to start off with, usually based on theoretical physical models, experimentally found models or...|...datasheet based models|If you noticed there were many output channels throughout the simscape project, all outputting to the save file and easily plotted by post-processing scripts" | split: "|" %}
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
 
@@ -33,9 +33,9 @@ I am pretty pleased with how it ended looking, the autoloading of models was a b
 ## Motorcycle
 My familiarity with R/C vehicles and drones meant I was in charge of the electrical powertrain design too, but in this regards, it just mean sourcing hobby-grade lithium cells and wiring them up to the controller in a semi-safe way. We would have never had time to build a Battery Management System, but it would have been the natural next step. Performance was ok, with a top speed of about 35mph (predicted by the model and our tests) with a bit anaemic 5 min full throttle run time predicted. Surprisingly even though we had to both make the bike and a simulation framework, the bike actually outperformed compared to another team which was tasked with making an electric bike only. Overall it was a great fun project, not everyone gets to say they rode their final project in university!
 
-{% assign img_array = "banner.jpg|dyno-test.gif|windtunnel.jpg|onroad_testing.jpg|onroad_testing.gif" | split: "|" %}
+{% assign img_array = "banner.jpg|dyno-test.gif|windtunnel.jpg|onroad_testing.jpg|onroad_testing.gif|5_dashboard.jpg" | split: "|" %}
 
-{% assign caption_array = "Finished e-motorcycle|Testing on the rolling road|Testing in the wind tunnel|Testing on the actual road|Testing on the actual road, stunt driving by yours truly" | split: "|" %}
+{% assign caption_array = "Finished e-motorcycle|Testing on the rolling road|Testing in the wind tunnel|Testing on the actual road|Testing on the actual road, stunt driving by yours truly|We would always breakout the laser cutter or 3D printer at the drop of a hat" | split: "|" %}
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=2%}
 
