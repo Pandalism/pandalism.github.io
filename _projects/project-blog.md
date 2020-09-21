@@ -29,7 +29,7 @@ This latest blog is based on Jekyll, [a static website generator](), which basic
 {% include img.html assetsFolder=page.assets link='5-base.png' caption='With the aspects of the content management and static generation handled by Jekyll, I actually focused on making an acceptable front-end' %}
 
 ## Stubornness be damned
-Obviously part of the reason I wanted to make my own blog was always the challenge and learning that the journey would take. Understanding web development and front end would always be useful for *webscraping* and building GUI's using **electron.js**... Actually in reality was I just wanted a solid challenge, and that it was! Unconvinced with using a template, every single line of code in this repo was painstakingly written by yours truly after much research and tutorials consumed.
+Obviously part of the reason I wanted to make my own blog was always the challenge and learning that the journey would take. Understanding web development and front end would always be useful for *webscraping* and building GUI's using **electron.js**... Actually in reality what I just wanted a solid challenge, and that it was! Unconvinced with using a template, every single line of code in this repo was painstakingly written by yours truly after much research and tutorials consumed.
 
 {% assign img_array = "6-code.png|7-splash.gif|8-social.png|9-slideshow.png|10-comments.png" | split: "|" %}
 {% assign caption_array = "Coding the website was a mix of HTML, SCSS, liquid and a little JavaScript|Gaining some inertia I started getting fancy including an interactive splash page|Pretty icons and social media buttons|Slideshows| and even a !omment section (for literally nobody but thats another subject)!" | split: "|" %}
@@ -39,7 +39,7 @@ Obviously part of the reason I wanted to make my own blog was always the challen
 This, of course, meant it took way too long, and there are tiny little bugs, with some serious spaghetti CSS... but it was **very rewarding**, and gave me new found appreciation for anyone who can navigate the waters between browser compatibility and trends in web2.0, as its quite frankly nightmarish.
 
 ## Current situation
-As it stands the blog serves its purpose fantastically, it's a playground for git methodologies, blogging, web development and showcasing work. If I find something I fancy trying I will attempt it on the private server, and if it works integrate it. Sometimes a bit rough, and not exactly the hall mark of fantastic graphic design, but by gosh the Project page has a fancy responsive gallery with hover animations, and of that I am very proud.
+As it stands the blog serves its purpose fantastically, it's a playground for git methodologies, blogging, web development and showcasing work. If I find something I fancy trying, I will attempt it on the private server, and if it works integrate it. Sometimes a bit rough, and not exactly the hall mark of fantastic graphic design, but by gosh the Project page has a fancy responsive gallery with hover animations, and of that I am very proud.
 
 For future projects/improvements:
 - Refactor and streamline the CSS portions
