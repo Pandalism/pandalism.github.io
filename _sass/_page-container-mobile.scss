@@ -23,5 +23,40 @@
       display: block;
     }
   }
+}
+
+// 2 column gallery logic
+@media only screen and (max-width: $gallery-2-column-change) {
+  .article {
+      // logic for galleries
+      .gallery {
+
+        &-box{
+          width:$gallery-2-column-width;
+          padding-bottom: $gallery-2-column-width;
+        }
+
+      }
+
+  }
+
+
+}
+
+// 1 column gallery logic
+@media only screen and (max-width: $gallery-1-column-change) {
+  .article {
+      // logic for galleries
+      .gallery {
+
+        &-box{
+          width:$gallery-1-column-width;
+          padding-bottom: $gallery-1-column-width;
+        }
+
+      }
+
+  }
+
 
 }

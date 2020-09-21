@@ -27,9 +27,16 @@ insert in code to replace usual markdown aspects.
 
 
       <a href="{{site.url}}/{{include.assetsFolder}}/{{img}}" target="_blank">
-        <img src="{{site.url}}/{{include.assetsFolder}}/{{img | replace: '.', '_thumb.'}}"
-         alt="{{include.caption}}"
-         onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{img}}'">
+        {% assign filetype = img | split: "." | last %}
+        {% if filetype == "gif" %}
+        <img src="{{site.url}}/{{include.assetsFolder}}/{{img}}"
+        alt="{{include.caption}}">
+        {% else %}
+          <img src="{{site.url}}/{{include.assetsFolder}}/{{img | replace: '.', '_thumb.'}}"
+          alt="{{include.caption}}"
+          onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{img}}'">
+        {% endif %}
+
 
 
         <em>{{include.caption[forloop.index0]}}</em>

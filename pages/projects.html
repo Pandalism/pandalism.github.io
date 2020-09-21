@@ -1,0 +1,25 @@
+---
+layout: page
+title: "Projects"
+category: life
+permalink: /projects/
+assets: page-assets/projects
+---
+<p>
+A selection of various projects I was involved with or started over the years.
+</p>
+
+
+<div class='gallery'>
+{% for project in site.projects %}
+
+  <div class='gallery-box'>
+      <div class='gallery-item'>
+        <a href="{{ project.url | absolute_url}}">
+        <img class='gallery-img' src="{{project.image | absolute_url}}" />
+        <div class='gallery-shadow'><div class='gallery-text'><h4>{{ project.title }}</h4></div></div>
+        </a>
+      </div>
+    </div>
+{% endfor %}
+</div>
