@@ -5,7 +5,7 @@ category: life
 assets: page-assets/projects/blog
 startdate: 2018-08-25
 enddate: none
-image: page-assets/projects/blog/splash.gif
+image: page-assets/projects/blog/7-splash.gif
 tag: blog
 published: True
 ---
