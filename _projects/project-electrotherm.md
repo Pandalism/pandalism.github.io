@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Electro-Thermal 1D simulation of a Battery Contactor Module"
-category: motorcycles
+category: programming
 assets: page-assets/projects/electro-therm
 startdate: 2019-08-08
 enddate: 2019-10-01
