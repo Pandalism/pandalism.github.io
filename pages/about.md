@@ -4,7 +4,7 @@ title: "About"
 permalink: /about/
 ---
 
-<img src="{{site.baseurl}}/page-assets/{{page.name}}/headshot.jpg" alt="The author in question" style="border-radius: 50%">
+<img src="{{site.baseurl}}/page-assets/{{page.name}}/headshot_thumb.jpg" alt="The author in question" style="border-radius: 50%">
 
 
 Hello. I'm **Felix Diaz-Maroto Rivas**, you might also find me under the pseudonym [**Pandalism**] here and there.
