@@ -39,7 +39,7 @@ Without further ado, here is the frame embedded into the page (mind you if the i
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main?urlpath=%2Fvoila%2Frender%2Finfer_beer_or_bacon.ipynb)
 
-{% include img.html assetsFolder=page.assets link='4.png' caption="apparently I am closer to a beer can than bacon! (should probably put a confidence cutoff on the labelling...)" %}'
+{% include img.html assetsFolder=page.assets link='4.png' caption="apparently I am closer to a beer can than bacon! (should probably put a confidence cutoff on the labelling...)" %}
 
 
 ## Further work
