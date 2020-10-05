@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beercan or Bacon Classifier"
-image: "post-assets/2020-10-03-beer-or-bacon/francis and kevin bacon.png"
+image: "post-assets/2020-10-03-beer-or-bacon/banner.jpg"
 category: programming
 tags: python fastai widgets binder
 assets: "post-assets/2020-10-03-beer-or-bacon"
@@ -27,7 +27,7 @@ search_terms = ['beer can -recipe -chicken',
 
 {% assign img_array = "1.png|2.png|3.png" | split: "|" %}
 
-{% assign caption_array = "Francis and Kevin just getting in the way|Through this excersise I found some curious ways of cooking with beer cans|After cleaning up the search terms a bit, results were pretty good" | split: "|" %}
+{% assign caption_array = "Francis and Kevin just getting in the way|Throughhttps://elc.github.io/posts/embed-interactive-notebooks/ this excersise I found some curious ways of cooking with beer cans|After cleaning up the search terms a bit, results were pretty good" | split: "|" %}
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
 
@@ -43,7 +43,7 @@ Without further ado, here is the frame embedded into the page (mind you if the i
 
 
 ## Further work
-Firstly I need to figure out how to embedded the binder in to the blog as an iframe. Im not sure what sort of anti cross-site protection i'm running into but I will have to investigate more later. Some posts make it seem like its [not possible at all](https://github.com/jupyterhub/binderhub/issues/1078), but then some users appear to be able to do it via [nbinteract instead of voila](https://elc.github.io/posts/embed-interactive-notebooks/). Regardless, needs more research! 
+Firstly I need to figure out how to embedded the binder in to the blog as an iframe. Im not sure what sort of anti cross-site protection i'm running into but I will have to investigate more later. Some posts make it seem like its [not possible at all](https://github.com/jupyterhub/binderhub/issues/1078), but then some users appear to be able to do it via [nbinteract instead of voila](https://elc.github.io/posts/embed-interactive-notebooks/). Regardless, needs more research!
 
 Since binder is running the instance as a docker container itself, would be interesting to experiment with with hosting it myself, but I think the first thing is to create a dedicated linux machine with nvidia drivers and a cuda enviroment all set up.
 
