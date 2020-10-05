@@ -8,7 +8,7 @@ assets: "post-assets/2020-10-03-beer-or-bacon"
 published: true
 ---
 
-An experiment in using ipython widgets, fastai and binder to create a *highly practical and necessary** 'beercan or bacon' classifier, available through the internet!
+An experiment in using ipython widgets, fastai and binder to create a **highly practical and necessary** 'beercan or bacon' classifier, available through the internet!
 
 ## Introduction
 One of the major issues I have with the **fastai** system and the initial tutorials is that they discourage setting it up on your computer, since it apparently can be nightmarish with all the cuda driver issues and what not. This however means most of the experiments and trials I run are hidden away in some Paperspace notepad, and I'm not particularly fond of that. However I did remember a mention a while back in their tutorials about using Binder.org to host a low performance classifier...So back I went to figure out how to put the Beercan or Bacon classifier up on the internet for all!
