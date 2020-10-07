@@ -39,9 +39,6 @@ Without further ado, here is the frame embedded into the page (mind you if the i
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main?urlpath=%2Fvoila%2Frender%2Finfer_beer_or_bacon.ipynb)
 
-{% include img.html assetsFolder=page.assets link='4.png' caption="apparently I am closer to a beer can than bacon! (should probably put a confidence cutoff on the labelling...)" %}
-
-
 ## Further work
 Firstly I need to figure out how to embedded the binder in to the blog as an iframe. Im not sure what sort of anti cross-site protection i'm running into but I will have to investigate more later. Some posts make it seem like its [not possible at all](https://github.com/jupyterhub/binderhub/issues/1078), but then some users appear to be able to do it via [nbinteract instead of voila](https://elc.github.io/posts/embed-interactive-notebooks/). Regardless, needs more research!
 
