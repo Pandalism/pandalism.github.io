@@ -41,7 +41,7 @@ Without further ado, here is the link to the Binder application (mind you if the
 alt="Launch Binder" style="transform: scale(2);">
 </a>
 
-{% include gif.html assetsFolder=page.assets link='working.gif' caption="Screen capture of the classifier working" %}'
+{% include gif.html assetsFolder=page.assets link='working.gif' caption="Screen capture of the classifier working" %}
 
 ## Further work
 Firstly I need to figure out how to embedded the binder in to the blog as an iframe. Im not sure what sort of anti cross-site protection i'm running into but I will have to investigate more later. Some posts make it seem like its [not possible at all](https://github.com/jupyterhub/binderhub/issues/1078), but then some users appear to be able to do it via [nbinteract instead of voila](https://elc.github.io/posts/embed-interactive-notebooks/). Regardless, needs more research!
