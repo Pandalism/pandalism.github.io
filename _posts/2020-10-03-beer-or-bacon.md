@@ -3,7 +3,7 @@ layout: post
 title: "Beercan or Bacon Classifier"
 image: "post-assets/2020-10-03-beer-or-bacon/banner.jpg"
 category: programming
-tags: python fastai widgets binder
+tags: python fastai widgets binder classifier
 assets: "post-assets/2020-10-03-beer-or-bacon"
 published: true
 ---
