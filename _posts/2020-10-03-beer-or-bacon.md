@@ -32,12 +32,16 @@ search_terms = ['beer can -recipe -chicken',
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
 
 ## Binder App
-Without further ado, here is the frame embedded into the page (mind you if the image has been taken offline it can take a 10mins or so just to start up again, it is a free service after all...):
-
+Without further ado, here is the link to the Binder application (mind you if the image has been taken offline it can take a 10mins or so just to start up again, it is a free service after all...):
 
 <!--<iframe width='100%' height='600px' src="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main"></iframe>-->
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main?urlpath=%2Fvoila%2Frender%2Finfer_beer_or_bacon.ipynb)
+<a href="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main?urlpath=%2Fvoila%2Frender%2Finfer_beer_or_bacon.ipynb" target="_blank"> <!--_-->
+<img src="https://mybinder.org/badge_logo.svg"
+alt="Launch Binder" style="transform: scale(2);">
+</a>
+
+{% include gif.html assetsFolder=page.assets link='working.gif' caption="Screen capture of the classifier working" %}'
 
 ## Further work
 Firstly I need to figure out how to embedded the binder in to the blog as an iframe. Im not sure what sort of anti cross-site protection i'm running into but I will have to investigate more later. Some posts make it seem like its [not possible at all](https://github.com/jupyterhub/binderhub/issues/1078), but then some users appear to be able to do it via [nbinteract instead of voila](https://elc.github.io/posts/embed-interactive-notebooks/). Regardless, needs more research!
