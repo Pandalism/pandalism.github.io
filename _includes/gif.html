@@ -1,0 +1,14 @@
+{% comment %}
+Include to embed single gif images.
+
+example use:
+{% include gif.html assetsFolder=exampleAssetsFolder link=pictureName caption=anExampleCaption %}
+
+insert in code to replace usual markdown aspects.
+
+{% endcomment %}
+
+{% assign filetype = include.link | split: "." | last %}
+<img src="{{site.url}}/{{include.assetsFolder}}/{{include.link}}"
+alt="{{include.caption}}">
+<em>{{include.caption}}</em>
