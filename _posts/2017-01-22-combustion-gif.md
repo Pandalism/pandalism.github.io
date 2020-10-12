@@ -5,6 +5,7 @@ image: post-assets/2017-01-22-combustion-gif/banner.png
 category: creativity
 tags: archives gifs after-effects engines chemical-reactions seamless-loop
 assets: post-assets/2017-01-22-combustion-gif
+published: true
 ---
 
 Looping gifs have always kinda mesmerised me, so when I came across [this amazing video from Warped Perception](https://www.youtube.com/watch?v=jdW1t8r8qYc) I knew I just had to make a gif. *Warped Perception* are not the first in making videos of engines with transparent heads or windows, as previously *Petri Ranki* had done it with a [two stroke](https://www.youtube.com/watch?v=BrWpF6YiSDs), and many model engine builders had been incorporating glass cylinders into their [creations](https://www.youtube.com/watch?v=6M9Yqctk_Tg) over the years.
