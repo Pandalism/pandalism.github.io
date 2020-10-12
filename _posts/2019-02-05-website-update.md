@@ -5,6 +5,7 @@ category: programming
 subcategory: webdev
 tags: website jekyll sass html css js webdev blog
 assets: "post-assets/2019-02-05-website-update"
+published: true
 ---
 What better way to keep track of progress than with a blog post! The past months have ended up being much more busy than what I expected and I had broken the live website with a template change so I had shelved the blog for a while. Now however, after a very busy weekend working on my CV I decided to go at it again, fully dedicating myself because what's the point of half-assing a website. I imagine once I have it up and running It will be much easier to just focus on fun functionality and blog posts rather than this change which seems to be in the limbo.
 
