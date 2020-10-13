@@ -23,9 +23,7 @@ I started with just creating three divs/layers with the ears, eyes and nose. The
 
 However it felt flat, and you can tell it only works for very large 'scenes' or distances. Since the ears, eyes and nose can be approximated as flat shapes on parallel planes, by rotating an object the planes would appear squished. So to give a bit more depth, I added a scale effect based on mouse position.
 
-
-![Ears are a bit like shapes on a plane, so they should squish when perspective is off axis]({{ site.url }}/{{ page.assets }}/perspective.png)
-*Ears are a bit like shapes on a plane, so they should squish when perspective is off axis*
+{% include img.html assetsFolder=page.assets link='perspective.png' caption="Ears are a bit like shapes on a plane, so they should squish when perspective is off axis" %}
 
 <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="result" data-user="pandalism" data-slug-hash="NJmYwj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Splash page w/ Scale + Translate">
   <span>See the Pen <a href="https://codepen.io/pandalism/pen/NJmYwj/">
@@ -53,10 +51,7 @@ The result seemed more natural so it's what I ended up using for the welcome spl
 As per usual, I kinda went along reinventing the wheel for no reason, and it would have probably been simpler to just use the correct tool (CSS3 perspective + rotate transforms) from the beginning. Eh, it was fun though...
 
 ### Credit
-[W3Schools on CSS transforms](https://www.w3schools.com/cssref/css3_pr_transform.asp)
-
-[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
-
-[CSS Tricks](https://css-tricks.com/almanac/properties/t/transform/)
-
-[jQuery on mouse events](http://api.jquery.com/event.pagex/)
+- [W3Schools on CSS transforms](https://www.w3schools.com/cssref/css3_pr_transform.asp)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [CSS Tricks](https://css-tricks.com/almanac/properties/t/transform/)
+- [jQuery on mouse events](http://api.jquery.com/event.pagex/)
