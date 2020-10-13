@@ -24,16 +24,11 @@ Using some trusty vernier calipers and some googling, I used Solidworks to CAD u
 I already decided it would require two pieces stuck together to achieve the sort of reliable hold I was seeking, but I still wanted to print a smaller test piece to check the fit and amend accordingly before I spent a good hour printing the final pieces.
 
 
-{% include img.html assetsFolder=page.assets link='testcad.png' caption="Test print" %}
+{% assign img_array = "testcad.png|init_print.jpg|init_fit.jpg|init_pressfit.jpg" | split: "|" %}
 
+{% assign caption_array = "Test print|Printed out. note the warping from removing the piece from the 3dprinter base|MicroSD slots turned out to be a smidge too narrow|The sandwhich between two layers would create the pressfit on the larger cards, but here it was clear the layer needed to be a thicker" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='init_print.jpg' caption="Printed out. note the warping from removing the piece from the 3dprinter base" %}
-
-
-{% include img.html assetsFolder=page.assets link='init_fit.jpg' caption="MicroSD slots turned out to be a smidge too narrow" %}
-
-
-{% include img.html assetsFolder=page.assets link='init_pressfit.jpg' caption="The sandwhich between two layers would create the pressfit on the larger cards, but here it was clear the layer needed to be a thicker" %}
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=1 %}
 
 ## Final print
 
@@ -60,7 +55,7 @@ Could I have just taken one from thingiverse? Yeah probably, but what's the fun 
 ## Result
 It works pretty darn good!
 
-![Holding fast]({{ site.url }}/{{ page.assets }}/shake.gif)*Holding fast*
+{% include gif.html assetsFolder=page.assets link='shake.gif' caption="Holding fast" %}
 
 
 Only things I would change are:
@@ -69,5 +64,4 @@ Only things I would change are:
  - Made a hole in the middle to save some minor amount of PLA, just good practice really...
 
 ## Credit
-
-[Ezgif](https://ezgif.com), for the video to GIF conversion.
+- [Ezgif](https://ezgif.com), for the video to GIF conversion.

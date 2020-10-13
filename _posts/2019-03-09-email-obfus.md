@@ -5,6 +5,7 @@ image:
 category: programming
 subcategory: webdev
 tags: webdev security javascript obfuscation cryptography github-page blog
+assets: post-assets/2019-03-09-email-obfus
 published: true
 ---
 
@@ -35,36 +36,29 @@ So if I want to hide my secret email `a`, I can XOR it with a key of equal lengt
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-![]({{ site.url }}/post-assets/2019-03-09-email-obfus/example.png)
-*The non-ascii characters shown as boxes aren't too friendly to browsers, so better avoid using them by using the raw array instead*
+{% include img.html assetsFolder=page.assets link='example.png' caption="The non-ascii characters shown as boxes aren't too friendly to browsers, so better avoid using them by using the raw array instead" %}
 
 I quickly realised the issue with using the output string with a bunch of non-ascii characters, since they didn't copy-paste well, and they could get sanitised when serving them in a website. So added a way of inputting number arrays into `A` and `B`, and also outputting the resulting array `C - Array`. This also meant I would likely have to use the key as an array of numbers in the javascript file to avoid any non-ascii character issues.
 
-![]({{ site.url }}/post-assets/2019-03-09-email-obfus/switched.png)
-*Swapping A, B and C around doesnt matter with XOR encoding*
+{% include img.html assetsFolder=page.assets link='switched.png' caption="Swapping A, B and C around doesnt matter with XOR encoding" %}
 
 
 ## Executing the change on the website
 
 So now I know how to convert a ciphered key and an array of numbers into the email. Both stored in the configuration file for the jekyll server, and inserted into the page and javascript file separately using liquid tags. Then given an event, it uses javascript to apply the key to the link, and replace it with the true email address.
 
-![]({{ site.url }}/post-assets/2019-03-09-email-obfus/liquid-in-js.png)
-*Using liquid one can insert jekyll variables into even javascript*
-
+{% include img.html assetsFolder=page.assets link='liquid-in-js.png' caption="Using liquid one can insert jekyll variables into even javascript" %}
 
 However I didn't want to do it on page load, since maybe some bots are smart enough to trigger some part of the page loading JavaScript. Instead I wanted it to be triggered by the user, mainly I thought about using the `.hover()` event since it would mean the mailto link would change only on hovering over the button itself. However, to help out mobile users, I also tied it to a click on the navigation menu icon used to toggle the menu in mobile view. This would mean only a user initiated move would make the text resolve to its unobfuscated view
 
-![]({{ site.url }}/post-assets/2019-03-09-email-obfus/on-hover-and-click.png)
-*User interacting with any of these, triggers the unobfuscation*
+{% include img.html assetsFolder=page.assets link='on-hover-and-click.png' caption="User interacting with any of these, triggers the unobfuscation" %}
 
 ## Result
 
 Well the result is now live so go ahead and look at code! You'll see that until the user interacts with the page, the email is actually hidden, and since we used XOR, you can set the ciphered text to anything you want, mine being a warning that you need javascript to see it!
 
-![]({{ site.url }}/post-assets/2019-03-09-email-obfus/before-n-after.png)
-*On mobile it works like a charm, and won't keep changing with each press*
+{% include img.html assetsFolder=page.assets link='before-n-after.png' caption="On mobile it works like a charm, and won't keep changing with each press" %}
 
 ### Credit
-[EloquentJavascript.](https://eloquentjavascript.net/15_event.html)
-
-And as always, [various](https://stackoverflow.com/questions/179713/how-to-change-the-href-for-a-hyperlink-using-jquery) [different](https://stackoverflow.com/questions/10003706/convert-string-array-representation-back-to-an-array) [stackoverflow](https://stackoverflow.com/questions/2098408/how-to-get-href-value-using-jquery) questions.
+- [EloquentJavascript.](https://eloquentjavascript.net/15_event.html)
+- And as always, [various](https://stackoverflow.com/questions/179713/how-to-change-the-href-for-a-hyperlink-using-jquery) [different](https://stackoverflow.com/questions/10003706/convert-string-array-representation-back-to-an-array) [stackoverflow](https://stackoverflow.com/questions/2098408/how-to-get-href-value-using-jquery) questions.

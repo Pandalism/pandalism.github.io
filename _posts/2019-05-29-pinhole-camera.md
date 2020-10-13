@@ -24,7 +24,7 @@ The 'features' on the other hand are:
 - an extremely large depth of focus
 - A characteristic softness and vignetting.
 
-[![](https://axiswebmedia.blob.core.windows.net/www/usermedia/108409/Events/0/39vapuqqkkesewiy4tje3g_large.jpg)_Example of a photo with a pinhole camera_](https://axiswebmedia.blob.core.windows.net/www/usermedia/108409/Events/0/39vapuqqkkesewiy4tje3g_large.jpg)
+{% include imgext.html img='https://axiswebmedia.blob.core.windows.net/www/usermedia/108409/Events/0/39vapuqqkkesewiy4tje3g_large.jpg' caption="Example of a photo with a pinhole camera" link=1 %}
 
 Notice the long exposure, and thus the dynamic blurring, overall softness, but that the objects in the foreground as in focus as the background.
 
@@ -32,39 +32,42 @@ Notice the long exposure, and thus the dynamic blurring, overall softness, but t
 
 Following the article, I dented a piece of thin steel I had, sanded down until I had a tiny hole, and done! Stuck it to the outside of a spare body cap in which I had drilled a hole and started shooting.
 
-{% include img.html assetsFolder=page.assets link='1.jpg' caption='Ignore the griminess' %}
+{% assign img_array = "1.jpg|2.jpg" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='2.jpg' caption='Inside of the lens cap.' %}
+{% assign caption_array = "Ignore the griminess|Inside of the lens cap" | split: "|" %}
+
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=1 %}
+
 
 The first pictures were quite a lot more zoomed in than I expected and a hell of a lot blurrier, even after reading all about how blurry it was going to be. But even in the dark messiness I was pleased.
 
-{% include img.html assetsFolder=page.assets link='3.jpg' caption="Even 5 second exposures weren't enough." %}
+{% assign img_array = "3.jpg|6.jpg|5.jpg" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='6.jpg' caption='Seriously long exposures at relatively high ISO' %}
+{% assign caption_array = "Even 5 second exposures weren't enough|Seriously long exposures at relatively high ISO|Dialing in the exposure was a lot of trial and error" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='5.jpg' caption='Dialing in the exposure was a lot of trial and error' %}
-
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=2 %}
 
 ### Second attempt
 I figured that most of the blurriness was coming from the misshaped pinhole (since the smash and sand method didn't seem the most precise) and the size of the pinhole itself. So I tried to make a smaller, yet rounder, hole. Luckily I found a 0.45mm drill bit and used that to finish another pinhole I made.
 
-{% include img.html assetsFolder=page.assets link='8.jpg' caption='Second attempt to the left, ~0.5mm. The first is around ~0.7mm' %}
+{% assign img_array = "8.jpg|9.jpg|10.jpg|11.jpg" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='9.jpg' caption='This time I attached it to the inside of the cap' %}
+{% assign caption_array = "Second attempt to the left, ~0.5mm. The first is around ~0.7mm|This time I attached it to the inside of the cap|Still pretty blurry|But notice how both the car and the box are equally in focus!" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='10.jpg' caption='Still pretty blurry' %}
-
-{% include img.html assetsFolder=page.assets link='11.jpg' caption='But notice how both the car and the box are equally in focus!' %}
-
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=3 %}
 
 ### Third attempt
 Even though by now I had read more about the importance of the hole precision, the inner box reflections and all the other aspects of proper positioning and diffraction, I was aiming to achieve the 0.3mm hole which in theory was the ideal for a camera with 44mm flange distance and APS-C sized sensor (according to [Mr.Pinhole](http://mrpinhole.com/wiz.php)). This time I went back to the dent and sand method.
 
-{% include img.html assetsFolder=page.assets link='12.jpg' caption='Barely notice the difference, but it is slightly smaller' %}
 
-{% include img.html assetsFolder=page.assets link='13.jpg' caption='Still quite blurry, but somewhat interesting artefacting going on' %}
+{% assign img_array = "12.jpg|13.jpg|14.jpg" | split: "|" %}
 
-{% include img.html assetsFolder=page.assets link='14.jpg' caption='to be honest at this point is basically macro photography' %}
+{% assign caption_array = "Barely notice the difference, but it is slightly smaller|Still quite blurry, but somewhat interesting artefacting going on|To be honest at this point this feels like macro photography" | split: "|" %}
+
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=4 %}
+
+
+
 
 
 

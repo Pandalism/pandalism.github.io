@@ -1,17 +1,6 @@
 
 # My Blog
-So I decided to try and finally get through to making a website as both a showcase/resume type thing as well as blogging. Not really sure how far I want to go with this but I thought I might as well use it to keep track of the little projects I sometimes do.
-
-## Structure and Features
-I figure it'll be a pretty standard webpage structure:
-
- * About
- * Blog
- * Projects
-    * Subproject page 1
-    * Subproject page 2
- * Contact/Social-media stuff? <- this will go in footer
-
+Welcome to my blog! Not much to say, I am currently using it to just post about projects and what not, mostly related to the blog itself, some machine learning aspects, data science, electronics, or 3D printing.
 
 ## Roadmap
 To remind myself what I'd like to achieve here:
@@ -20,8 +9,13 @@ To remind myself what I'd like to achieve here:
  - [x] v1.0 - Same content/structure/features but now using my own layouts/themes/design :bowtie:
  - [x] v1.1 - expand icon set to sub categories
  - [x] v1.2 - make banner pictures appear on the mini icons next to blog entries
- - [ ] v1.3 - Add projects and project layout (delayed)
  - [x] v1.4 - Add tagging/categories
+ - [x] v1.5 - Paginate
+ - [x] v1.6 - Comments + Slideshows
+ - [x] v1.7 - Add projects and project layout (delayed)
+ - [ ] ???? - Fix tables in mobile
+ - [ ] ???? - Embed Binder notebooks
+ - [ ] ???? - Move projects to use CSS grid
  - [ ] v2.0 - Update design pending criticisims
 
 ## Credits
