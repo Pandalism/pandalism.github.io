@@ -16,5 +16,8 @@ insert in code to replace usual markdown aspects.
 
 {% endcomment %}
 
+{% assign link = include.link | default: 0 %}
+
+{% if link == 1 %}<a href="{{include.img}}" target="_blank">{% endif %}
 <img src="{{include.img}}" alt="{{include.caption}}">
-<em>{{include.caption}}</em>
+<em>{{include.caption}}</em>{% if link == 1 %}</a>{% endif %}
