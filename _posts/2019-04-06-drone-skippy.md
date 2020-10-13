@@ -26,17 +26,11 @@ To start with, I should mention the build itself, its practically all taken from
 
 Overall, it ended up costing around ~£250 with a battery. Here's some pretty pictures building it:
 
-![Bare drone frame]({{ site.url }}/{{ page.assets }}/1.jpg)
-*GT-M200 frame built up*
+{% assign img_array = "1.jpg|2.jpg|3.jpg|4.jpg" | split: "|" %}
 
-![Soldering components in and testing camera]({{ site.url }}/{{ page.assets }}/2.jpg)
-*Soldering in the reciever and checking the FPV camera*
+{% assign caption_array = "GT-M200 frame built up|Soldering in the reciever and checking the FPV camera|Fully built up sans battery|Connecting it up to the PC and checking config, note the tight packaging" | split: "|" %}
 
-![All built up]({{ site.url }}/{{ page.assets }}/3.jpg)
-*Fully built up sans battery*
-
-![Testing config]({{ site.url }}/{{ page.assets }}/4.jpg)
-*Connecting it up to the PC and checking config, note the tight packaging*
+{% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=1 %}
 
 The build was relatively simple, and although my other builds way back were on the slightly larger 250mm-class drones, this frame was actually still quite easy to work around. I was quite impressed with how small the device was, and how far flight controllers and electronic speed controllers had evolved (You could even put music on them now!).
 
@@ -55,8 +49,7 @@ I lost visual reference and speed across the field into the floor, hitting it ha
 
 I searched and searched, methodically across all the bushes on the side of the field, to no avail. Then going to check the goggles themselves to see the recorded FPV videos I realised I hadn't recorded anything at all, instead taking stills when I thought it was turned on.
 
-![Still before take off]({{ site.url }}/{{ page.assets }}/5.jpg)
-*My last beacon of hope ended up being this shitty still*
+{% include img.html assetsFolder=page.assets link='5.jpg' caption="My last beacon of hope ended up being this shitty still" %}
 
 At midnight I left, and came around looking again next Sunday, and then the Monday morning before work, and Tuesday, and ... etc. By the next Saturday I admitted defeat and declared Skippy (named post mortem due to its proclivity to skip on the floor) officially MIA. **Goddamnit**.
 
@@ -66,8 +59,6 @@ Lessons learned (the expensive way):
  - Make sure the DVR function is working before flying in earnest.
  - Practice more on [simulators](http://www.liftoff-game.com/) before flying for real (this one should have been clear to me after all the simulation/HIL engineering I've done)
 
-
 ### Credit
-[Rotorbuilds](https://rotorbuilds.com/) for making a super nice build so that I dont have to whip out the calculator to size the components.
-
-[Hobbyking](https://hobbyking.com/) and [Banggood](https://eu.banggood.com/) for making this hobby cheap enough that I can brush this off with only part of my soul dying.
+- [Rotorbuilds](https://rotorbuilds.com/) for making a super nice build so that I dont have to whip out the calculator to size the components.
+- [Hobbyking](https://hobbyking.com/) and [Banggood](https://eu.banggood.com/) for making this hobby cheap enough that I can brush this off with only part of my soul dying.
