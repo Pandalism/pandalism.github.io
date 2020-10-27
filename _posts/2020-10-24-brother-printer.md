@@ -57,7 +57,7 @@ exit 0
 ```
 
 The deviations from the aforementioned post were:
-- Updated to a [newer container](registry.hub.docker.com/r/olbat/cupsd) made by the same person, olbat.
+- Updated to a [newer container](registry.hub.docker.com/r/olbat/cupsd) made by the same person, _olbat_.
 - Getting rid of the absolute paths for executables (the docker one no longer worked for example).
 - Also stopping cups-lpd service, which I just added whilst debugging but seemed to not break anything.
 - Rewrite the logic in pulling the printer address, since now `lsusb` was outputting quite a different format.
@@ -82,9 +82,9 @@ Then stopped the container, set the volume bindings as above, and it worked grea
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=2 %}
 
 ### Working but ... not really
-There was still a very curious thing, which is that the printer would only print once or twice, after startup, and then not print again until I would press the power button on the device itself. In addition the printer would then fall out of `lsusb` as if disconnected or turned off. Now the only reason I wanted to add the printer to the NAS is so I wouldnt have to deal with cables, plugging in and and turning things on and off and
+There was still a very curious thing, which is that the printer would only print once or twice, after startup, and then not print again until I would press the power button on the device itself. In addition the printer would then fall out of `lsusb` as if disconnected or turned off. Now the only reason I wanted to add the printer to the NAS is so I wouldnt have to deal with cables, plugging in and and turning things on and off and this was clearly ruining that.
 
-Embarrasingly long story short, it was. After much googling and searching and dissecting forums about community drivers and what not, turns out the auto-power off wasn't a unique linux feature, it just happens that by default the printer would properly turn off after 2 hours of inactivity. This couldn't be changed via normal configuration options and instead needed a special program jokingly called [Remote Printer Console](https://support.brother.com/g/b/downloadlist.aspx?c=eu_ot&lang=en&prod=hl1110_us_eu_as&os=93&dlid=dlf004873_000&type3=62), which neither worked remotely nor looked like any console or anything. So installed on the windows laptop and hooked up directly to the printer, I pulled the settings, changed the auto-power off and saved the settings.
+Embarrassingly long story short, it was. After much googling and searching and dissecting forums about community drivers and what not, turns out the auto-power off wasn't a unique linux feature, it just happens that by default the printer would properly turn off after 2 hours of inactivity. This couldn't be changed via normal configuration options and instead needed a special program jokingly called [Remote Printer Console](https://support.brother.com/g/b/downloadlist.aspx?c=eu_ot&lang=en&prod=hl1110_us_eu_as&os=93&dlid=dlf004873_000&type3=62), which neither worked remotely nor looked like any console or anything. So installed on the windows laptop and hooked up directly to the printer, I pulled the settings, changed the auto-power off and saved the settings.
 
 {% include img.html assetsFolder=page.assets link='printer.png' caption="Silly option which was ruining my weekend" %}
 
