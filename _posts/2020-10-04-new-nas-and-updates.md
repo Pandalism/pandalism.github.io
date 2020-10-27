@@ -3,7 +3,7 @@ layout: post
 title: "New NAS and cleaner network corner!"
 image: "post-assets/2020-10-04-new-nas-and-updates/banner.jpg"
 category: technology
-subcategory: electronics
+subcategory: domotics
 tags:  microserver computer NAS docker network raspberrypi
 assets: "post-assets/2020-10-04-new-nas-and-updates"
 published: true
