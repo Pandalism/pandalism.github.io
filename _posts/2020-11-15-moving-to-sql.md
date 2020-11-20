@@ -6,7 +6,7 @@ category: technology
 subcategory: domotics
 tags:  nas sqlite mariadb sql
 assets: "post-assets/2020-11-15-moving-to-sql"
-published: false
+published: true
 ---
 
 I track quite a lot of weird, trivial metrics in my life. This includes some personal aspects (mood, sleeping hours, weight, etc) and also general CO2 related energy usage and vehicle use. At first I was storing the data in a simple excel, but it started becoming unwieldy and I split it up into different files, with some interconnects as needed. Now its become again an unwieldy beast and difficult to interact with, so I've decided to stop running from the fact it should just have been in a proper database from the get go. I've decided to try and migrate it all to a SQL server, although as per usual, this is just a general idea and I'll see where we end up!
