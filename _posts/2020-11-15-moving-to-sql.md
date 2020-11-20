@@ -45,7 +45,7 @@ Now I have to say I wasn't particularly leaning on any SQL flavour, but my initi
 On initial install, the window pops up and makes you write the root password (with some pretty high security requirements to boot) and the port and then... that's it. Its running, in theory.
 But alas, even after getting the official MariaDB python connector, every attempt to connect through my local python notebook was being outright rejected. Luckily, per chance I was also SSH'd into the NAS at the same time, and there I tried running a simple python connection and outputting the result to the bash shell, and surprisingly, it worked.
 
-Well clearly it was a permissions issue, and it was only allowing localhost connections. I was a bit stumped here as I hadn't ever delt with managing SQL server permissions before without a GUI, but then it clicked that considering the usual Synology software paradigm, this was likely meant to be a database for a local website, and sure enough, after installing PHPmyadmin from the app store, and it asked me for the MariaDB login details, and I could easily add a new user without the localhost restriction.
+Well clearly it was a permissions issue, and it was only allowing localhost connections. I was a bit stumped here as I hadn't ever delt with managing SQL server permissions before without a GUI, but then it clicked that considering the usual software available in Synology, this was likely meant to be a database for a local website/wordpress; sure enough, I installed PHPmyadmin from the app store, and it asked me for the MariaDB login details, and I could easily add a new user without the localhost restriction.
 
 {% assign img_array = "mariadb.png|mariadb2.png|error.png" | split: "|" %}
 
@@ -53,16 +53,16 @@ Well clearly it was a permissions issue, and it was only allowing localhost conn
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=3 %}
 
-At this stage I started recreating the tables, with the required changes from SQLite to MariaDB, and also making use of some of the extra features like datatypes and what not. Here I hit another snag with the foreign key assignement. Quite frankly the error message was pretty useless and the MariaDB documentation wasn't great in solving it until I found a [dedicated page](mariadb.org/mariadb-innodb-foreign-key-constraint-errors) which recommended querying the underlying enginer for latest errors using `SHOW ENGINE INNODB STATUS`. Following my string of luck, this command failed when executed via the python interface, but did work through the PHPmyadmin website. Finding the issue in inconsistent application of `UNSIGNED` across tables, it was easy to resolve, I had just gotten a bit ambitious trying out features.
+At this stage I started recreating the tables, with the required changes from SQLite to MariaDB, and also making use of some of the extra features like datatypes and what not. Here I hit another snag with the foreign key assignement. Quite frankly the error message was pretty useless and the MariaDB documentation wasn't great in solving it until I found a [dedicated page](mariadb.org/mariadb-innodb-foreign-key-constraint-errors) which recommended querying the underlying engine for latest errors using `SHOW ENGINE INNODB STATUS`. Following the usual pattern, this command failed when executed via the python interface, but did work through the PHPmyadmin website. Finding the issue in inconsistent application of `UNSIGNED` across tables, it was easy to resolve, I had just gotten a bit ambitious trying out features.
 
-{% include img.html assetsFolder=page.assets link='error_2.png' caption="I'm not particularly happy having to ask the underlying enigne what the problem was..." %}
+{% include img.html assetsFolder=page.assets link='error_2.png' caption="I'm not particularly happy having to ask the underlying engine what the problem was..." %}
 
 ## Uploading initial tables
 By this stage I have to admit I wasn't particularly impressed and had already decided I was going to experiment more with other database setups (even if MariaDB, just from within a docker) so I didn't upload all the data. Just a couple of rows from some different excels to check the constraints worked reasonably well and that's all. It did make me realise that some of the excels have evolved over time with new vehicles and are ever so slightly different, alas.
 
 {% assign img_array = "mariadb_create.png|confirmation.png|mariadb_pulling.png" | split: "|" %}
 
-{% assign caption_array = "Creating the tables|The good think about having PHPmyadmin available was confirming the changes I wanted to do through the connection|Simple exercise to upload and pull data from the database, making sure it was all working and proper errors were thrown if bad data was fed" | split: "|" %}
+{% assign caption_array = "Creating the tables|The good thing about having PHPmyadmin available was confirming the changes executed in a visual manner|Simple exercise to upload and pull data from the database, making sure it was all working and proper errors were thrown if bad data was fed" | split: "|" %}
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=4 %}
 
