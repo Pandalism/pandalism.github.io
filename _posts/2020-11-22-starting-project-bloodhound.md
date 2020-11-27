@@ -9,28 +9,48 @@ assets: "post-assets/2020-11-22-starting-project-bloodhound"
 published: false
 ---
 
-Last weekend, I started thinking what
+Last weekend, I started thinking and playing with the idea of moving some of the metric trackers I use into SQL. Whilst in the process, my mind started getting ahead of myself as per usual and the idea kind of evolved into just making the actual tracking itself easier, maybe through something that we use every day... like a phone messenger app! Thus the birth of Bloodhound, my metric tracking project interfaced via a Telegram Bot.
 
-## General jist of it
+## What am I even talking about
+Roughly speaking there are two independent groups of metrics I keep track of religiously, metrics relating to my personal health, and metrics relating to my vehicle and CO2 output.
+Personal metrics include weight, hours slept, routines completed, etc. Vehicle and CO2 is mostly metrics on fuel usage per vehicle and Utilities consumption. All in all, it can take a bit of time to make sure its all annotated and if I am in a rush in the morning I can quickly forget, leaving gaps in the data.
 
+Thus I think facilitating this tracking via a personalised messenger bot would help greatly in reducing time spent in managing the metrics, and be quite a good practice opportunity. There is also the psychological aspect of being reminded to do routines when asked by a third party, which I hope means I will stick to them better and finally start doing those morning push ups I so happily ignore.
+
+## The general concept
+In summary, I envision a chatbot which asks me for my weight every morning and if I did my morning exercise, noting it and uploading it to the right SQL table, at the same time my interaction with the bot will trigger an API call to fitbit and try to pull my sleep hours, including bed time and wake up time, prompting me to confirm the results seem correct or not. From there there will be various other prompts listed throughout the day to ask about other metrics to follow, all being saved into the correct table in the SQL server.
+
+Independently after refueling I want to be able to take a picture of the vehicle dashboard and fuel receipt and share it with the bot, triggering a lightweight classifier to categorise what image it is, and store it in the correct file structure. In the same action or possibly later It'll extracting the mileage from the vehicle dashboard, and fuel bought and price from the subsequent receipt. This was already a project I started doing many ages ago in matlab which would extract such data, just the receipts never worked well as I was sort of brute forcing OCR on to it and estimating what looked like the right portions. The receipt reading will certainly be a challenge. On a similar note I'd like to be able to upload images of my utilities and get the information extracted automatically, but as that is a rare occurrence its not that important.
+
+The final step in all of this would be to be able to use the chat bot to create visualisations and present them on demand to me, as well as letting me edit and correct the sql entries. Nonetheless I'm getting ahead of myself here.
 
 ## Getting a working Telegram bot
-Getting a "Hello world" telegram bot working was quite trivial using the python API, its probably one of the easiest I've seen so far actually. Once running some experimentation with the system showed me a couple of points:
+Getting a "Hello world" telegram bot working was quite trivial using the python API, and I have to commend Telegram and the maintainers of telegram-python-api on the simplicity of it all. Once running some experimentation with the system showed me a couple of points:
 - The bot will only capture messages/commands if the handlers are set up for it (there is a wildcard handler however)
-- The bot will only function whilst the python connection is open, if closed it will not respond nor save messages for later for when the system is up again.
-- The methods need to be loaded every time a connection is made after closing it, however you dont have to do that if the conneciton is maintained but the polling is stopped.
+- The bot will only function whilst the python connection is open, if closed it will not respond nor save messages for later for when the system is up again. It is not hosted on the telegram API servers, it merely inserts the hooks and handler prompts.
+- The methods need to be loaded every time a connection is made after closing it, however you don't have to do that if the conneciton is maintained but the polling is stopped.
 
 {% include img.html assetsFolder=page.assets link='bot_baby_steps.png' caption="Baby steps" %}
 
-next step pulling images and saving them locally.
+I then set up a dummy Good morning! prompt asking for weight and passed that on into a dummy sqlite table, which worked as expected.
+
+
+
+
 
 ## Working with the images
+Next step was to experiment with loading images, saving/manipulating them and sending them back, to better understand the formatting and compression applied, if any. For this I just implemented a image flip echo, and tested with images done in the moment and saved photos being shared.
 
 
 
 ## Next steps
-
+- Want to experiment further with having the bot detect when I'm online, to start morning routines
+-
+Keep progressing
+Some limitations arise from using the telegram api server directly, however there is the option to self-host, which allows a much better handling of large files and what not. Now surprisingly, for once, I don't see any docker container with it already... which would be a fantastic project in of itself. As much as I use docker containers all day, I've never actually created one, so maybe I'll try.
 
 
 ## Credit and Further links
 - https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm
+- https://github.com/Gondolav/catify-my-face-bot/
+- https://core.telegram.org/bots/api#using-a-local-bot-api-server
