@@ -30,12 +30,11 @@
   <!-- logic for adding the date for posts -->
   {% if page.layout == "post" %}
   <p class="date">{{ page.date | date_to_long_string }}
-  </p>
   {% if page.updated %}
-  <p class="date">
-    <em>Updated on: {{ page.updated | date_to_long_string }}</em>
-  </p>
+  <br />
+  <em>Updated on: {{ page.updated | date_to_long_string }}</em>
   {% endif %}
+  </p>
   {% endif %}
 
   <!-- logic for iterating and linking tags -->
