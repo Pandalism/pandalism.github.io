@@ -1,19 +1,24 @@
 ---
 layout: post
 title: "Adding an unsupported Brother printer to Synology"
-image: "post-assets/2020-10-24-brother-printer/IMG_8821.JPG"
+image: "post-assets/2020-10-24-brother-printer/IMG_8821.jpg"
 category: technology
 subcategory: domotics
 tags:  microserver NAS docker  
 assets: "post-assets/2020-10-24-brother-printer"
+updated: 2020-12-17
 published: true
 ---
 
 In overhauling the network I decided to give away an old HP 1022 laserjet and install a newer Brother HL-1110 that I had hanging around, but whilst the HP 1022 worked fine with DSM's printer integration, Synology had dropped support for the whole feature some time ago and the newer printer was not supported. In addition the printer would only print once and then stop printing.
 This is how I resolved it using Docker and a container with CUPS.
 
+##### 2020-12-17 Update
+Once running, the setup works great, however around half the time on startup, the docker container would reject the device ID given to it. It seemed to be off by 1 usually.
+Example: The script would find the printer was in `dev/bus/usb/003/002`, however the container only worked if I manually passed `dev/bus/usb/003/003`. I tried with adding a 1 to the device id, but then it didnt work the other half of the time. Unsure what was the reason, I just decided to find and pass through the whole hub in which the printer is addressed. I did various tests and found the Synology usb ports seem to each refer to one hub, so this will not accidentally trap other USB connected devices. As such the new script will pass through `dev/bus/usb/003`. This has worked fantastically with no issues so far.
+
 ### Script
-{% assign img_array = "printer.jpg|IMG_8821.JPG" | split: "|" %}
+{% assign img_array = "printer.jpg|IMG_8821.jpg" | split: "|" %}
 
 {% assign caption_array = "Old bulky beige printer|Newer HL-1110 in the network corner" | split: "|" %}
 
@@ -34,7 +39,7 @@ synoservicecfg --hard-stop cups-lpd
 # Get Printer location
 echo "Getting printer info..."
 LOC=$(lsusb|grep Brother|awk '{print $1}')
-PRINTER="/dev/bus/usb/00${LOC:3:1}/00$((${LOC:5:1}))"
+PRINTER="/dev/bus/usb/00${LOC:3:1}"
 echo $PRINTER
 
 # Wait a bit until docker is up and running
@@ -75,9 +80,9 @@ sudo docker cp containerID:/etc/cups/ /volume1/docker
 ```
 Then stopped the container, set the volume bindings as above, and it worked great on every startup, through multiple resets. After that it was just getting the printer page address (in my case `localip:631/printers/HL-1110`), and passing that to the windows printer setup location, selected the drivers, and it all worked easily.
 
-{% assign img_array = "printer-config1.png|printer-config2.png|printer-config3.png|save-config.png" | split: "|" %}
+{% assign img_array = "printer-config1.png|printer-config2.png|printer-config3.png|save-config.png|lsusb_output.png" | split: "|" %}
 
-{% assign caption_array = "On first run just need to add the printer|Select the right drivers|Setup!|Now copy the configuration out of the container to the folder you want to use for persistence" | split: "|" %}
+{% assign caption_array = "On first run just need to add the printer|Select the right drivers|Setup!|Now copy the configuration out of the container to the folder you want to use for persistence|Update: output of the lsusb command, note the WD drive, also inserted in the back USB port is in a different hub." | split: "|" %}
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=2 %}
 

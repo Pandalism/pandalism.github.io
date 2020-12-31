@@ -5,6 +5,7 @@ image: "post-assets/2020-10-03-beer-or-bacon/banner.jpg"
 category: programming
 tags: python fastai widgets binder classifier
 assets: "post-assets/2020-10-03-beer-or-bacon"
+updated: 2020-12-30
 published: true
 ---
 
@@ -27,21 +28,25 @@ search_terms = ['beer can -recipe -chicken',
 
 {% assign img_array = "1.png|2.png|3.png" | split: "|" %}
 
-{% assign caption_array = "Francis and Kevin just getting in the way|Throughhttps://elc.github.io/posts/embed-interactive-notebooks/ this excersise I found some curious ways of cooking with beer cans|After cleaning up the search terms a bit, results were pretty good" | split: "|" %}
+{% assign caption_array = "Francis and Kevin just getting in the way|Throughhttps://elc.github.io/posts/embed-interactive-notebooks/ this exercise I found some curious ways of cooking with beer cans|After cleaning up the search terms a bit, results were pretty good" | split: "|" %}
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
 
 ## Binder App
-Without further ado, here is the link to the Binder application (mind you if the image has been taken offline it can take a 10mins or so just to start up again, it is a free service after all...):
+Without further ado, here is the jupyter notebook embedded below thanks to the magic of `nbinteract` and `Binder` (mind you if the image has been taken offline it can take a 10mins or so just to start up again, it is a free service after all...):
 
-<!--<iframe width='100%' height='600px' src="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main"></iframe>-->
 
-<a href="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main?urlpath=%2Fvoila%2Frender%2Finfer_beer_or_bacon.ipynb" target="_blank"> <!--_-->
+<iframe width="100%" height="450px" style="border:4px inset grey;" src="{{site.url}}/{{page.assets}}/iframe_beercan-or-bacon.html"></iframe>
+
+<!--
+<iframe width='100%' height='600px' src="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/test?urlpath=voila%2Frender%2Finfer_beer_or_bacon.ipynb"></iframe> -->
+
+If the above does not work or you'd like to look into the Binder page directly please use:
+
+<a href="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/main?urlpath=%2Fnotebooks%2Finfer_beer_or_bacon.ipynb" target="_blank">
 <img src="https://mybinder.org/badge_logo.svg"
 alt="Launch Binder" style="transform: scale(2);">
 </a>
-
-{% include gif.html assetsFolder=page.assets link='working.gif' caption="Screen capture of the classifier working" %}
 
 ## Further work
 Firstly I need to figure out how to embedded the binder in to the blog as an iframe. Im not sure what sort of anti cross-site protection i'm running into but I will have to investigate more later. Some posts make it seem like its [not possible at all](https://github.com/jupyterhub/binderhub/issues/1078), but then some users appear to be able to do it via [nbinteract instead of voila](https://elc.github.io/posts/embed-interactive-notebooks/). Regardless, needs more research!
@@ -49,7 +54,7 @@ Firstly I need to figure out how to embedded the binder in to the blog as an ifr
 Since binder is running the instance as a docker container itself, would be interesting to experiment with with hosting it myself, but I think the first thing is to create a dedicated linux machine with nvidia drivers and a cuda enviroment all set up.
 
 ## Conclusion
-Truely the hardest part of all this was actually getting the learned model to open and play nice in **mybinder.org**, this was not the first time running into a **dependency nightmare**, but it was the first where there were 15min build times between attempts and the most lackluster error messages to help! I didn't want to just throw up the whole Paperspace conda enviroment into it because its just *embarrassing* to have a 30gb docker container for a simple image classifier, so I tried to find the bare minimum needed, and failed a little.
+Truely the hardest part of all this was actually getting the learned model to open and play nice in **mybinder.org**, this was not the first time running into a **dependency nightmare**, but it was the first where there were 15min build times between attempts and the most lackluster error messages to help! I didn't want to just throw up the whole Paperspace conda enviroment into it because its seemed a bit excessive to have a 30gb docker container for a simple image classifier, so I tried to find the bare minimum needed, and that took a long time.
 
 <!-- On top of that turns out Jupyter notebooks don't allow to be embedded in iframes on websites with different originating urls (good default behaviour tbh). So overcoming that hurdle was another massive nightmare, that took longer than both the training/testing in Paperspace AND navigating the requirement quagmire combined. -->
 
