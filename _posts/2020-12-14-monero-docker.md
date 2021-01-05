@@ -7,9 +7,12 @@ subcategory: programming
 tags:  microserver NAS docker monero
 assets: "post-assets/2020-12-14-monero-docker"
 published: true
+updated: 2020-01-05
 ---
 
 Finally had a practical reason to play with docker outside of tutorials! Taken a back by the blockchain size, I modified a docker container to run a Monero pruned node.
+
+
 
 ## Size of cryptocurrency nodes
 I like to host cryptocurrency nodes for myself, but as the ever marching blockchains grow in size with each block, hosting multiple of them starts becoming a real burden on the hard drive. Current estimates stand at [64GB](https://bitinfocharts.com/monero/) and [370GB](https://bitinfocharts.com/bitcoin/) for Monero and Bitcoin respectively.
@@ -32,8 +35,10 @@ Seeing the opportunity to actually have a reason to spin my own dockerfile for o
 
 
 ## Plans
-__To be quite frank__ this didn't deserve its own post but as I mentioned, the blog is mostly for note keeping. In this particular case I'd really like to revisit this and just build a container based on the [linuxserver.io containers](https://github.com/linuxserver/docker-baseimage-ubuntu). The benefits being having the built in translation into the the userid that I declare in the arguments, bringing the format inline with the other containers, and breaking out the various options of the node as enviromental variables. Alas, that for another day.
+__To be quite frank__ this didn't deserve its own post but as I mentioned, the blog is mostly for note keeping. In this particular case I'd really like to revisit this and just build a container based on the [linuxserver.io containers](https://github.com/linuxserver/docker-baseimage-ubuntu). The benefits being having the built in puid and guid translation from the external user into the container, bringing the format inline with the other containers, and breaking out the various options of the node as environmental variables. Alas, that for another day.
 
+## Updated
+After seeing there was some malicious attacks on the Monero network decided to update to the 0.17.1.8 version and activate the ip filter option, took the opportunity to practice with automated builds in dockerhub.io and tagging in github.
 
 ## Credit and Further links
 - [pandalism/monero-docker](https://hub.docker.com/repository/docker/pandalism/monero-docker)
