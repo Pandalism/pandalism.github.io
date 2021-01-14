@@ -43,24 +43,34 @@ The downside to this process is that its not a true notebook, any interactive pr
 
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array showindex=1 %}
 
-Please excuse the terrible drawings.
+Please excuse the terrible sketches. I will replace them when I get the time.
 
-## Converting notebooks
-For a generalised tutorial of how to use `nbinteract` I recommend [this blog post](https://elc.github.io/posts/embed-interactive-notebooks/), for the specific steps I did for the fast.ai app, keep reading.
+## Converting the fast aI
+For a generalised tutorial of how to use `nbinteract` I recommend [this blog post](https://elc.github.io/posts/embed-interactive-notebooks/).
 
-I assume you have just [finished the section on "deploying your app" in Chapter 2](https://github.com/fastai/fastbook/blob/master/02_production.ipynb)(or 30mins into the [video lesson 3](https://course.fast.ai/videos/?lesson=3)), you've gone through the challenges of getting the dependencies right and now have a working app on binder. Now the best way is to perform the conversion directly in
+If you apply the above directly to your app, it will appear to work, but won't do anything when you click on "Show Widgets". The reason for this is that `nbinteract` doesn't properly recognise the fast.ai implementation of widgets. For it to work you need to replace it with `ipywidgets`. For the specific steps I did for my fast.ai app, keep reading.
 
-1. Install nbinteract
+I assume you have just [finished the section on "deploying your app" in Chapter 2](https://github.com/fastai/fastbook/blob/master/02_production.ipynb)(or 30mins into the [video lesson 3](https://course.fast.ai/videos/?lesson=3)), you've gone through the challenges of getting the dependencies right and now have a working app on binder.
 
-## How to make it work with Fast.ai
-Now you might be able to host and embed simple notebooks
+#### Modifying the notebook to use ipywidgets
+First you have to make the __key__ changes to the notebook itself for `nbinteract` to work correctly. In Paperspace or your local environment where you developed the app, navigate to the notebook in question.
 
+2. Replace `from fastai.vision.widgets import *` with `import ipywidgets as widgets`.
+3. Go through the notebook and ensure all the widgets such are now prefixed with `widgets.`, for example `widgets.FileUpload()` and `widgets.VBox()`.
+4. next step add the markers to suppress [notebook cell inputs and outputs as needed](https://www.nbinteract.com/recipes/recipes_layout.html), with `# nbi:hide_in` and  `# nbi:hide_out` respectively. I suppressed all the cells except for the output of the widgets, note that you won't see the effect until its been processed by `nbinteract`
+5. Save the notebook and upload it to the github repository which you are using for the binder app.
+6. Re-run the binder page to build with the new changes and make sure it still works correctly after changing the widgets (the jupyter notebook should work as per normal, with all cells visible).
 
-## Supply? What Supply?
+#### Creating the static html file to embed
+For the following steps, I prefer to do it directly in the binder instance, as I can quickly change how it is displayed, but note that any changes are lost after the session.
+1. Navigate to the root of jupyter, by replacing the end of the url whether it be `/notebook/example.ipynb` or `/voila/render...ipynb` with `/tree`.
+2. At the root, open a new terminal window
+3. In the terminal install nbinteract with `pip install nbinteract`
+4. Then run `nbinteract notebook.ipynb -s user/repo/branch`, but using your values for the inference notebook and the github repo in which it is hosted.
+5. You now have a html file with the same name at the root of the folder, download it and you can test it directly!
+6. If all is working, make any edits (I like to remove the top "show widgets" button) and place somewhere in your blog's file-structure so you can embed it directly.
 
-
-## It finally (mostly) arrived!
-
+Easy!
 
 ## Credit and links
 - binder
