@@ -33,7 +33,7 @@ search_terms = ['beer can -recipe -chicken',
 {% include img_slide.html assetsFolder=page.assets link=img_array caption=caption_array %}
 
 ## Binder App
-Without further ado, here is the jupyter notebook embedded below thanks to the magic of `nbinteract` and `Binder` (mind you if the image has been taken offline it can take a 10mins or so just to start up again, it is a free service after all...):
+Without further ado, here is the jupyter notebook embedded below thanks to the magic of `nbinteract` and `Binder` (mind you if the image has been taken offline it can take a couple of minutes or so just to start up again, it is a free service after all...):
 
 
 <iframe width="100%" height="450px" src="{{site.url}}/{{page.assets}}/iframe_beercan-or-bacon.html"></iframe>
