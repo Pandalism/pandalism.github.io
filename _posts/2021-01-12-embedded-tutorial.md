@@ -3,7 +3,7 @@ layout: post
 title: "Tutorial: Embedding Fast.ai into your website through binder and nbinteract"
 image: #"post-assets/2021-01-12-embedded-tutorial"
 category: programming
-tags:  python jupyter binder webdev tutorial fastai
+tags:  python jupyter binder webdev tutorial fastai blog
 assets: "post-assets/2021-01-12-embedded-tutorial"
 published: true
 ---
