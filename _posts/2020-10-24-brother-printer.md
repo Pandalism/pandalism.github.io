@@ -4,7 +4,7 @@ title: "Adding an unsupported Brother printer to Synology"
 image: "post-assets/2020-10-24-brother-printer/IMG_8821.jpg"
 category: technology
 subcategory: domotics
-tags:  microserver NAS docker guide
+tags:  microserver NAS docker tutorial
 assets: "post-assets/2020-10-24-brother-printer"
 updated: 2020-12-17
 published: true
