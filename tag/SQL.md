@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: SQL"
-tag: SQL
+title: "Tag: sql"
+tag: sql
 robots: noindex
 ---
