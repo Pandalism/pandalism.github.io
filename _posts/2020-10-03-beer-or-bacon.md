@@ -36,7 +36,7 @@ search_terms = ['beer can -recipe -chicken',
 Without further ado, here is the jupyter notebook embedded below thanks to the magic of `nbinteract` and `Binder` (mind you if the image has been taken offline it can take a couple of minutes or so just to start up again, it is a free service after all...):
 
 
-<iframe width="100%" height="450px" src="{{site.url}}/{{page.assets}}/iframe_beercan-or-bacon.html"></iframe>
+<iframe width="100%" height="450px" style="border:4px inset grey;" src="{{site.url}}/{{page.assets}}/iframe_beercan-or-bacon.html"></iframe>
 
 <!--
 <iframe width='100%' height='600px' src="https://mybinder.org/v2/gh/Pandalism/beercan_or_bacon/test?urlpath=voila%2Frender%2Finfer_beer_or_bacon.ipynb"></iframe> -->
