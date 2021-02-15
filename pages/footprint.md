@@ -42,7 +42,6 @@ This is my current measurements for my yearly CO2 ~~and Water~~ impact:
 #### Assumptions
 There are a lot of assumptions here:
  - Does not include missed or cancelled flights.
- - Does not (currently) include [well-to-tank factors](https://www.lowcvp.org.uk/Hubs/leb/TestingandAccreditation/WTTFactors.htm), which would inevitably increase the CO2 quite a bit.
  - Flights calculated with [ICAO carbon offset calculator](https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx).
  - No impact factors for height of CO2 emission.
  - Diesel:	2.68kg/L, Petrol:	2.31	kg/L, Gas:	2.27	kg/m3, Electricity:	0.53	kg/kwh. Now includes Well-to-tank factors and is taken from the values calculated by the [UK Goverment](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2019).
