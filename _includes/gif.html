@@ -9,6 +9,6 @@ insert in code to replace usual markdown aspects.
 {% endcomment %}
 
 {% assign filetype = include.link | split: "." | last %}
-<img src="{{site.url}}/{{include.assetsFolder}}/{{include.link}}"
+<img src="/{{include.assetsFolder}}/{{include.link}}"
 alt="{{include.caption}}">
 <em>{{include.caption}}</em>

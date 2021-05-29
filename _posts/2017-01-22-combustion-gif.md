@@ -15,9 +15,9 @@ However, this latest is one of the best videos out there, perfectly showcasing t
 Anyways, less bullshit, here's the full loop:
 
 <video autoplay loop>
-  <source src= "{{site.url}}/{{page.assets}}/720p_compressed.mp4" type="video/mp4">
-  <source src= "{{site.url}}/{{page.assets}}/720p_VP8_compressed.mkv" type="video/mp4">
-  <source src= "{{site.url}}/{{page.assets}}/360p_compressed.mp4" type="video/mp4">
+  <source src= "/{{page.assets}}/720p_compressed.mp4" type="video/mp4">
+  <source src= "/{{page.assets}}/720p_VP8_compressed.mkv" type="video/mp4">
+  <source src= "/{{page.assets}}/360p_compressed.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

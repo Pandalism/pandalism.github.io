@@ -9,7 +9,7 @@ assets: "post-assets/2019-05-23-alfie-drone"
 published: true
 ---
 
-As mentioned previously, [after the loss of Skippy]({{site.url}}/2019/04/06/drone-skippy/), I was set back but not undetermined to continue along this path to fast flying mini chainsaws with tiny little cameras on them. This time I took a short cut and bought a tiny little Plug-n-Play (PNP) quad with 3 inch props, [the GT-M3](https://www.unmannedtechshop.co.uk/product/diatone-2018-gt-m3-fpv-racing-quadcopter-pnp/).
+As mentioned previously, [after the loss of Skippy](/2019/04/06/drone-skippy/), I was set back but not undetermined to continue along this path to fast flying mini chainsaws with tiny little cameras on them. This time I took a short cut and bought a tiny little Plug-n-Play (PNP) quad with 3 inch props, [the GT-M3](https://www.unmannedtechshop.co.uk/product/diatone-2018-gt-m3-fpv-racing-quadcopter-pnp/).
 
 ## The quad
 Its so tiny! I dare say it even looks cute, until you arm it and the tiny little 3 inch props start whirring in menacing anticipation. Its quite well put together with a 'flight stack' consisting of a 4-in-1 ESC, F4 Flight controller, and team blacksheep VTX (which sadly uses a miniature whip antenna instead of a micro pagoda, but I might change that soon).

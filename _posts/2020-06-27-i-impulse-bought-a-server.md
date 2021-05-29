@@ -25,7 +25,7 @@ First thing I thought was of the classic HP microservers, they always seemed lik
 
 Well... No. Not really, they were still >£400, >£600 if you wanted anything powerful, and after more research turns out that HP majorly messed up with this generation of microservers as they weren't really user-servicable, the AMD processors appeared anaemic (Opteron X3216, X3418, X3421) and were soldered on, with little to no upgradeability. The Gen10 Plus was a much better option, back to socketed Intel processors and a slightly more compact, yet still familiar form factor. However, being just released they are pretty expensive, [~£730 for the xeon version](https://www.ebuyer.com/964560-hpe-proliant-microserver-gen10-plus-performance-ultra-micro-tower-xeon-p18584-421).
 
-Well the old Gen8 would be dirt cheap then right? I remembered when ebuyer was practically giving them away with cashback that ended up being [£120 for the basic unit]({{site.url}}/{{page.assets}}/gen8_was_cheap.png). But no, somehow, maybe due to the colossal let down that was Gen10, server hardware had actually **_appreciated_ in value**! Now looking more like £270 for the base price, and some units selling for £350. Insane.
+Well the old Gen8 would be dirt cheap then right? I remembered when ebuyer was practically giving them away with cashback that ended up being [£120 for the basic unit](/{{page.assets}}/gen8_was_cheap.png). But no, somehow, maybe due to the colossal let down that was Gen10, server hardware had actually **_appreciated_ in value**! Now looking more like £270 for the base price, and some units selling for £350. Insane.
 
 {% include img.html assetsFolder=page.assets link='gen8_ebay.png' caption="Gen8 Microservers recently sold on Ebay" %}
 
