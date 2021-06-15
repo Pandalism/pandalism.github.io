@@ -5,7 +5,7 @@ image: "post-assets/2021-02-14-spanish-ahk/banner.png"
 category: programming
 tags: utilities autohotkey
 assets: "post-assets/2021-02-14-spanish-ahk"
-published: false
+published: true
 ---
 
 Common issue when typing in non-english languages is that not all the letters are easily accessible. Whilst porting over some of my utility scripts I thought I might as well publish this Autohotkey snippet which lets me use ñ, á, é, í, ó, ú and ü in a very quick and intuitive way with a British keyboard.
