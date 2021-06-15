@@ -4,22 +4,22 @@
 
   {%  if page.letterheadIcon %}
   <div class="category">
-    <img src="{{site.baseurl}}/{{page.letterheadIcon}}" alt="" class="">
+    <img src="/{{page.letterheadIcon}}" alt="" class="">
   </div>
 
   {%  elsif layout.letterheadIcon %}
   <div class="category">
-    <img src="{{site.baseurl}}/{{layout.letterheadIcon}}" alt="" class="">
+    <img src="/{{layout.letterheadIcon}}" alt="" class="">
   </div>
 
   {%  elsif page.subcategory %}
   <div class="category">
-    <img src="{{site.baseurl}}/assets/icons/category/{{page.subcategory}}.png" alt="" class="">
+    <img src="/assets/icons/category/{{page.subcategory}}.png" alt="" class="">
   </div>
 
   {% elsif page.category %}
   <div class="category">
-    <img src="{{site.baseurl}}/assets/icons/category/{{page.category}}.png" alt="" class="">
+    <img src="/assets/icons/category/{{page.category}}.png" alt="" class="">
   </div>
   {% endif %}
 

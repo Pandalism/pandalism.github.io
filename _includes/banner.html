@@ -4,7 +4,7 @@
   {% if page.image contains "http" %}
   <img src={{page.image}} alt="Banner Image">
   {% else %}
-  <img src={{site.url}}/{{page.image}} alt="Banner Image" onerror="this.onerror=null;this.src='{{site.url}}/page-assets/404/404.png'">
+  <img src=/{{page.image}} alt="Banner Image" onerror="this.onerror=null;this.src='/page-assets/404/404.png'">
   {% endif %}
 
 </div>

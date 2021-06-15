@@ -17,10 +17,10 @@ insert in code to replace usual markdown aspects.
 {% endcomment %}
 
 {% assign filetype = include.link | split: "." | last %}
-<a href="{{site.url}}/{{include.assetsFolder}}/{{include.link}}" target="_blank">{% if filetype == "gif" %}
-<img src="{{site.url}}/{{include.assetsFolder}}/{{include.link}}"
+<a href="/{{include.assetsFolder}}/{{include.link}}" target="_blank">{% if filetype == "gif" %}
+<img src="/{{include.assetsFolder}}/{{include.link}}"
 alt="{{include.caption}}">{% else %}
-<img src="{{site.url}}/{{include.assetsFolder}}/{{include.link | replace: '.', '_thumb.'}}"
+<img src="/{{include.assetsFolder}}/{{include.link | replace: '.', '_thumb.'}}"
 alt="{{include.caption}}"
-onerror="if (this.src != '{{site.url}}/{{include.assetsFolder}}/{{include.link}}') this.src = '{{site.url}}/{{include.assetsFolder}}/{{include.link}}'">
+onerror="if (this.src != '/{{include.assetsFolder}}/{{include.link}}') this.src = '/{{include.assetsFolder}}/{{include.link}}'">
 {% endif %}<em>{{include.caption}}</em></a>
