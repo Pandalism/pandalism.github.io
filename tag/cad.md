@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: CAD"
-tag: CAD
+title: "Tag: cad"
+tag: cad
 robots: noindex
 ---
